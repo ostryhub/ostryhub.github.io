@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "208026595525",
+    "firebase_url": "https://game-starter-5c772.firebaseio.com",
+    "project_id": "game-starter-5c772",
+    "storage_bucket": "game-starter-5c772.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:208026595525:android:bf444f2a40505599",
+        "android_client_info": {
+          "package_name": "com.igrek.GameStarter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "208026595525-jlfkiueiu43e3j61e6j0lsqkhe4g984e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuBpVemV6DehI6bFAwKZCkvOuaxz8vFHI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
