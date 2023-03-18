@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)https://editor.method.ac/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="icon" href="https://editor.method.ac/images/favicon.svg" sizes="any" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Method Draw Vector Editor</title>
+  
+  <meta name="description" content="Method Draw is an open source SVG editor for the web, you can use it online without signing up.">
+
+  <link rel="stylesheet" href="./test_files/all.css">
+<link rel="preconnect" href="https://fonts.googleapis.com/"><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""><link href="./test_files/css2" rel="stylesheet"><link href="./test_files/css2(1)" rel="stylesheet"><link href="./test_files/css2(2)" rel="stylesheet"><link href="./test_files/css2(3)" rel="stylesheet"><link href="./test_files/css2(4)" rel="stylesheet"><link href="./test_files/css2(5)" rel="stylesheet"><link href="./test_files/css2(6)" rel="stylesheet"><link href="./test_files/css2(7)" rel="stylesheet"><link href="./test_files/css2(8)" rel="stylesheet"><link href="./test_files/css2(9)" rel="stylesheet"><link href="./test_files/css2(10)" rel="stylesheet"><link href="./test_files/css2(11)" rel="stylesheet"><link href="./test_files/css2(12)" rel="stylesheet"><link href="./test_files/css2(13)" rel="stylesheet"><link href="./test_files/css2(14)" rel="stylesheet"><link href="./test_files/css2(15)" rel="stylesheet"><link href="./test_files/css2(16)" rel="stylesheet"><link href="./test_files/css2(17)" rel="stylesheet"><link href="./test_files/css2(18)" rel="stylesheet"><link href="./test_files/css2(19)" rel="stylesheet"><link href="./test_files/css2(20)" rel="stylesheet"><link href="./test_files/css2(21)" rel="stylesheet"><link href="./test_files/css2(22)" rel="stylesheet"><link href="./test_files/css2(23)" rel="stylesheet"><link href="./test_files/css2(24)" rel="stylesheet"><link href="./test_files/css2(25)" rel="stylesheet"><link href="./test_files/css2(26)" rel="stylesheet"><link href="./test_files/css2(27)" rel="stylesheet"><link href="./test_files/css2(28)" rel="stylesheet"><link href="./test_files/css2(29)" rel="stylesheet"><link href="./test_files/css2(30)" rel="stylesheet"><link href="./test_files/css2(31)" rel="stylesheet"><link href="./test_files/css2(32)" rel="stylesheet"><link href="./test_files/css2(33)" rel="stylesheet"><link href="./test_files/css2(34)" rel="stylesheet"><link href="./test_files/css2(35)" rel="stylesheet"><link href="./test_files/css2(36)" rel="stylesheet"><link href="./test_files/css2(37)" rel="stylesheet"><link href="./test_files/css2(38)" rel="stylesheet"><link href="./test_files/css2(39)" rel="stylesheet"><link href="./test_files/css2(40)" rel="stylesheet"><link href="./test_files/css2(41)" rel="stylesheet"><link href="./test_files/css2(42)" rel="stylesheet"><link href="./test_files/css2(43)" rel="stylesheet"><link href="./test_files/css2(44)" rel="stylesheet"><link href="./test_files/css2(45)" rel="stylesheet"><link href="./test_files/css2(46)" rel="stylesheet"><link href="./test_files/css2(47)" rel="stylesheet"><link href="./test_files/css2(48)" rel="stylesheet"><link href="./test_files/css2(49)" rel="stylesheet"><link href="./test_files/css2(50)" rel="stylesheet"><link href="./test_files/css2(51)" rel="stylesheet"><link href="./test_files/css2(52)" rel="stylesheet"><link href="./test_files/css2(53)" rel="stylesheet"><link href="./test_files/css2(54)" rel="stylesheet"><link href="./test_files/css2(55)" rel="stylesheet"><link href="./test_files/css2(56)" rel="stylesheet"><link href="./test_files/css2(57)" rel="stylesheet"><link href="./test_files/css2(58)" rel="stylesheet"><link href="./test_files/css2(59)" rel="stylesheet"><link href="./test_files/css2(60)" rel="stylesheet"><link href="./test_files/css2(61)" rel="stylesheet"><link href="./test_files/css2(62)" rel="stylesheet"><link href="./test_files/css2(63)" rel="stylesheet"><link href="./test_files/css2(64)" rel="stylesheet"><link href="./test_files/css2(65)" rel="stylesheet"><link href="./test_files/css2(66)" rel="stylesheet"><link href="./test_files/css2(67)" rel="stylesheet"><link href="./test_files/css2(68)" rel="stylesheet"><link href="./test_files/css2(69)" rel="stylesheet"><link href="./test_files/css2(70)" rel="stylesheet"><link href="./test_files/css2(71)" rel="stylesheet"><link href="./test_files/css2(72)" rel="stylesheet"><link href="./test_files/css2(73)" rel="stylesheet"><link href="./test_files/css2(74)" rel="stylesheet"><link href="./test_files/css2(75)" rel="stylesheet"><link href="./test_files/css2(76)" rel="stylesheet"><link href="./test_files/css2(77)" rel="stylesheet"><link href="./test_files/css2(78)" rel="stylesheet"><link href="./test_files/css2(79)" rel="stylesheet"><link href="./test_files/css2(80)" rel="stylesheet"><link href="./test_files/css2(81)" rel="stylesheet"><link href="./test_files/css2(82)" rel="stylesheet"><link href="./test_files/css2(83)" rel="stylesheet"><link href="./test_files/css2(84)" rel="stylesheet"><link href="./test_files/css2(85)" rel="stylesheet"><link href="./test_files/css2(86)" rel="stylesheet"><link href="./test_files/css2(87)" rel="stylesheet"><link href="./test_files/css2(88)" rel="stylesheet"><link href="./test_files/css2(89)" rel="stylesheet"><link href="./test_files/css2(90)" rel="stylesheet"><link href="./test_files/css2(91)" rel="stylesheet"><link href="./test_files/css2(92)" rel="stylesheet"><link href="./test_files/css2(93)" rel="stylesheet"><link href="./test_files/css2(94)" rel="stylesheet"><link href="./test_files/css2(95)" rel="stylesheet"><link href="./test_files/css2(96)" rel="stylesheet"><link href="./test_files/css2(97)" rel="stylesheet"><link href="./test_files/css2(98)" rel="stylesheet"><link href="./test_files/css2(99)" rel="stylesheet"><link href="./test_files/css2(100)" rel="stylesheet"><link href="./test_files/css2(101)" rel="stylesheet"><link href="./test_files/css2(102)" rel="stylesheet"><link href="./test_files/css2(103)" rel="stylesheet"><link href="./test_files/css2(104)" rel="stylesheet"><link href="./test_files/css2(105)" rel="stylesheet"><link href="./test_files/css2(106)" rel="stylesheet"><link href="./test_files/css2(107)" rel="stylesheet"><link href="./test_files/css2(108)" rel="stylesheet"><link href="./test_files/css2(109)" rel="stylesheet"><link href="./test_files/css2(110)" rel="stylesheet"><link href="./test_files/css2(111)" rel="stylesheet"><link href="./test_files/css2(112)" rel="stylesheet"><link href="./test_files/css2(113)" rel="stylesheet"><link href="./test_files/css2(114)" rel="stylesheet"></head>
+<body class="">
+
+<div id="method-draw" class="app">
+<div id="rulers">
+  <div id="ruler_corner"></div>
+  <div id="ruler_x"><div style="width: 1824px;"><canvas width="7296" height="64" style="width: 1824px; height: 16px;"></canvas></div></div>
+  <div id="ruler_y"><div style="height: 1200px;"><canvas height="4800" width="64" style="height: 1200px; width: 16px;"></canvas></div></div>
+</div>
+
+<div id="workarea" class="pathedit" style="overflow: scroll;">
+<div id="svgcanvas" style="width: 1824px; height: 1200px;">
+<svg width="1824" height="1199.999378774433" id="svgroot" xlinkns="http://www.w3.org/1999/xlink"><svg id="canvasBackground" width="799.999585849622" height="599.9996893872164" x="512.000207075189" y="299.9998446936082" style="pointer-events:none"><defs id="placeholder_defs"></defs><rect width="100%" height="100%" x="0" y="0" stroke-width="0" stroke="transparent" fill="#fff" style="pointer-events:none"></rect></svg><svg xmlns="http://www.w3.org/2000/svg" width="799.999585849622" height="599.9996893872164" id="svgcontent" x="512.000207075189" y="299.9998446936082" viewBox="0 0 800 600"><g style="pointer-events:all"><title style="pointer-events:inherit">Layer 1</title><path fill="#fff" stroke="#000" opacity="NaN" d="M 65.00000160217371 211.5 C 63.00000160217371 95.5 126 24.5 213 73.5 C 300 122.5 79 267.5 65 211.5" id="svg_11"></path></g><defs></defs></svg><g id="selectorParentGroup" transform="translate(512.000207075189,299.9998446936082)"><rect id="selectorRubberBand" fill="none" stroke="#666" stroke-dasharray="3,2" display="none" style="pointer-events:none" x="1097.999834868408" y="217.00014851071336" width="0" height="0"></rect><g id="selectorGroup0" transform="" display="none"><path id="selectedBox0" fill="none" stroke="#4F80FF" shape-rendering="crispEdges" style="pointer-events:none" d="M60.955698364495944,56.78515685288195 L234.2237066248902,56.78515685288195 234.2237066248902,225.1621153992214 60.955698364495944,225.1621153992214z"></path><g display="none"><circle id="selectorGrip_rotate_nw" fill="#000" r="8" stroke="#000" fill-opacity="0" stroke-opacity="0" stroke-width="0" style="cursor:url(images/rotate.png) 12 12, auto;" cx="56.955698364495944" cy="52.78515685288195"></circle><circle id="selectorGrip_rotate_ne" fill="#000" r="8" stroke="#000" fill-opacity="0" stroke-opacity="0" stroke-width="0" style="cursor:url(images/rotate.png) 12 12, auto;" cx="238.2237066248902" cy="52.78515685288195"></circle><circle id="selectorGrip_rotate_se" fill="#000" r="8" stroke="#000" fill-opacity="0" stroke-opacity="0" stroke-width="0" style="cursor:url(images/rotate.png) 12 12, auto;" cx="238.2237066248902" cy="229.1621153992214"></circle><circle id="selectorGrip_rotate_sw" fill="#000" r="8" stroke="#000" fill-opacity="0" stroke-opacity="0" stroke-width="0" style="cursor:url(images/rotate.png) 12 12, auto;" cx="56.955698364495944" cy="229.1621153992214"></circle><rect id="selectorGrip_resize_nw" width="8" height="8" fill="#4F80FF" stroke="rgba(0,0,0,0)" style="cursor:nw-resize" pointer-events="all" x="57" y="53"></rect><rect id="selectorGrip_resize_n" width="8" height="8" fill="#4F80FF" stroke="rgba(0,0,0,0)" style="cursor:n-resize" pointer-events="all" x="144" y="53"></rect><rect id="selectorGrip_resize_ne" width="8" height="8" fill="#4F80FF" stroke="rgba(0,0,0,0)" style="cursor:ne-resize" pointer-events="all" x="230" y="53"></rect><rect id="selectorGrip_resize_e" width="8" height="8" fill="#4F80FF" stroke="rgba(0,0,0,0)" style="cursor:e-resize" pointer-events="all" x="230" y="137"></rect><rect id="selectorGrip_resize_se" width="8" height="8" fill="#4F80FF" stroke="rgba(0,0,0,0)" style="cursor:se-resize" pointer-events="all" x="230" y="221"></rect><rect id="selectorGrip_resize_s" width="8" height="8" fill="#4F80FF" stroke="rgba(0,0,0,0)" style="cursor:s-resize" pointer-events="all" x="144" y="221"></rect><rect id="selectorGrip_resize_sw" width="8" height="8" fill="#4F80FF" stroke="rgba(0,0,0,0)" style="cursor:sw-resize" pointer-events="all" x="57" y="221"></rect><rect id="selectorGrip_resize_w" width="8" height="8" fill="#4F80FF" stroke="rgba(0,0,0,0)" style="cursor:w-resize" pointer-events="all" x="57" y="137"></rect></g></g><g id="pathpointgrip_container"><rect id="pathpointgrip_0" display="inline" width="5" height="5" fill="#4F80FF" stroke="#4F80FF" shape-rendering="crispEdges" stroke-width="1" cursor="move" style="pointer-events:all" xlink:title="Drag node to move it. Double-click node to change segment type" x="62.49996795245467" y="208.99989050899381"></rect><circle id="ctrlpointgrip_1c1" display="inline" r="3" fill="#4F80FF" stroke="#4F80FF" stroke-opacity="0" stroke-width="3" cursor="move" style="pointer-events:all" xlink:title="Drag control point to adjust curve properties" cx="62.99996898783061" cy="95.49995056079862"></circle><circle id="ctrlpointgrip_0c2" display="none" r="3" fill="#4F80FF" stroke="#4F80FF" stroke-opacity="0" stroke-width="3" cursor="move" style="pointer-events:all" xlink:title="Drag control point to adjust curve properties" cx="334" cy="80.5"></circle><line id="ctrlLine_1" stroke="#4F80FF" stroke-width="1" style="pointer-events:none" x1="306" y1="-31.5" x2="320" y2="24.5" display="none"></line><line id="ctrlLine_2" stroke="#4F80FF" stroke-width="1" style="pointer-events:none" x1="334" y1="80.5" x2="320" y2="24.5" display="none"></line><rect id="pathpointgrip_1" display="inline" width="5" height="5" fill="#fff" stroke="#4F80FF" shape-rendering="crispEdges" stroke-width="1" cursor="move" style="pointer-events:all" xlink:title="Drag node to move it. Double-click node to change segment type" x="210.49988973246187" y="70.99996194993402"></rect><rect id="pathpointgrip_2" display="inline" width="5" height="5" fill="#fff" stroke="#4F80FF" shape-rendering="crispEdges" stroke-width="1" cursor="move" style="pointer-events:all" xlink:title="Drag node to move it. Double-click node to change segment type" x="62.499966350281795" y="208.99989050899381"></rect><line id="ctrlLine_1c1" stroke="#4F80FF" stroke-width="1" style="pointer-events:none" x1="62.99996898783061" y1="95.49995056079862" x2="64.99996795245467" y2="211.49989050899381" display="inline"></line><line id="ctrlLine_1c2" stroke="#4F80FF" stroke-width="1" style="pointer-events:none" x1="125.99993477131547" y1="24.499987316644674" x2="212.99988973246187" y2="73.49996194993402" display="inline"></line><circle id="ctrlpointgrip_1c2" display="inline" r="3" fill="#4F80FF" stroke="#4F80FF" stroke-opacity="0" stroke-width="3" cursor="move" style="pointer-events:all" xlink:title="Drag control point to adjust curve properties" cx="125.99993477131547" cy="24.499987316644674"></circle><path id="segline_1" display="none" fill="none" stroke="#0ff" stroke-opacity="1" shape-rendering="crispEdges" stroke-width="2" style="pointer-events:none" d="M 64.99996795245467 211.49989050899381 C 62.99996898783061 95.49995056079862 125.99993477131547 24.499987316644674 212.99988973246187 73.49996194993402"></path><path id="segline_0" display="none" fill="none" stroke="#0ff" stroke-opacity="1" shape-rendering="crispEdges" stroke-width="2" style="pointer-events:none" d="M0,0 0,0"></path><line id="ctrlLine_2c1" stroke="#4F80FF" stroke-width="1" style="pointer-events:none" x1="299.9998446936082" y1="122.49993658322337" x2="212.99988973246187" y2="73.49996194993402" display="inline"></line><circle id="ctrlpointgrip_2c1" display="inline" r="3" fill="#4F80FF" stroke="#4F80FF" stroke-opacity="0" stroke-width="3" cursor="move" style="pointer-events:all" xlink:title="Drag control point to adjust curve properties" cx="299.9998446936082" cy="122.49993658322337"></circle><line id="ctrlLine_2c2" stroke="#4F80FF" stroke-width="1" style="pointer-events:none" x1="78.99995910265017" y1="267.49986151846736" x2="64.9999663502818" y2="211.49989050899381" display="inline"></line><circle id="ctrlpointgrip_2c2" display="inline" r="3" fill="#4F80FF" stroke="#4F80FF" stroke-opacity="0" stroke-width="3" cursor="move" style="pointer-events:all" xlink:title="Drag control point to adjust curve properties" cx="78.99995910265017" cy="267.49986151846736"></circle><path id="segline_2" display="none" fill="none" stroke="#0ff" stroke-opacity="1" shape-rendering="crispEdges" stroke-width="2" style="pointer-events:none" d="M 212.99988973246187 73.49996194993402 C 299.9998446936082 122.49993658322337 78.99995910265017 267.49986151846736 64.9999663502818 211.49989050899381"></path><rect id="pathpointgrip_3" display="none" width="5" height="5" fill="#fff" stroke="#4F80FF" shape-rendering="crispEdges" stroke-width="1" cursor="move" style="pointer-events:all" xlink:title="Drag node to move it. Double-click node to change segment type" x="188.5" y="250"></rect><rect id="pathpointgrip_4" display="none" width="5" height="5" fill="#fff" stroke="#4F80FF" shape-rendering="crispEdges" stroke-width="1" cursor="move" style="pointer-events:all" xlink:title="Drag node to move it. Double-click node to change segment type" x="55.5" y="272"></rect><rect id="pathpointgrip_5" display="none" width="5" height="5" fill="#fff" stroke="#4F80FF" shape-rendering="crispEdges" stroke-width="1" cursor="move" style="pointer-events:all" xlink:title="Drag node to move it. Double-click node to change segment type" x="121.5" y="78"></rect><rect id="pathpointgrip_6" display="none" width="5" height="5" fill="#fff" stroke="#4F80FF" shape-rendering="crispEdges" stroke-width="1" cursor="move" style="pointer-events:all" xlink:title="Drag node to move it. Double-click node to change segment type" x="333.5" y="41"></rect><rect id="pathpointgrip_7" display="none" width="5" height="5" fill="#fff" stroke="#4F80FF" shape-rendering="crispEdges" stroke-width="1" cursor="move" style="pointer-events:all" xlink:title="Drag node to move it. Double-click node to change segment type" x="474.5" y="132"></rect><rect id="pathpointgrip_8" display="none" width="5" height="5" fill="#fff" stroke="#4F80FF" shape-rendering="crispEdges" stroke-width="1" cursor="move" style="pointer-events:all" xlink:title="Drag node to move it. Double-click node to change segment type" x="516.5" y="305"></rect><rect id="pathpointgrip_9" display="none" width="5" height="5" fill="#fff" stroke="#4F80FF" shape-rendering="crispEdges" stroke-width="1" cursor="move" style="pointer-events:all" xlink:title="Drag node to move it. Double-click node to change segment type" x="423.5" y="457"></rect><rect id="pathpointgrip_10" display="none" width="5" height="5" fill="#fff" stroke="#4F80FF" shape-rendering="crispEdges" stroke-width="1" cursor="move" style="pointer-events:all" xlink:title="Drag node to move it. Double-click node to change segment type" x="115.5" y="373"></rect><rect id="pathpointgrip_11" display="none" width="5" height="5" fill="#fff" stroke="#4F80FF" shape-rendering="crispEdges" stroke-width="1" cursor="move" style="pointer-events:all" xlink:title="Drag node to move it. Double-click node to change segment type" x="643.5" y="376.5"></rect><rect id="pathpointgrip_12" display="none" width="5" height="5" fill="#fff" stroke="#4F80FF" shape-rendering="crispEdges" stroke-width="1" cursor="move" style="pointer-events:all" xlink:title="Drag node to move it. Double-click node to change segment type" x="585.5" y="275.5"></rect></g><g id="selectorGroup1" transform="" display="none"><path id="selectedBox1" fill="none" stroke="#4F80FF" shape-rendering="crispEdges" style="pointer-events:none" d="M73,228.5 L75,228.5 75,230.5 73,230.5z"></path></g></g></svg></div>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600">
+
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_1" d="m231,295l-8,-121c0,0 78,-49 107,10" opacity="NaN" stroke="#000" fill="#fff"></path>
+  <path id="svg_2" d="m1008,552c52,-60 16,15 16,15c0,0 -13,70 2,34" opacity="NaN" stroke="#000" fill="#fff"></path>
+ </g>
+</svg></div>
+
+<div id="menu_bar" class="active">
+  <a class="menu">
+    <div class="menu_title" id="logo">
+      <svg viewBox="0 0 16 16" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M-.1 16.1L16 .04V16.1H-.1z"></path>
+        <path d="M0 16.1V.1l16 16H0z" fill="var(--z7)"></path>
+      </svg>
+    </div>
+    <div class="menu_list inverted-undo">
+      <div id="modal_about" class="menu_item" data-action="about">About this app...</div>
+      <div class="separator"></div>
+      <div id="modal_preferences" class="menu_item" data-action="configure">Configure...</div>
+      <div id="modal_shortcuts" class="menu_item" data-action="shortcuts">Keyboard Shortcuts...</div>
+      <div id="modal_donate" class="menu_item" data-action="donate" style="display: block;">Donate or sponsor...</div>
+    </div>
+  </a>
+
+  <div class="menu open">
+    <div class="menu_title" style="">File</div>
+    <div class="menu_list inverted-undo" id="file_menu"> 
+      <div data-action="clear" id="tool_clear" class="menu_item">New Document</div>
+      
+      <div id="tool_open" class="menu_item">
+        <input type="file" accept="image/svg+xml" id="tool_open_input">
+        Open SVG... <span class="shortcut" style="display: none;">⌘O</span>
+      </div>
+      
+      <div id="tool_import" class="menu_item">
+        <input type="file" accept="image/*" id="tool_import_input">
+        Place Image... <span class="shortcut" style="display: none;">⌘K</span>
+      </div>
+      <div data-action="save" id="tool_save" class="menu_item" style="">Save Image... <span class="shortcut">⌘S</span></div>
+      <div data-action="export" id="tool_export" class="menu_item">Export as PNG</div>
+    </div>
+  </div>
+
+  <div class="menu">
+    <div class="menu_title" style="">Edit</div>
+    <div class="menu_list inverted-undo" id="edit_menu">
+      <div data-action="undo" class="menu_item" id="tool_undo">Undo <span class="shortcut">⌘Z</span></div>
+      <div data-action="redo" class="menu_item disabled" id="tool_redo">Redo <span class="shortcut">⌘Y</span></div>
+      <div class="separator"></div>
+      <div data-action="cutSelected" class="menu_item action_selected disabled" id="tool_cut">Cut <span class="shortcut">⌘X</span></div>
+      <div data-action="copySelected" class="menu_item action_selected disabled" id="tool_copy">Copy <span class="shortcut">⌘C</span></div>
+      <div data-action="pasteSelected" class="menu_item action_selected disabled" id="tool_paste">Paste <span class="shortcut">⌘V</span></div>
+      <div data-action="duplicateSelected" class="menu_item action_selected disabled" id="tool_clone">Duplicate <span class="shortcut">⌘D</span></div>
+      <div data-action="deleteSelected" class="menu_item action_selected disabled" id="tool_delete">Delete <span>⌫</span></div>
+    </div>
+  </div>
+  
+  <div class="menu">
+    <div class="menu_title">Object</div>
+    <div class="menu_list inverted-undo" id="object_menu">
+      <div class="menu_item action_selected disabled" id="tool_move_top">Bring to Front <span class="shortcut">⌘⇧↑</span></div>
+      <div class="menu_item action_selected disabled" id="tool_move_up">Bring Forward <span class="shortcut">⌘↑</span></div>
+      <div class="menu_item action_selected disabled" id="tool_move_down">Send Backward <span class="shortcut">⌘↓</span></div>
+      <div class="menu_item action_selected disabled" id="tool_move_bottom">Send to Back <span class="shortcut">⌘⇧↓</span></div>
+      <div class="separator"></div>
+      <div class="menu_item action_multi_selected disabled" id="tool_group">Group Elements <span class="shortcut">⌘G</span></div>
+      <div class="menu_item action_group_selected disabled" id="tool_ungroup">Ungroup Elements <span class="shortcut">⌘⇧G</span></div>
+      <div class="separator"></div>
+      <div class="menu_item action_path_convert_selected disabled" id="tool_topath">Convert to Path</div>
+      <div class="menu_item action_path_selected disabled" id="tool_reorient">Reorient path</div>
+    </div>
+  </div>
+
+  <div class="menu">
+    <div class="menu_title" style="">View</div>
+    <div class="menu_list inverted-undo" id="view_menu">
+        <div class="menu_item push_button_pressed" id="tool_rulers">View Rulers <span class="shortcut">⇧R</span></div>
+        <div class="menu_item" id="tool_wireframe" style="">View Wireframe</div>
+        <div class="separator"></div>
+        <div class="menu_item" id="tool_source" data-action="source">Source... <span class="shortcut">⌘U</span></div>
+    </div>
+  </div>
+  <div class="menu-right">
+  <button class="menu-icon" id="darkmode-button" title="Switch to lightmode">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"></path></svg>
+  </button>
+</div>
+</div>
+
+<div id="panels" class="tools_panel">
+
+  <div id="canvas_panel" class="context_panel" style="display: none;">
+    
+    <h4>Canvas</h4>
+
+    <div class="draginputs">
+
+
+      <label class="draginput twocol textcontent" data-title="Change Content">
+        <input id="canvas_title" type="text">
+        <span>Title</span>
+      </label>
+
+
+      <label data-title="Change canvas width" class="draginput">
+        <input id="canvas_width" type="text" pattern="[0-9]*" value="800" readonly="readonly" data-scale="28.571428571428573" data-domain="70" data-cursor="false">
+        <span class="icon_label">Width</span>
+      </label>
+
+      <label data-title="Change canvas height" class="draginput">
+        <input id="canvas_height" type="text" pattern="[0-9]*" value="600" readonly="readonly" data-scale="28.571428571428573" data-domain="70" data-cursor="false">
+        <span class="icon_label">Height</span>
+      </label>
+      
+      <label data-title="Change canvas color" class="draginput">
+        <span>Color</span>
+        <div id="color_canvas_tools">
+          <div class="color_tool active" id="tool_canvas">
+            <div class="color_block">
+              <div id="canvas_bg"></div>
+              <div id="canvas_color"><svg xmlns="http://www.w3.org/2000/svg" width="60.5"><rect width="100%" height="100%" fill="none" opacity="1"></rect>    <defs><lineargradient id="gradbox_"></lineargradient></defs></svg></div>
+            </div>
+          </div>
+        </div>
+      </label>
+
+      <div class="draginput">
+        <span>Sizes</span>
+        <select id="resolution">
+
+          <option id="selectedPredefined" selected="selected">Custom</option>
+          <option id="fitToContent" value="content">Fit to Content</option>
+
+          <optgroup label="Social Media">
+            <option value="1012x506">Twitter Post (1012 × 506)</option>
+            <option value="1500x500">Twitter Header (1500 × 500)</option>
+            <option value="1200x630">Facebook Post (1200 × 630)</option>
+            <option value="820x312">Facebook Cover (820 × 312)</option>
+            <option value="1080x1080">Instagram Post (1080 × 1080)</option>
+            <option value="1080x1920">Instagram Story (1080 × 1920)</option>
+            <option value="300">Dribble Shot (400 × 300)</option>
+            <option value="800x600">Dribble Shot HD (800 × 600)</option>
+            <option value="1584x396">LinkedIn Cover (1584 × 396)</option>
+          </optgroup>
+
+          <optgroup label="Presentation">
+            <option value="1920x1080">16:9 (1920 × 1080)</option>
+            <option value="1024x768">4:3 (1024 × 768)</option>
+          </optgroup>
+          
+          <optgroup label="Desktop">
+            <option value="1140x1024">Desktop (1140 × 1024)</option>
+            <option value="375x700">MacBook (834 × 1194)</option>
+            <option value="1440x900">MacBook Pro (1024 × 1366)</option>
+            <option value="1500x1000">Surface Book (1440 × 990)</option>
+            <option value="1280x720">iMac (1368 × 912)</option>
+          </optgroup>
+
+
+          <optgroup label="Tablet">
+            <option value="414x896">iPad Mini (768 × 1024)</option>
+            <option value="375x812">iPad Pro 11" (834 × 1194)</option>
+            <option value="375x812">iPad Pro 12.9" (1024 × 1366)</option>
+            <option value="414x736">Surface Pro 3 (1440 × 990)</option>
+            <option value="414x736">Surface Pro 4 (1368 × 912)</option>
+          </optgroup>
+
+          <optgroup label="Phone">
+            <option value="414x896">iPhone 11 ProMax (414 × 896)</option>
+            <option value="375x812">iPhone 11 Pro / X (375 × 812)</option>
+            <option value="414x736">iPhone 8 Plus (414 × 736)</option>
+            <option value="375x667">iPhone 8 (375 × 667)</option>
+            <option value="411x731">Google Pixel 2 (411 × 731)</option>
+            <option value="411x823">Google Pixel XL (411 × 823)</option>
+            <option value="360x640">Android (360 × 640)</option>
+          </optgroup>
+          
+          <optgroup label="Paper">
+            <option value="595x842">A4 (595 × 842)</option>
+            <option value="420x595">A5 (420 × 595)</option>
+            <option value="297x420">A6 (297 × 420)</option>
+            <option value="612x792">Letter (612 × 792) </option>
+            <option value="792x1224">Tabloid (792 × 1224)</option>
+            
+          </optgroup>
+        </select>
+        <div class="caret"></div>
+        <label id="resolution_label">Custom</label>
+      </div>
+
+    </div>
+  </div>
+  
+  <div id="rect_panel" class="context_panel" style="display: none;">
+    <h4>Rectangle</h4>
+    <div class="draginputs">
+      <label class="draginput">
+        <input id="rect_x" class="attr_changer" data-title="Change X coordinate" data-attr="x" pattern="[0-9]*" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        <span>X</span> 
+      </label>
+      <label class="draginput">
+        <input id="rect_y" class="attr_changer" data-title="Change Y coordinate" data-attr="y" pattern="[0-9]*" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        <span>Y</span> 
+      </label>
+      <label class="draginput" id="rect_width_tool attr_changer" data-title="Change rectangle width">
+        <input id="rect_width" class="attr_changer" data-attr="width" type="text" pattern="[0-9]*" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        <span class="icon_label">Width</span>
+      </label>
+      <label class="draginput" id="rect_height_tool" data-title="Change rectangle height">
+        <input id="rect_height" class="attr_changer" data-attr="height" type="text" pattern="[0-9]*" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        <span class="icon_label">Height</span>
+      </label>
+    </div>
+  </div>
+  
+  <div id="path_panel" class="context_panel clearfix" style="display: none;">
+      <h4>Path</h4>
+      <div class="draginputs">
+        <label class="draginput">
+          <input id="path_x" class="attr_changer" data-title="Change ellipse&#39;s cx coordinate" data-attr="x" pattern="[0-9]*" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span>X</span>
+        </label>
+        <label class="draginput">
+          <input id="path_y" class="attr_changer" data-title="Change ellipse&#39;s cy coordinate" data-attr="y" pattern="[0-9]*" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+          <span>Y</span>
+        </label>
+    </div>
+  </div>
+
+  <div id="image_panel" class="context_panel clearfix" style="display: none;">
+  <h4>Image</h4>
+    <div class="draginputs">
+      <label class="draginput">
+        <input id="image_x" class="attr_changer" data-title="Change X coordinate" data-attr="x" pattern="[0-9]*" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        <span>X</span> 
+      </label>
+      <label class="draginput">
+        <input id="image_y" class="attr_changer" data-title="Change Y coordinate" data-attr="y" pattern="[0-9]*" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        <span>Y</span> 
+      </label>
+      <label class="draginput">
+        <input id="image_width" class="attr_changer" data-title="Change image width" data-attr="width" pattern="[0-9]*" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        <span class="icon_label">Width</span>
+      </label>
+      <label class="draginput">
+        <input id="image_height" class="attr_changer" data-title="Change image height" data-attr="height" pattern="[0-9]*" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        <span class="icon_label">Height</span>
+      </label>
+    </div>
+  </div>
+  
+  <div id="circle_panel" class="context_panel" style="display: none;">
+    <h4>Circle</h4>
+    <div class="draginputs">
+      <label id="tool_circle_cx" class="draginput">
+        <span>Center X</span>
+        <input id="circle_cx" class="attr_changer" title="Change circle&#39;s cx coordinate" data-attr="cx" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+      </label>
+      <label id="tool_circle_cy" class="draginput">
+        <span>Center Y</span>
+        <input id="circle_cy" class="attr_changer" title="Change circle&#39;s cy coordinate" data-attr="cy" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+      </label>
+      <label id="tool_circle_r" class="draginput">
+        <span>Radius</span>
+        <input id="circle_r" class="attr_changer" title="Change circle&#39;s radius" data-attr="r" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+      </label>
+    </div>
+  </div>
+
+  <div id="ellipse_panel" class="context_panel" style="display: none;">
+      <h4>Ellipse</h4>
+      <div class="draginputs">
+      <label id="tool_ellipse_cx" class="draginput">
+        <input id="ellipse_cx" class="attr_changer" data-title="Change ellipse&#39;s cx coordinate" data-attr="cx" pattern="[0-9]*" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        <span>X</span>
+      </label>
+      <label id="tool_ellipse_cy" class="draginput">
+        <input id="ellipse_cy" class="attr_changer" data-title="Change ellipse&#39;s cy coordinate" data-attr="cy" pattern="[0-9]*" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        <span>Y</span>
+      </label>
+      <label id="tool_ellipse_rx" class="draginput">
+        <input id="ellipse_rx" class="attr_changer" data-title="Change ellipse&#39;s x radius" data-attr="rx" pattern="[0-9]*" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        <span>Radius X</span>
+      </label>
+      <label id="tool_ellipse_ry" class="draginput">
+        <input id="ellipse_ry" class="attr_changer" data-title="Change ellipse&#39;s y radius" data-attr="ry" pattern="[0-9]*" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        <span>Radius Y</span>
+      </label>
+    </div>
+  </div>
+
+  <div id="line_panel" class="context_panel clearfix" style="display: none;">
+    <h4>Line</h4>
+    <div class="draginputs">
+      <label id="tool_line_x1" class="draginput">
+        <input id="line_x1" class="attr_changer" data-title="Change line&#39;s starting x coordinate" data-attr="x1" pattern="[0-9]*" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        <span>Start X</span>
+      </label>
+      <label id="tool_line_y1" class="draginput">
+        <input id="line_y1" class="attr_changer" data-title="Change line&#39;s starting y coordinate" data-attr="y1" pattern="[0-9]*" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        <span>Start Y</span>
+      </label>
+      <label id="tool_line_x2" class="draginput">
+        <input id="line_x2" class="attr_changer" data-title="Change line&#39;s ending x coordinate" data-attr="x2" pattern="[0-9]*" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        <span>End X</span>
+      </label>
+      <label id="tool_line_y2" class="draginput">
+        <input id="line_y2" class="attr_changer" data-title="Change line&#39;s ending y coordinate" data-attr="y2" pattern="[0-9]*" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        <span>End Y</span>
+      </label>
+    </div>
+  </div>
+
+  <div id="text_panel" class="context_panel" style="display: none;">
+
+    <h4>Text</h4>
+    <div class="draginputs">
+      <label class="draginput twocol textcontent hidden" data-title="Change Content">
+        <input id="text" type="text" autocomplete="off">
+        <span>Content</span>
+      </label>
+      <label class="draginput">
+        <input id="text_x" class="attr_changer" data-title="Change text x coordinate" data-attr="x" pattern="[0-9]*" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        <span>X</span>
+      </label>
+      <label class="draginput">
+        <input id="text_y" class="attr_changer" data-title="Change text y coordinate" data-attr="y" pattern="[0-9]*" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        <span>Y</span>
+      </label>
+      <div class="toolset draginput twocol" id="tool_font_family">
+          <!-- Font family -->
+        <span>Font</span>
+        <div id="preview_font" style="font-family: sans-serif">sans-serif</div>
+        <div class="caret"></div>
+        <input id="font_family" data-title="Change Font Family" size="12" type="hidden">
+        <select id="font_family_dropdown">
+        
+    <option value="sans-serif" selected="">sans-serif</option>
+    <option value="serif" selected="">serif</option>
+    <option value="monospace" selected="">monospace</option>
+  
+      <option value="Alegreya">Alegreya</option>
+    
+      <option value="Alumni Sans">Alumni Sans</option>
+    
+      <option value="Andada Pro">Andada Pro</option>
+    
+      <option value="Antonio">Antonio</option>
+    
+      <option value="Archivo">Archivo</option>
+    
+      <option value="Arimo">Arimo</option>
+    
+      <option value="Asap">Asap</option>
+    
+      <option value="Assistant">Assistant</option>
+    
+      <option value="Azeret Mono">Azeret Mono</option>
+    
+      <option value="Besley">Besley</option>
+    
+      <option value="Big Shoulders Display">Big Shoulders Display</option>
+    
+      <option value="Bitter">Bitter</option>
+    
+      <option value="Bodoni Moda">Bodoni Moda</option>
+    
+      <option value="Brygada 1918">Brygada 1918</option>
+    
+      <option value="Cabin">Cabin</option>
+    
+      <option value="Catamaran">Catamaran</option>
+    
+      <option value="Caveat">Caveat</option>
+    
+      <option value="Changa">Changa</option>
+    
+      <option value="Cinzel">Cinzel</option>
+    
+      <option value="Comfortaa">Comfortaa</option>
+    
+      <option value="Commissioner">Commissioner</option>
+    
+      <option value="Crimson Pro">Crimson Pro</option>
+    
+      <option value="Cuprum">Cuprum</option>
+    
+      <option value="Dancing Script">Dancing Script</option>
+    
+      <option value="Domine">Domine</option>
+    
+      <option value="Dosis">Dosis</option>
+    
+      <option value="EB Garamond">EB Garamond</option>
+    
+      <option value="El Messiri">El Messiri</option>
+    
+      <option value="Encode Sans">Encode Sans</option>
+    
+      <option value="Epilogue">Epilogue</option>
+    
+      <option value="Exo">Exo</option>
+    
+      <option value="Faustina">Faustina</option>
+    
+      <option value="Fira Code">Fira Code</option>
+    
+      <option value="Fraunces">Fraunces</option>
+    
+      <option value="Gemunu Libre">Gemunu Libre</option>
+    
+      <option value="Georama">Georama</option>
+    
+      <option value="Glory">Glory</option>
+    
+      <option value="Gluten">Gluten</option>
+    
+      <option value="Grandstander">Grandstander</option>
+    
+      <option value="Grenze Gotisch">Grenze Gotisch</option>
+    
+      <option value="Hahmlet">Hahmlet</option>
+    
+      <option value="Heebo">Heebo</option>
+    
+      <option value="Hepta Slab">Hepta Slab</option>
+    
+      <option value="Ibarra Real Nova">Ibarra Real Nova</option>
+    
+      <option value="Imbue">Imbue</option>
+    
+      <option value="Inconsolata">Inconsolata</option>
+    
+      <option value="Inter">Inter</option>
+    
+      <option value="JetBrains Mono">JetBrains Mono</option>
+    
+      <option value="Josefin Sans">Josefin Sans</option>
+    
+      <option value="Josefin Slab">Josefin Slab</option>
+    
+      <option value="Jost">Jost</option>
+    
+      <option value="Jura">Jura</option>
+    
+      <option value="Karla">Karla</option>
+    
+      <option value="Kreon">Kreon</option>
+    
+      <option value="Kufam">Kufam</option>
+    
+      <option value="Kumbh Sans">Kumbh Sans</option>
+    
+      <option value="Lemonada">Lemonada</option>
+    
+      <option value="Lexend">Lexend</option>
+    
+      <option value="Libre Franklin">Libre Franklin</option>
+    
+      <option value="Literata">Literata</option>
+    
+      <option value="Lora">Lora</option>
+    
+      <option value="Manrope">Manrope</option>
+    
+      <option value="Manuale">Manuale</option>
+    
+      <option value="Markazi Text">Markazi Text</option>
+    
+      <option value="Maven Pro">Maven Pro</option>
+    
+      <option value="Merriweather Sans">Merriweather Sans</option>
+    
+      <option value="Mulish">Mulish</option>
+    
+      <option value="MuseoModerno">MuseoModerno</option>
+    
+      <option value="Newsreader">Newsreader</option>
+    
+      <option value="Noto Sans Display">Noto Sans Display</option>
+    
+      <option value="Noto Sans Mono">Noto Sans Mono</option>
+    
+      <option value="Noto Serif Display">Noto Serif Display</option>
+    
+      <option value="Open Sans">Open Sans</option>
+    
+      <option value="Orbitron">Orbitron</option>
+    
+      <option value="Oswald">Oswald</option>
+    
+      <option value="Oxanium">Oxanium</option>
+    
+      <option value="Petrona">Petrona</option>
+    
+      <option value="Piazzolla">Piazzolla</option>
+    
+      <option value="Playfair Display">Playfair Display</option>
+    
+      <option value="Podkova">Podkova</option>
+    
+      <option value="Public Sans">Public Sans</option>
+    
+      <option value="Quicksand">Quicksand</option>
+    
+      <option value="Raleway">Raleway</option>
+    
+      <option value="Rasa">Rasa</option>
+    
+      <option value="Recursive">Recursive</option>
+    
+      <option value="Red Hat Display">Red Hat Display</option>
+    
+      <option value="Red Hat Text">Red Hat Text</option>
+    
+      <option value="Red Rose">Red Rose</option>
+    
+      <option value="Reem Kufi">Reem Kufi</option>
+    
+      <option value="Roboto Mono">Roboto Mono</option>
+    
+      <option value="Roboto Slab">Roboto Slab</option>
+    
+      <option value="Rokkitt">Rokkitt</option>
+    
+      <option value="Rosario">Rosario</option>
+    
+      <option value="Rubik">Rubik</option>
+    
+      <option value="Ruda">Ruda</option>
+    
+      <option value="STIX Two Text">STIX Two Text</option>
+    
+      <option value="Saira">Saira</option>
+    
+      <option value="Sansita Swashed">Sansita Swashed</option>
+    
+      <option value="Signika">Signika</option>
+    
+      <option value="Sora">Sora</option>
+    
+      <option value="Space Grotesk">Space Grotesk</option>
+    
+      <option value="Spartan">Spartan</option>
+    
+      <option value="Stick No Bills">Stick No Bills</option>
+    
+      <option value="Syne">Syne</option>
+    
+      <option value="Texturina">Texturina</option>
+    
+      <option value="Tourney">Tourney</option>
+    
+      <option value="Trispace">Trispace</option>
+    
+      <option value="Truculenta">Truculenta</option>
+    
+      <option value="Urbanist">Urbanist</option>
+    
+      <option value="Varta">Varta</option>
+    
+      <option value="Vollkorn">Vollkorn</option>
+    
+      <option value="Work Sans">Work Sans</option>
+    
+      <option value="Yaldevi">Yaldevi</option>
+    
+      <option value="Yanone Kaffeesatz">Yanone Kaffeesatz</option>
+    
+      <option value="Yrsa">Yrsa</option>
+    </select>
+      </div>
+      <div class="draginput font_style">
+          <span>Font Style</span>
+          <div id="tool_bold" data-title="Bold Text [B]">B</div>
+          <div id="tool_italic" data-title="Italic Text [I]">i</div>
+        </div>
+      <label id="tool_font_size" data-title="Change Font Size" class="draginput">
+        <input id="font_size" value="0" readonly="readonly" data-scale="3.557142857142857" data-domain="70" data-cursor="true">
+        <span id="font_sizeLabel" class="icon_label">Font Size</span>
+      <div class="draginput_cursor" style="top: 70px;"></div></label>
+    </div>
+  </div>
+
+  <!-- formerly gsvg_panel -->
+  <div id="svg_panel" class="context_panel clearfix" style="display: none;">
+    <h4>SVG</h4>
+  </div>
+  
+  <div id="use_panel" class="context_panel clearfix" style="display: none;">
+    <h4>Use</h4>
+    <div class="button full" id="tool_unlink_use" data-title="Break link">Break use ref</div>
+  </div>
+  
+  <div id="g_panel" class="context_panel clearfix" style="display: none;">
+    <h4>Group</h4>
+    <div class="draginputs">
+      <label class="draginput">
+        <input id="g_x" class="attr_changer" data-title="Change groups&#39;s x coordinate" data-attr="x" pattern="[0-9]*" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        <span>X</span>
+      </label>
+      <label class="draginput">
+        <input id="g_y" class="attr_changer" data-title="Change groups&#39;s y coordinate" data-attr="y" pattern="[0-9]*" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        <span>Y</span>
+      </label>
+    </div>
+    <div class="button full" title="Ungroup Elements" id="button_ungroup">Ungroup</div>
+  </div>
+  
+  <div id="path_node_panel" class="context_panel clearfix" style="display: block;">
+    <h4>Edit Path</h4>
+
+    <div class="draginputs">
+      <label id="tool_node_x" class="draginput">
+        <input id="path_node_x" class="attr_changer" data-title="Change node&#39;s x coordinate" data-attr="x" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        <span>X</span>
+      </label>
+      <label id="tool_node_y" class="draginput">
+        <input id="path_node_y" class="attr_changer" data-title="Change node&#39;s y coordinate" data-attr="y" readonly="readonly" data-scale="2.857142857142857" data-domain="70" data-cursor="false">
+        <span>Y</span>
+      </label>
+      
+      <div id="segment_type" class="draginput label">
+        <span>Seg Type</span>
+        <select id="seg_type" data-title="Change Segment type">
+          <option id="straight_segments" selected="selected" value="4">Straight</option>
+          <option id="curve_segments" value="6">Curve</option>
+        </select>
+        <div class="caret"></div>
+        <label id="seg_type_label">Curve</label>
+      </div>
+
+    </div>
+    
+    <div class="button-container clearfix">
+      <div class="button full" id="tool_node_clone" title="Adds a node">Add Node</div>
+      <div class="button full" id="tool_node_delete" title="Delete Node">Delete Node</div>
+      <div class="button full" id="tool_openclose_path" title="Open/close sub-path">Open/close Path</div>
+    </div>
+  </div>
+  
+  <!-- Buttons when a single element is selected -->
+  <div id="selected_panel" class="context_panel" style="display: none;">
+    <div class="draginputs">
+      <label id="tool_angle" data-title="Change rotation angle" class="draginput">
+        <input id="angle" class="attr_changer" size="2" value="0" data-attr="transform" data-min="-180" data-max="180" type="text" readonly="readonly" data-scale="5.142857142857143" data-domain="70" data-cursor="false">
+        <span class="icon_label">Rotation</span>
+        <div id="tool_angle_indicator" class="angle" style="transform: rotate(0deg);">
+          <div id="tool_angle_indicator_cursor" class="angle-cursor"></div>
+        </div>
+      </label>
+      
+      <label id="tool_opacity" data-title="Change selected item opacity" class="draginput">
+        <input id="group_opacity" class="attr_changer" data-attr="opacity" value="100" step="5" min="0" max="100" readonly="readonly" data-scale="1.4285714285714284" data-domain="70" data-cursor="true">
+        <span id="group_opacityLabel" class="icon_label">Opacity</span>
+      <div class="draginput_cursor" style="top: -1.42109e-14px;"></div></label>
+      
+      <label id="tool_blur" data-title="Change gaussian blur value" class="draginput">
+          <input id="blur" size="2" value="0" step=".1" min="0" max="10" readonly="readonly" data-scale="0.14285714285714288" data-domain="70" data-cursor="true">
+          <span class="icon_label">Blur</span>
+      <div class="draginput_cursor" style="top: 70px;"></div></label>
+      
+      <label id="cornerRadiusLabel" data-title="Change Rectangle Corner Radius" class="draginput" style="display: none;">
+        <input id="rect_rx" value="0" data-attr="rx" class="attr_changer" type="text" pattern="[0-9]*" readonly="readonly" data-scale="1.4285714285714286" data-domain="70" data-cursor="true">
+        <span class="icon_label">Roundness</span>
+      <div class="draginput_cursor" style="top: 70px;"></div></label>
+
+    </div>
+    
+    <div id="align_tools" style="display: block;">
+      <h4>Align to canvas</h4>
+      <div class="toolset align_buttons" id="tool_position">
+          <label>
+            <div class="col last clear" id="position_opts">
+              <div class="align_button" id="tool_posleft" title="Align Left" data-align="left">
+                <svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27">
+                  <path d="M 2 1 L 2 5 L 14 5 L 14 11 L 2 11 L 2 16 L 20 16 L 20 22 L 2 22 L 2 26 L 1 26 L 1 1 L 2 1 Z"></path>
+                </svg>
+              </div>
+              <div class="align_button" id="tool_poscenter" title="Align Center" data-align="center">
+                <svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27">
+                  <path d="M 13 1 L 14 1 L 14 6 L 22 6 L 22 12 L 14 12 L 14 15 L 19 15 L 19 21 L 14 21 L 14 26 L 13 26 L 13 21 L 8 21 L 8 15 L 13 15 L 13 12 L 5 12 L 5 6 L 13 6 L 13 1 Z"></path>
+                </svg>
+              </div>
+              <div class="align_button" id="tool_posright" title="Align Right" data-align="right">
+                  <svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27">
+                    <path d="M 25 1 L 25 5 L 13 5 L 13 11 L 25 11 L 25 16 L 7 16 L 7 22 L 25 22 L 25 26 L 26 26 L 26 1 L 25 1 Z"></path>
+                  </svg>
+              </div>
+              <div class="align_button" id="tool_postop" title="Align Top" data-align="top">
+                  <svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27">
+                    <path d="M 1 2 L 5 2 L 5 14 L 11 14 L 11 2 L 16 2 L 16 20 L 22 20 L 22 2 L 26 2 L 26 1 L 1 1 L 1 2 Z"></path>
+                  </svg>
+              </div>
+              <div class="align_button" id="tool_posmiddle" title="Align Middle" data-align="middle">
+                <svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27">
+                  <path d="M 26 13 L 26 14 L 21 14 L 21 22 L 15 22 L 15 14 L 12 14 L 12 19 L 6 19 L 6 14 L 1 14 L 1 13 L 6 13 L 6 8 L 12 8 L 12 13 L 15 13 L 15 5 L 21 5 L 21 13 L 26 13 Z"></path>
+                </svg>
+              </div>
+              <div class="align_button" id="tool_posbottom" title="Align Bottom" data-align="bottom">
+                <svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27">
+                  <path d="M 1 25 L 5 25 L 5 13 L 11 13 L 11 25 L 16 25 L 16 7 L 22 7 L 22 25 L 26 25 L 26 26 L 1 26 L 1 25"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </label>
+      </div>    
+    </div>
+  </div>
+  
+  <!-- Buttons when multiple elements are selected -->
+  <div id="multiselected_panel" class="context_panel clearfix" style="display: none;">
+    <h4 class="hidable">Multiple Elements</h4>
+    
+    <div class="toolset align_buttons">
+      <label id="tool_align_relative">
+        <div class="select-input">
+          <select id="align_relative_to" title="Align relative to ..." class="select_tool">
+          <option id="selected_objects" value="selected">Align to objects</option>
+          <option id="page" value="page">Align to page</option>
+          </select>
+        </div>
+      </label>
+      <div class="col last clear">
+          <div class="align_button" id="tool_alignleft" title="Align Left" data-align="left">
+            <svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27">
+              <path d="M 2 1 L 2 5 L 14 5 L 14 11 L 2 11 L 2 16 L 20 16 L 20 22 L 2 22 L 2 26 L 1 26 L 1 1 L 2 1 Z"></path>
+            </svg>
+          </div>
+          <div class="align_button" id="tool_aligncenter" title="Align Center" data-align="center">
+            <svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27">
+              <path d="M 13 1 L 14 1 L 14 6 L 22 6 L 22 12 L 14 12 L 14 15 L 19 15 L 19 21 L 14 21 L 14 26 L 13 26 L 13 21 L 8 21 L 8 15 L 13 15 L 13 12 L 5 12 L 5 6 L 13 6 L 13 1 Z"></path>
+            </svg>
+          </div>
+          <div class="align_button" id="tool_alignright" title="Align Right" data-align="right">
+            <svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27">
+              <path d="M 25 1 L 25 5 L 13 5 L 13 11 L 25 11 L 25 16 L 7 16 L 7 22 L 25 22 L 25 26 L 26 26 L 26 1 L 25 1 Z"></path>
+            </svg>
+          </div>
+          <div class="align_button" id="tool_aligntop" title="Align Top" data-align="top">
+            <svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27">
+              <path d="M 1 2 L 5 2 L 5 14 L 11 14 L 11 2 L 16 2 L 16 20 L 22 20 L 22 2 L 26 2 L 26 1 L 1 1 L 1 2 Z"></path>
+            </svg>
+          </div>
+          <div class="align_button" id="tool_alignmiddle" title="Align Middle" data-align="middle">
+            <svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27">
+              <path d="M 26 13 L 26 14 L 21 14 L 21 22 L 15 22 L 15 14 L 12 14 L 12 19 L 6 19 L 6 14 L 1 14 L 1 13 L 6 13 L 6 8 L 12 8 L 12 13 L 15 13 L 15 5 L 21 5 L 21 13 L 26 13 Z"></path>
+            </svg>
+          </div>
+          <div class="align_button" id="tool_alignbottom" title="Align Bottom" data-align="bottom">
+            <svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="27" height="27">
+              <path d="M 1 25 L 5 25 L 5 13 L 11 13 L 11 25 L 16 25 L 16 7 L 22 7 L 22 25 L 26 25 L 26 26 L 1 26 L 1 25"></path>
+            </svg>
+          </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="button full" id="button_group">Group Elements</div>
+    <div class="button full" id="tool_text_on_path" title="Place text on path" style="display: none;">Place text on path</div>
+
+  </div>
+  
+  <div id="stroke_panel" class="context_panel" style="display: none;">
+    <h4>Stroke</h4>
+    <div class="draginputs">
+      <label class="draginput" data-title="Change stroke">
+        <input id="stroke_width" size="2" value="1" data-attr="stroke-width" min="0" max="99" step="1" readonly="readonly" data-scale="1.4142857142857144" data-domain="70" data-cursor="true">
+        <span class="icon_label">Width</span>
+      <div class="draginput_cursor" style="top: 68.9394px;"></div></label>
+      <div class="stroke_tool draginput"> 
+        <span>Dash</span>
+        <select id="stroke_style" data-title="Change stroke dash style">
+          <option selected="selected" value="none">—</option>
+          <option value="2,2">···</option>
+          <option value="5,5">- -</option>
+          <option value="5,2,2,2">-·-</option>
+          <option value="5,2,2,2,2,2">-··-</option>
+        </select>
+        <div class="caret"></div>
+        <label id="stroke_style_label">—</label>
+      </div>
+      
+      <label style="display: none;">
+        <span class="icon_label">Stroke Join</span>
+      </label>
+      
+      <label style="display: none;">
+        <span class="icon_label">Stroke Cap</span>
+      </label>
+
+    </div>
+  </div>
+
+</div> <!-- tools_top -->
+  <div id="cur_context_panel">
+    
+  </div>
+
+<div id="tools_left" class="tools_panel">
+  <div class="tool_button current" id="tool_select" data-mode="select" title="Select Tool [V]">
+    <svg viewBox="0 0 24 24" width="24" height="24">
+      <path d="M17.15 20.76l-2.94 1.5-3.68-6-4.41 3V1.24l12.5 12.01-4.41 1.5 2.94 6z"></path>
+    </svg>
+  </div>
+  <div class="tool_button" id="tool_fhpath" data-mode="fhpath" title="Pencil Tool [P]">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" style="transform: scale(-1,1)"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path></svg>
+  </div>
+  <div class="tool_button" id="tool_line" data-mode="line" title="Line Tool [L]">
+    <svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+      <path d="M 3 1 L 26 24 L 24 26 L 1 3 L 3 1 Z"></path>
+    </svg>
+  </div>
+  <div class="tool_button" id="tool_rect" data-mode="rect" title="Square/Rect Tool [R]">
+    <svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+      <path d="M 0 8 L 0 24 L 24 24 L 25 8 L 0 8 Z"></path>
+    </svg>
+  </div>
+  <div class="tool_button" id="tool_ellipse" data-mode="ellipse" title="Ellipse/Circle Tool [C]">
+    <svg viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+      <ellipse cx="13" cy="13" rx="13" ry="9"></ellipse>
+    </svg>
+  </div>
+
+  <div class="tool_button" id="tool_shapelib" data-mode="shapelib" title="Shape Tool [s]">
+    <svg xmlns="http://www.w3.org/2000/svg" height="27" width="27" viewBox="0 0 24 24">
+      <polygon points="14.43,10 12,2 9.57,10 2,10 8.18,14.41 5.83,22 12,17.31 18.18,22 15.83,14.41 22,10"></polygon>
+    </svg>
+    <div class="tool_menu">
+      
+    </div>
+</div>
+
+  <div class="tool_button" id="tool_path" data-mode="path" title="Path Tool [P]">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 27" width="27" height="27">
+      <path d="M12.2 1.9c0-.36.86 0 .86 0V14a1.3 1.3 0 10.88 0V1.9s.87-.36.87 0c0 6.81 5.22 11.68 5.22 11.68l-3.25 8.2h-6.55l-3.26-8.2s5.22-4.87 5.22-11.68zM7.83 25.26v-2.61h11.32v2.6H7.84z"></path>
+    </svg>
+  </div>
+  <div class="tool_button" id="tool_text" data-mode="text" title="Text Tool [T]">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="2 2 20 20" width="27"><path d="M5 4v3h5.5v12h3V7H19V4z"></path></svg>
+  </div>
+
+  <div class="tool_button" id="tool_zoom" data-mode="zoom" title="Zoom Tool [Z]">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="2 2 20 20" width="27"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+  </div>
+
+  <div class="tool_button" id="tool_eyedropper" data-mode="eyedropper" title="Eyedropper Tool [E]">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="2 2 20 20" width="27" style="transform: scale(-1, 1)"><path d="M20.71 5.63l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-3.12 3.12-1.93-1.91-1.41 1.41 1.42 1.42L3 16.25V21h4.75l8.92-8.92 1.42 1.42 1.41-1.41-1.92-1.92 3.12-3.12c.4-.4.4-1.03.01-1.42zM6.92 19L5 17.08l8.06-8.06 1.92 1.92L6.92 19z"></path></svg>
+  </div>
+  
+  <div id="color_tools">
+        <div id="tool_switch" title="Switch stroke and fill colors [X]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 11"><path d="M3.01 2A6 6 0 019 8h1.83l-2.91 2.91L5 8h2a4 4 0 00-3.99-4v1.93L.1 3.02 3.01.1V2z"></path></svg>
+        </div>
+        <div class="color_tool active" id="tool_fill">
+          <label class="icon_label" title="Change fill color"></label>
+          <div class="color_block">
+            <div id="fill_bg"></div>
+            <div id="fill_color" class="color_block"><svg xmlns="http://www.w3.org/2000/svg" width="100%"><rect width="100%" height="100%" fill="#4F80FF" opacity="1"></rect>    <defs><lineargradient id="gradbox_"></lineargradient></defs></svg></div>
+          </div>
+        </div>
+
+        <div class="color_tool" id="tool_stroke">
+            <label class="icon_label" title="Change stroke color"></label>
+          <div class="color_block">
+            <div id="stroke_bg"></div>
+            <div id="stroke_color" class="color_block" title="Change stroke color"><svg xmlns="http://www.w3.org/2000/svg" width="100%"><rect width="100%" height="100%" fill="#4F80FF" opacity="1"></rect>    <defs><lineargradient id="gradbox_"></lineargradient></defs></svg></div>
+          </div>
+        </div>
+  </div>
+</div> <!-- tools_left -->
+
+<div id="tools_bottom" class="tools_panel">
+
+    <!-- Zoom buttons -->
+  <select id="zoom_select">
+    <option value="6">6%</option>
+    <option value="12">12%</option>
+    <option value="16">16%</option>
+    <option value="25">25%</option>
+    <option value="50">50%</option>
+    <option value="75">75%</option>
+    <option value="100" selected="selected">100%</option>
+    <option value="150">150%</option>
+    <option value="200">200%</option>
+    <option value="300">300%</option>
+    <option value="400">400%</option>
+    <option value="600">600%</option>
+    <option value="800">800%</option>
+    <option value="1600">1600%</option>
+  </select>
+  <div id="zoom_panel" class="toolset" title="Change zoom level">
+    <div class="select-input" id="zoom_label">
+      <span id="zoomLabel" class="zoom_tool icon_label">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="2 2 20 20" width="27"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+      </span>
+      <input id="zoom" value="100%" type="text" readonly="readonly">
+    </div>
+  </div>
+  
+  <div id="palette" title="Click to change fill color, shift-click to change stroke color"><div class="palette_item transparent" data-rgb="none"></div>             <div class="palette_item black" data-rgb="#000000"></div>             <div class="palette_item white" data-rgb="#ffffff"></div><div class="palette_item" style="background-color: #444444;" data-rgb="#444444"></div><div class="palette_item" style="background-color: #482816;" data-rgb="#482816"></div><div class="palette_item" style="background-color: #422C10;" data-rgb="#422C10"></div><div class="palette_item" style="background-color: #3B2F0E;" data-rgb="#3B2F0E"></div><div class="palette_item" style="background-color: #32320F;" data-rgb="#32320F"></div><div class="palette_item" style="background-color: #293414;" data-rgb="#293414"></div><div class="palette_item" style="background-color: #1F361B;" data-rgb="#1F361B"></div><div class="palette_item" style="background-color: #153723;" data-rgb="#153723"></div><div class="palette_item" style="background-color: #0C372C;" data-rgb="#0C372C"></div><div class="palette_item" style="background-color: #083734;" data-rgb="#083734"></div><div class="palette_item" style="background-color: #0E353B;" data-rgb="#0E353B"></div><div class="palette_item" style="background-color: #1A333F;" data-rgb="#1A333F"></div><div class="palette_item" style="background-color: #273141;" data-rgb="#273141"></div><div class="palette_item" style="background-color: #332D40;" data-rgb="#332D40"></div><div class="palette_item" style="background-color: #3E2A3C;" data-rgb="#3E2A3C"></div><div class="palette_item" style="background-color: #462735;" data-rgb="#462735"></div><div class="palette_item" style="background-color: #4B252D;" data-rgb="#4B252D"></div><div class="palette_item" style="background-color: #4D2425;" data-rgb="#4D2425"></div><div class="palette_item" style="background-color: #4C261D;" data-rgb="#4C261D"></div><div class="palette_item" style="background-color: #666666;" data-rgb="#666666"></div><div class="palette_item" style="background-color: #845335;" data-rgb="#845335"></div><div class="palette_item" style="background-color: #7B572D;" data-rgb="#7B572D"></div><div class="palette_item" style="background-color: #6F5C2A;" data-rgb="#6F5C2A"></div><div class="palette_item" style="background-color: #62612C;" data-rgb="#62612C"></div><div class="palette_item" style="background-color: #546433;" data-rgb="#546433"></div><div class="palette_item" style="background-color: #46673D;" data-rgb="#46673D"></div><div class="palette_item" style="background-color: #396849;" data-rgb="#396849"></div><div class="palette_item" style="background-color: #306856;" data-rgb="#306856"></div><div class="palette_item" style="background-color: #2D6862;" data-rgb="#2D6862"></div><div class="palette_item" style="background-color: #33666C;" data-rgb="#33666C"></div><div class="palette_item" style="background-color: #426373;" data-rgb="#426373"></div><div class="palette_item" style="background-color: #535F75;" data-rgb="#535F75"></div><div class="palette_item" style="background-color: #645A73;" data-rgb="#645A73"></div><div class="palette_item" style="background-color: #74556D;" data-rgb="#74556D"></div><div class="palette_item" style="background-color: #805064;" data-rgb="#805064"></div><div class="palette_item" style="background-color: #884D58;" data-rgb="#884D58"></div><div class="palette_item" style="background-color: #8B4D4B;" data-rgb="#8B4D4B"></div><div class="palette_item" style="background-color: #894F3F;" data-rgb="#894F3F"></div><div class="palette_item" style="background-color: #999999;" data-rgb="#999999"></div><div class="palette_item" style="background-color: #C48157;" data-rgb="#C48157"></div><div class="palette_item" style="background-color: #B8874D;" data-rgb="#B8874D"></div><div class="palette_item" style="background-color: #A98E49;" data-rgb="#A98E49"></div><div class="palette_item" style="background-color: #97944B;" data-rgb="#97944B"></div><div class="palette_item" style="background-color: #849854;" data-rgb="#849854"></div><div class="palette_item" style="background-color: #729C62;" data-rgb="#729C62"></div><div class="palette_item" style="background-color: #619E73;" data-rgb="#619E73"></div><div class="palette_item" style="background-color: #559E84;" data-rgb="#559E84"></div><div class="palette_item" style="background-color: #529D94;" data-rgb="#529D94"></div><div class="palette_item" style="background-color: #5B9BA2;" data-rgb="#5B9BA2"></div><div class="palette_item" style="background-color: #6D97AB;" data-rgb="#6D97AB"></div><div class="palette_item" style="background-color: #8391AE;" data-rgb="#8391AE"></div><div class="palette_item" style="background-color: #9A8AAB;" data-rgb="#9A8AAB"></div><div class="palette_item" style="background-color: #AF84A3;" data-rgb="#AF84A3"></div><div class="palette_item" style="background-color: #BF7E96;" data-rgb="#BF7E96"></div><div class="palette_item" style="background-color: #C97A86;" data-rgb="#C97A86"></div><div class="palette_item" style="background-color: #CE7975;" data-rgb="#CE7975"></div><div class="palette_item" style="background-color: #CC7C65;" data-rgb="#CC7C65"></div><div class="palette_item" style="background-color: #BBBBBB;" data-rgb="#BBBBBB"></div><div class="palette_item" style="background-color: #FFB27C;" data-rgb="#FFB27C"></div><div class="palette_item" style="background-color: #FABA6F;" data-rgb="#FABA6F"></div><div class="palette_item" style="background-color: #E6C36A;" data-rgb="#E6C36A"></div><div class="palette_item" style="background-color: #CFCA6D;" data-rgb="#CFCA6D"></div><div class="palette_item" style="background-color: #B8D078;" data-rgb="#B8D078"></div><div class="palette_item" style="background-color: #A0D58A;" data-rgb="#A0D58A"></div><div class="palette_item" style="background-color: #8CD79F;" data-rgb="#8CD79F"></div><div class="palette_item" style="background-color: #7DD8B5;" data-rgb="#7DD8B5"></div><div class="palette_item" style="background-color: #7AD6CA;" data-rgb="#7AD6CA"></div><div class="palette_item" style="background-color: #84D3DB;" data-rgb="#84D3DB"></div><div class="palette_item" style="background-color: #9ACEE6;" data-rgb="#9ACEE6"></div><div class="palette_item" style="background-color: #B6C7EA;" data-rgb="#B6C7EA"></div><div class="palette_item" style="background-color: #D3BEE7;" data-rgb="#D3BEE7"></div><div class="palette_item" style="background-color: #EDB6DC;" data-rgb="#EDB6DC"></div><div class="palette_item" style="background-color: #FFAFCC;" data-rgb="#FFAFCC"></div><div class="palette_item" style="background-color: #FFAAB8;" data-rgb="#FFAAB8"></div><div class="palette_item" style="background-color: #FFA9A2;" data-rgb="#FFA9A2"></div><div class="palette_item" style="background-color: #FFAC8D;" data-rgb="#FFAC8D"></div><div class="palette_item" style="background-color: #DDDDDD;" data-rgb="#DDDDDD"></div><div class="palette_item" style="background-color: #FFE7A2;" data-rgb="#FFE7A2"></div><div class="palette_item" style="background-color: #FFF093;" data-rgb="#FFF093"></div><div class="palette_item" style="background-color: #FFFA8D;" data-rgb="#FFFA8D"></div><div class="palette_item" style="background-color: #FFFF91;" data-rgb="#FFFF91"></div><div class="palette_item" style="background-color: #EEFF9F;" data-rgb="#EEFF9F"></div><div class="palette_item" style="background-color: #D1FFB4;" data-rgb="#D1FFB4"></div><div class="palette_item" style="background-color: #B9FFCE;" data-rgb="#B9FFCE"></div><div class="palette_item" style="background-color: #A8FFE9;" data-rgb="#A8FFE9"></div><div class="palette_item" style="background-color: #A4FFFF;" data-rgb="#A4FFFF"></div><div class="palette_item" style="background-color: #B1FFFF;" data-rgb="#B1FFFF"></div><div class="palette_item" style="background-color: #CBFFFF;" data-rgb="#CBFFFF"></div><div class="palette_item" style="background-color: #EDFFFF;" data-rgb="#EDFFFF"></div><div class="palette_item" style="background-color: #FFF5FF;" data-rgb="#FFF5FF"></div><div class="palette_item" style="background-color: #FFEBFF;" data-rgb="#FFEBFF"></div><div class="palette_item" style="background-color: #FFE2FF;" data-rgb="#FFE2FF"></div><div class="palette_item" style="background-color: #FFDCEC;" data-rgb="#FFDCEC"></div><div class="palette_item" style="background-color: #FFDBD2;" data-rgb="#FFDBD2"></div><div class="palette_item" style="background-color: #FFDFB8;" data-rgb="#FFDFB8"></div></div>
+</div>
+
+<!-- hidden divs -->
+<div id="color_picker"></div>
+
+</div> <!-- /app -->
+
+<div id="dialog_box">
+  <div id="dialog_box_overlay"></div>
+  <div id="dialog_container" class="ui-draggable">
+    <div id="dialog_content"></div>
+    <div id="dialog_buttons"></div>
+  </div>
+</div>
+
+<ul id="cmenu_canvas" class="contextMenu" style="top: 541px; left: 774px; display: none;">
+  <li class="disabled"><a href="https://editor.method.ac/#cut">Cut <span class="shortcut">⌘X;</span></a></li>
+  <li class="disabled"><a href="https://editor.method.ac/#copy">Copy<span class="shortcut">⌘C</span></a></li>
+  <li class="disabled"><a href="https://editor.method.ac/#paste">Paste<span class="shortcut">⌘V</span></a></li>
+  <li class="separator disabled"><a href="https://editor.method.ac/#delete">Delete<span class="shortcut">⌫</span></a></li>
+  <li class="separator disabled"><a href="https://editor.method.ac/#group">Group<span class="shortcut">⌘G</span></a></li>
+  <li class="disabled"><a href="https://editor.method.ac/#ungroup">Ungroup<span class="shortcut">⌘⇧G</span></a></li>
+  <li class="separator disabled"><a href="https://editor.method.ac/#move_front">Bring to Front<span class="shortcut">⌘⇧↑</span></a></li>
+  <li class="disabled"><a href="https://editor.method.ac/#move_up">Bring Forward<span class="shortcut">⌘↑</span></a></li>
+  <li class="disabled"><a href="https://editor.method.ac/#move_down">Send Backward<span class="shortcut">⌘↓</span></a></li>
+  <li class="disabled"><a href="https://editor.method.ac/#move_back">Send to Back<span class="shortcut">⌘⇧↓</span></a></li>
+</ul>
+
+<div class="tools_flyout inverted-undo" id="tools_shapelib" style="display: none;"><div id="shape_cats"><div data-cat="basic" class="current">Basic</div><div data-cat="object">Objects</div><div data-cat="symbol">Symbols</div><div data-cat="arrow">Arrows</div><div data-cat="flowchart">Flowchart</div><div data-cat="nature">Nature</div><div data-cat="game">Cards &amp; Chess</div><div data-cat="dialog_balloon">Dialog baloons</div><div data-cat="music">Music</div><div data-cat="weather">Weather &amp; Time</div><div data-cat="ui">User Interface</div><div data-cat="social">Social Web</div></div>
+  <div id="shape_buttons"><div class="tool_button" id="shapelib_star_points_5" title="star_points_5"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m1,116.58409l113.82668,0l35.17332,-108.13487l35.17334,108.13487l113.82666,0l-92.08755,66.83026l35.17514,108.13487l-92.08759,-66.83208l-92.08757,66.83208l35.17515,-108.13487l-92.08758,-66.83026z"></path></svg></svg></div><div class="tool_button" id="shapelib_donut" title="donut"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m1,150l0,0c0,-82.29042 66.70958,-149 149,-149l0,0c39.51724,0 77.41599,15.69816 105.35889,43.64108c27.94293,27.94293 43.64111,65.84165 43.64111,105.35892l0,0c0,82.29041 -66.70958,149 -149,149l0,0c-82.29041,0 -149,-66.70959 -149,-149zm74.5,0l0,0c0,41.1452 33.35481,74.5 74.5,74.5c41.14522,0 74.5,-33.3548 74.5,-74.5c0,-41.1452 -33.3548,-74.5 -74.5,-74.5l0,0c-41.14519,0 -74.5,33.35481 -74.5,74.5z"></path></svg></svg></div><div class="tool_button" id="shapelib_triangle" title="triangle"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m1,280.375l149,-260.75l149,260.75z"></path></svg></svg></div><div class="tool_button" id="shapelib_right_triangle" title="right_triangle"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m1,299l0,-298l298,298z"></path></svg></svg></div><div class="tool_button" id="shapelib_diamond" title="diamond"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m1,150l149,-149l149,149l-149,149l-149,-149z"></path></svg></svg></div><div class="tool_button" id="shapelib_pentagon" title="pentagon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m1.00035,116.97758l148.99963,-108.4053l148.99998,108.4053l-56.91267,175.4042l-184.1741,0l-56.91284,-175.4042z"></path></svg></svg></div><div class="tool_button" id="shapelib_hexagon" title="hexagon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m1,149.99944l63.85715,-127.71428l170.28572,0l63.85713,127.71428l-63.85713,127.71428l-170.28572,0l-63.85715,-127.71428z"></path></svg></svg></div><div class="tool_button" id="shapelib_septagon1" title="septagon1"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m0.99917,191.06511l29.51249,-127.7108l119.48833,-56.83673l119.48836,56.83673l29.51303,127.7108l-82.69087,102.41679l-132.62103,0l-82.69031,-102.41679z"></path></svg></svg></div><div class="tool_button" id="shapelib_heptagon" title="heptagon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m1,88.28171l87.28172,-87.28171l123.43653,0l87.28172,87.28171l0,123.43654l-87.28172,87.28172l-123.43653,0l-87.28172,-87.28172l0,-123.43654z"></path></svg></svg></div><div class="tool_button" id="shapelib_decagon" title="decagon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m1,150.00093l28.45646,-88.40318l74.49956,-54.63682l92.08794,0l74.50002,54.63682l28.45599,88.40318l-28.45599,88.40318l-74.50002,54.63681l-92.08794,0l-74.49956,-54.63681l-28.45646,-88.40318z"></path></svg></svg></div><div class="tool_button" id="shapelib_dodecagon" title="dodecagon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m1,110.07421l39.92579,-69.14842l69.14842,-39.92579l79.85159,0l69.14842,39.92579l39.92578,69.14842l0,79.85159l-39.92578,69.14842l-69.14842,39.92578l-79.85159,0l-69.14842,-39.92578l-39.92579,-69.14842l0,-79.85159z"></path></svg></svg></div><div class="tool_button" id="shapelib_trapezoid" title="trapezoid"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m1,299l55.875,-298l186.25001,0l55.87498,298z"></path></svg></svg></div><div class="tool_button" id="shapelib_dialog_balloon_1" title="dialog_balloon_1"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m0.99786,35.96579l0,0c0,-19.31077 15.28761,-34.96524 34.14583,-34.96524l15.52084,0l0,0l74.50001,0l139.68748,0c9.05606,0 17.74118,3.68382 24.14478,10.24108c6.40356,6.55726 10.00107,15.45081 10.00107,24.72416l0,87.41311l0,0l0,52.44785l0,0c0,19.31078 -15.2876,34.96524 -34.14584,34.96524l-139.68748,0l-97.32507,88.90848l22.82506,-88.90848l-15.52084,0c-18.85822,0 -34.14583,-15.65446 -34.14583,-34.96524l0,0l0,-52.44785l0,0z"></path></svg></svg></div><div class="tool_button" id="shapelib_heart" title="heart"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m150,73c61,-175 300,0 0,225c-300,-225 -61,-400 0,-225z"></path></svg></svg></div><div class="tool_button" id="shapelib_cylinder" title="cylinder"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m299.0007,83.77844c0,18.28676 -66.70958,33.11111 -149.00002,33.11111m149.00002,-33.11111l0,0c0,18.28676 -66.70958,33.11111 -149.00002,33.11111c-82.29041,0 -148.99997,-14.82432 -148.99997,-33.11111m0,0l0,0c0,-18.28674 66.70956,-33.1111 148.99997,-33.1111c82.29044,0 149.00002,14.82436 149.00002,33.1111l0,132.44449c0,18.28674 -66.70958,33.11105 -149.00002,33.11105c-82.29041,0 -148.99997,-14.82431 -148.99997,-33.11105z"></path></svg></svg></div><div class="tool_button" id="shapelib_arrow_up" title="arrow_up"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m1.49805,149.64304l148.50121,-148.00241l148.50121,148.00241l-74.25061,0l0,148.71457l-148.5012,0l0,-148.71457z"></path></svg></svg></div><div class="tool_button" id="shapelib_arrow_u_turn" title="arrow_u_turn"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m1.00059,299.00055l0,-167.62497l0,0c0,-72.00411 58.37087,-130.37499 130.375,-130.37499l0,0l0,0c34.57759,0 67.73898,13.7359 92.18906,38.18595c24.45006,24.45005 38.18593,57.61144 38.18593,92.18904l0,18.625l37.24997,0l-74.49995,74.50002l-74.50002,-74.50002l37.25,0l0,-18.625c0,-30.8589 -25.0161,-55.87498 -55.87498,-55.87498l0,0l0,0c-30.85892,0 -55.875,25.01608 -55.875,55.87498l0,167.62497z"></path></svg></svg></div><div class="tool_button" id="shapelib_arrow_left_up" title="arrow_left_up"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m0.99865,224.5l74.50004,-74.5l0,37.25l111.74991,0l0,-111.75l-37.25,0l74.5,-74.5l74.5,74.5l-37.25,0l0,186.25l-186.24989,0l0,37.25l-74.50005,-74.5z"></path></svg></svg></div><div class="tool_button" id="shapelib_plaque" title="plaque"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m-0.00197,49.94376l0,0c27.5829,0 49.94327,-22.36036 49.94327,-49.94327l199.76709,0l0,0c0,27.5829 22.36037,49.94327 49.94325,49.94327l0,199.7671l0,0c-27.58289,0 -49.94325,22.36034 -49.94325,49.94325l-199.76709,0c0,-27.58292 -22.36037,-49.94325 -49.94327,-49.94325z"></path></svg></svg></div><div class="tool_button" id="shapelib_page" title="page"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m249.3298,298.99744l9.9335,-39.73413l39.73413,-9.93355l-49.66763,49.66768l-248.33237,0l0,-298.00001l298.00001,0l0,248.33234"></path></svg></svg></div><div class="tool_button" id="shapelib_cross" title="cross"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m0.99844,99.71339l98.71494,0l0,-98.71495l101.26279,0l0,98.71495l98.71495,0l0,101.2628l-98.71495,0l0,98.71494l-101.26279,0l0,-98.71494l-98.71494,0z"></path></svg></svg></div><div class="tool_button" id="shapelib_divide" title="divide"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m150,0.99785l0,0c25.17819,0 45.58916,20.41097 45.58916,45.58916c0,25.17821 -20.41096,45.58916 -45.58916,45.58916c-25.17822,0 -45.58916,-20.41093 -45.58916,-45.58916c0,-25.1782 20.41093,-45.58916 45.58916,-45.58916zm0,296.25203c-25.17822,0 -45.58916,-20.41095 -45.58916,-45.58917c0,-25.17819 20.41093,-45.58916 45.58916,-45.58916c25.17819,0 45.58916,20.41096 45.58916,45.58916c0,25.17822 -20.41096,45.58917 -45.58916,45.58917zm-134.06754,-193.71518l268.13507,0l0,91.17833l-268.13507,0z"></path></svg></svg></div><div class="tool_button" id="shapelib_minus" title="minus"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m0.99887,102.39503l297.49445,0l0,95.2112l-297.49445,0z"></path></svg></svg></div><div class="tool_button" id="shapelib_times" title="times"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><svg viewBox="-15 -15 330 330"><path d="m1.00089,73.36786l72.36697,-72.36697l76.87431,76.87368l76.87431,-76.87368l72.36765,72.36697l-76.87433,76.87431l76.87433,76.87431l-72.36765,72.36765l-76.87431,-76.87433l-76.87431,76.87433l-72.36697,-72.36765l76.87368,-76.87431l-76.87368,-76.87431z"></path></svg></svg></div></div>
+</div>
+  <script src="./test_files/loading.js"></script>
+  <script src="./test_files/all.js"></script><div class="modal hidden"><div class="modal-item">
+      <h1>About this application</h1>
+      <p>Method Draw is a simple <a href="https://github.com/methodofaction/Method-Draw">open source</a> vector drawing application. Method Draw was forked from <a href="https://github.com/SVG-Edit/svgedit">SVG-Edit</a> several years ago with the goal of improving and modernizing the interface.</p>
+      <p>At this time (2021), the author (<a href="http://method.ac/writing">Mark MacKay</a>) is working on improving stability and improving the codebase, which contains a lot of legacy practices. The goal is to create a vector editor suitable for simple graphic design tasks.</p>
+      </div></div><div class="modal hidden"><div class="modal-item modal-item-source">
+      <div id="svg_source_editor">
+        <div id="svg_source_overlay" class="overlay"></div>
+        <div id="svg_source_container">
+          <form>
+            <textarea id="svg_source_textarea" spellcheck="false"></textarea>
+          </form>
+          <div id="tool_source_back" class="toolbar_button">
+            <button id="tool_source_cancel" class="cancel">Cancel</button>
+            <button id="tool_source_save" class="ok">Apply Changes</button>
+          </div>
+        </div>
+    </div></div></div><div class="modal hidden"><div class="modal-item">
+      <h1>Configuration</h1>
+      <div id="configuration">
+        <button class="warning">Erase all data</button>
+        </div>
+      </div></div><div class="modal hidden"><div class="modal-item">
+      <h1>Donate</h1>
+      <p>
+        Method Draw relies on your generous donations for continued development.
+        <a href="https://method.ac/donate/">Donate now</a> if you find this application useful.
+      </p></div></div><div class="modal hidden"><div class="modal-item modal-item-wide">
+      <h1>Shortcuts</h1>
+      <div id="shortcuts"><div class="shortcut-keys"><div class="shortcut-key">v</div><div class="shortcut-name">Select tool</div></div><div class="shortcut-keys"><div class="shortcut-key">q</div><div class="shortcut-name">Freehand tool</div></div><div class="shortcut-keys"><div class="shortcut-key">l</div><div class="shortcut-name">Line tool</div></div><div class="shortcut-keys"><div class="shortcut-key">r</div><div class="shortcut-name">Rectangle tool</div></div><div class="shortcut-keys"><div class="shortcut-key">o</div><div class="shortcut-name">Ellipse tool</div></div><div class="shortcut-keys"><div class="shortcut-key">s</div><div class="shortcut-name">Shape tool</div></div><div class="shortcut-keys"><div class="shortcut-key">p</div><div class="shortcut-name">Path tool</div></div><div class="shortcut-keys"><div class="shortcut-key">t</div><div class="shortcut-name">Text tool</div></div><div class="shortcut-keys"><div class="shortcut-key">z</div><div class="shortcut-name">Zoom tool</div></div><div class="shortcut-keys"><div class="shortcut-key">e</div><div class="shortcut-name">Eyedropper tool</div></div><div class="shortcut-keys"><div class="shortcut-key">x</div><div class="shortcut-name">Focus fill/stroke</div></div><div class="shortcut-keys"><div class="shortcut-key">⇧</div><div class="shortcut-key">x</div><div class="shortcut-name">Switch fill/stroke</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">s</div><div class="shortcut-name">Save SVG File</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">z</div><div class="shortcut-name">Undo</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">y</div><div class="shortcut-name">Redo</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">⇧</div><div class="shortcut-key">z</div><div class="shortcut-name">Redo</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">c</div><div class="shortcut-name">Copy</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">x</div><div class="shortcut-name">Cut</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">v</div><div class="shortcut-name">Paste</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">d</div><div class="shortcut-name">Duplicate</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">u</div><div class="shortcut-name">View source</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">a</div><div class="shortcut-name">Select All</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">b</div><div class="shortcut-name">Set bold text</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">i</div><div class="shortcut-name">Set italic text</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">g</div><div class="shortcut-name">Group selected</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">⇧</div><div class="shortcut-key">g</div><div class="shortcut-name">Ungroup</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">o</div><div class="shortcut-name">Open SVG File</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">k</div><div class="shortcut-name">Place image</div></div><div class="shortcut-keys"><div class="shortcut-key">backspace</div><div class="shortcut-name">Delete</div></div><div class="shortcut-keys"><div class="shortcut-key">delete</div><div class="shortcut-name">Delete</div></div><div class="shortcut-keys"><div class="shortcut-key">ctrl</div><div class="shortcut-key">←</div><div class="shortcut-name">Rotate -1deg</div></div><div class="shortcut-keys"><div class="shortcut-key">ctrl</div><div class="shortcut-key">→</div><div class="shortcut-name">Rotate +1deg</div></div><div class="shortcut-keys"><div class="shortcut-key">ctrl</div><div class="shortcut-key">⇧</div><div class="shortcut-key">←</div><div class="shortcut-name">Rotate -5deg</div></div><div class="shortcut-keys"><div class="shortcut-key">ctrl</div><div class="shortcut-key">⇧</div><div class="shortcut-key">→</div><div class="shortcut-name">Rotate +5deg </div></div><div class="shortcut-keys"><div class="shortcut-key">⇧</div><div class="shortcut-key">o</div><div class="shortcut-name">Next item</div></div><div class="shortcut-keys"><div class="shortcut-key">⇧</div><div class="shortcut-key">p</div><div class="shortcut-name">Prev item</div></div><div class="shortcut-keys"><div class="shortcut-key">⇧</div><div class="shortcut-key">r</div><div class="shortcut-name">Show/hide rulers</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">+</div><div class="shortcut-name">Zoom in</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">-</div><div class="shortcut-name">Zoom out</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">=</div><div class="shortcut-name">Actual size</div></div><div class="shortcut-keys"><div class="shortcut-key">←</div><div class="shortcut-name">Nudge left</div></div><div class="shortcut-keys"><div class="shortcut-key">→</div><div class="shortcut-name">Nudge right</div></div><div class="shortcut-keys"><div class="shortcut-key">↑</div><div class="shortcut-name">Nudge up</div></div><div class="shortcut-keys"><div class="shortcut-key">↓</div><div class="shortcut-name">Nudge down</div></div><div class="shortcut-keys"><div class="shortcut-key">⇧</div><div class="shortcut-key">←</div><div class="shortcut-name">Jump left</div></div><div class="shortcut-keys"><div class="shortcut-key">⇧</div><div class="shortcut-key">→</div><div class="shortcut-name">Jump right</div></div><div class="shortcut-keys"><div class="shortcut-key">⇧</div><div class="shortcut-key">↑</div><div class="shortcut-name">Jump up</div></div><div class="shortcut-keys"><div class="shortcut-key">⇧</div><div class="shortcut-key">↓</div><div class="shortcut-name">Jump down</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">↑</div><div class="shortcut-name">Bring forward</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">↓</div><div class="shortcut-name">Send backward</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">⇧</div><div class="shortcut-key">↑</div><div class="shortcut-name">Bring to front</div></div><div class="shortcut-keys"><div class="shortcut-key">⌘</div><div class="shortcut-key">⇧</div><div class="shortcut-key">↓</div><div class="shortcut-name">Send to back</div></div><div class="shortcut-keys"><div class="shortcut-key">SPACEBAR</div><div class="shortcut-name">Pan canvas</div></div></div></div></div>
+
+
+</body></html>
