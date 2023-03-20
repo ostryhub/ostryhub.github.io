@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | WebGLTests</title>
+    <title>Unity WebGL Player | ltbl-unity</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">WebGLTests</div>
+        <div id="unity-build-title">ltbl-unity</div>
       </div>
     </div>
     <script>
@@ -59,12 +59,12 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/unity.loader.js";
       var config = {
-        dataUrl: buildUrl + "/unity.data",
-        frameworkUrl: buildUrl + "/unity.framework.js",
-        codeUrl: buildUrl + "/unity.wasm",
+        dataUrl: buildUrl + "/unity.data.gz",
+        frameworkUrl: buildUrl + "/unity.framework.js.gz",
+        codeUrl: buildUrl + "/unity.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
-        productName: "WebGLTests",
+        productName: "ltbl-unity",
         productVersion: "0.1",
         showBanner: unityShowBanner,
       };
@@ -102,18 +102,12 @@
 
       loadingBar.style.display = "block";
 
-      window.myGameInstance = null;
-      window.MyGameInstance = null;
-      
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
               }).then((unityInstance) => {
-                  
-                  window.MyGameInstance = unityInstance;
-                  
                 loadingBar.style.display = "none";
                 fullscreenButton.onclick = () => {
                   unityInstance.SetFullscreen(1);
