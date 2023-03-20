@@ -54286,8 +54286,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils.js */ "./src/common/utils.js");
 /* harmony import */ var _shapes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./shapes */ "./src/common/shapes.js");
-/* harmony import */ var opencascade_js_dist_opencascade_full__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! opencascade.js/dist/opencascade.full */ "./node_modules/opencascade.js/dist/opencascade.full.js");
-
 
 
 
@@ -54585,7 +54583,7 @@ class CSGNodeCalculator
     {
         // console.log("######### calculateNodeResult abcdefgh #########")
         
-        // try {
+        try {
             let perf = _common_performer__WEBPACK_IMPORTED_MODULE_7__["default"].create().start();
             
             if (typeof node === 'string')
@@ -54653,15 +54651,15 @@ class CSGNodeCalculator
             perfJson.measure("calculateNodeResult() stringify topoShapeDataJson node Id: \"+node.PartName")
             
             return topoShapesDataJson;
-        // }
-        // catch (e)
-        // {
-        //     console.error(`${this.constructor.name}.calculateNodeResult(${node.PartName} error: ${e.message} json: ${JSON.stringify(e)}`);
-        //     // return JSON.stringify({
-        //     //     error: e
-        //     // });
-        //     throw e;
-        // }
+        }
+        catch (e)
+        {
+            console.error(`${this.constructor.name}.calculateNodeResult(${node.PartName} error: ${e.message} json: ${JSON.stringify(e)}`);
+            return JSON.stringify({
+                error: `${e.message}${JSON.stringify(e)}`
+            });
+            // throw e;
+        }
     }
 
     /**
@@ -55740,8 +55738,8 @@ if (globalScope === undefined)
 
 function initIntoScope(scope)
 {
-    //console.log("init called, scope: ",scope);
-    //console.log("initOpenCascade is: ",initOpenCascade);
+    console.log("init called, scope: ",scope);
+    console.log("initOpenCascade is: ",opencascade_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
     let promise = (0,_common_createPromise_js__WEBPACK_IMPORTED_MODULE_1__.createPromise)();
     
