@@ -51967,6 +51967,117 @@ if ( typeof __THREE_DEVTOOLS__ !== 'undefined' ) {
 
 /***/ }),
 
+/***/ "./src/common/compounds.js":
+/*!*********************************!*\
+  !*** ./src/common/compounds.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _occt_shapes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../occt/shapes */ "./src/occt/shapes.js");
+
+
+let compounds = {
+
+    setOpenCascade(openCascade) {
+        this.oc = openCascade;
+    },
+    
+    /**
+     *
+     * @param shapes Array of shapes
+     * @return {TopoDS_Compound}
+     */
+    makeCompound(shapes) {
+        const oc = this.oc;
+
+        // Building the Resulting Compound
+        const aRes = new oc.TopoDS_Compound();
+        const aBuilder = new oc.BRep_Builder();
+        aBuilder.MakeCompound(aRes);
+
+        shapes.forEach(shape => {
+            aBuilder.Add(aRes, shape);
+        })
+        // aBuilder.Add(aRes, myBody.Shape());
+        // aBuilder.Add(aRes, myThreading);
+
+        return aRes;
+    },
+
+    deCompoundShape(shape, shapeTypeToAccept) {
+        const oc = this.oc;
+
+        if (shape.ShapeType() === shapeTypeToAccept || shapeTypeToAccept === undefined)
+        {
+            return [ shape ];
+        }
+
+        return this.listCompoundShapes(shape, shapeTypeToAccept);
+    },
+
+    /**
+     * Lists shapes withign the compound compoundShape.
+     * @param compoundShape
+     * @param shapeTypeToAccept undefined by default
+     * @return {*[]} List of shapes withing a given compound compoundShape
+     *
+     * export declare type TopAbs_ShapeEnum = {
+     *   TopAbs_COMPOUND: {};
+     *   TopAbs_COMPSOLID: {};
+     *   TopAbs_SOLID: {};
+     *   TopAbs_SHELL: {};
+     *   TopAbs_FACE: {};
+     *   TopAbs_WIRE: {};
+     *   TopAbs_EDGE: {};
+     *   TopAbs_VERTEX: {};
+     *   TopAbs_SHAPE: {};
+     * }
+     */
+    listCompoundShapes(compoundShape, shapeTypeToAccept) {
+        const oc = this.oc;
+
+        shapeTypeToAccept = shapeTypeToAccept ?? oc.TopAbs_ShapeEnum.TopAbs_SOLID;
+
+        if (compoundShape.ShapeType() !== oc.TopAbs_ShapeEnum.TopAbs_COMPOUND)
+        {
+            throw new Error(`listCompoundShapes(): Shape is not a compound. shape: ${_occt_shapes__WEBPACK_IMPORTED_MODULE_0__["default"].getShapeTypeAsString(compoundShape)}`)
+        }
+
+        let subShapes = [];
+
+        let anExplorer = new oc.TopExp_Explorer_1();
+        for (anExplorer.Init(compoundShape, shapeTypeToAccept, oc.TopAbs_ShapeEnum.TopAbs_SHAPE); anExplorer.More(); anExplorer.Next()) {
+            let current = anExplorer.Current();
+            subShapes.push(current);
+        }
+
+        return subShapes;
+    },
+
+    /**
+     *
+     * @param shape A topo shape, compound or not
+     * @return [ shape, ... ] An array of shapes, if input shape is a wire the returned array contains just the input shape
+     */
+    listWiresInsideCompound(shape) {
+        const oc = this.oc;
+
+        if (shape.ShapeType() === oc.TopAbs_ShapeEnum.TopAbs_WIRE) {
+            return [ shape ];
+        }
+
+        return this.deCompoundShape(shape, oc.TopAbs_ShapeEnum.TopAbs_WIRE);
+    },
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (compounds);
+
+/***/ }),
+
 /***/ "./src/common/createPromise.js":
 /*!*************************************!*\
   !*** ./src/common/createPromise.js ***!
@@ -52024,15 +52135,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
-/* harmony import */ var _openCascadeHelper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./openCascadeHelper.js */ "./src/common/openCascadeHelper.js");
-/* harmony import */ var opencascade_js_dist_opencascade_full__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! opencascade.js/dist/opencascade.full */ "./node_modules/opencascade.js/dist/opencascade.full.js");
-/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils.js */ "./src/common/utils.js");
-/* harmony import */ var _vectors_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./vectors.js */ "./src/common/vectors.js");
-/* harmony import */ var _shapes_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shapes.js */ "./src/common/shapes.js");
-/* harmony import */ var _wires_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./wires.js */ "./src/common/wires.js");
-/* harmony import */ var _math__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./math */ "./src/common/math.js");
-/* harmony import */ var _common_visualize__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../common/visualize */ "./src/common/visualize.js");
+/* harmony import */ var _openCascadeHelper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./openCascadeHelper.js */ "./src/common/openCascadeHelper.js");
+/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils.js */ "./src/common/utils.js");
+/* harmony import */ var _vectors_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./vectors.js */ "./src/common/vectors.js");
+/* harmony import */ var _occt_booleans__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../occt/booleans */ "./src/occt/booleans.js");
+/* harmony import */ var _occt_faces__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../occt/faces */ "./src/occt/faces.js");
+/* harmony import */ var _occt_shapes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../occt/shapes */ "./src/occt/shapes.js");
+/* harmony import */ var _occt_sweeps__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../occt/sweeps */ "./src/occt/sweeps.js");
+/* harmony import */ var _compounds__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./compounds */ "./src/common/compounds.js");
+/* harmony import */ var _wires_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./wires.js */ "./src/common/wires.js");
+/* harmony import */ var _wireToSolid_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./wireToSolid.js */ "./src/common/wireToSolid.js");
+/* harmony import */ var _math__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./math */ "./src/common/math.js");
+/* harmony import */ var _common_visualize__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../common/visualize */ "./src/common/visualize.js");
+
+
+
 
 
 
@@ -52046,32 +52163,47 @@ __webpack_require__.r(__webpack_exports__);
 const geometry = {
     
     setOpenCascade(openCascade) {
-        _openCascadeHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"].setOpenCascade(openCascade);
+        _openCascadeHelper_js__WEBPACK_IMPORTED_MODULE_0__["default"].setOpenCascade(openCascade);
         this.openCascade = openCascade;
         
-        _utils_js__WEBPACK_IMPORTED_MODULE_3__["default"].setOpenCascade(openCascade);
-        _vectors_js__WEBPACK_IMPORTED_MODULE_4__["default"].setOpenCascade(openCascade);
-        _shapes_js__WEBPACK_IMPORTED_MODULE_5__["default"].setOpenCascade(openCascade);
-        _wires_js__WEBPACK_IMPORTED_MODULE_6__["default"].setOpenCascade(openCascade);
-        _common_visualize__WEBPACK_IMPORTED_MODULE_8__["default"].setOpenCascade(openCascade);
+        _utils_js__WEBPACK_IMPORTED_MODULE_1__["default"].setOpenCascade(openCascade);
+        _vectors_js__WEBPACK_IMPORTED_MODULE_2__["default"].setOpenCascade(openCascade);
         
-        this.utils = _utils_js__WEBPACK_IMPORTED_MODULE_3__["default"];
-        this.vectors = _vectors_js__WEBPACK_IMPORTED_MODULE_4__["default"];
-        this.shapes = _shapes_js__WEBPACK_IMPORTED_MODULE_5__["default"];
-        this.wires = _wires_js__WEBPACK_IMPORTED_MODULE_6__["default"];
-        this.visualize = _common_visualize__WEBPACK_IMPORTED_MODULE_8__["default"];
+
+        _occt_booleans__WEBPACK_IMPORTED_MODULE_3__["default"].setOpenCascade(openCascade);
+        _occt_faces__WEBPACK_IMPORTED_MODULE_4__["default"].setOpenCascade(openCascade);
+        _occt_shapes__WEBPACK_IMPORTED_MODULE_5__["default"].setOpenCascade(openCascade);
+        _occt_sweeps__WEBPACK_IMPORTED_MODULE_6__["default"].setOpenCascade(openCascade);
+        
+        _compounds__WEBPACK_IMPORTED_MODULE_7__["default"].setOpenCascade(openCascade);
+        _wires_js__WEBPACK_IMPORTED_MODULE_8__["default"].setOpenCascade(openCascade);
+        _wireToSolid_js__WEBPACK_IMPORTED_MODULE_9__["default"].setOpenCascade(openCascade);
+        _common_visualize__WEBPACK_IMPORTED_MODULE_11__["default"].setOpenCascade(openCascade);
+        
+        this.utils = _utils_js__WEBPACK_IMPORTED_MODULE_1__["default"];
+        this.vectors = _vectors_js__WEBPACK_IMPORTED_MODULE_2__["default"];
+        
+        this.booleans = _occt_booleans__WEBPACK_IMPORTED_MODULE_3__["default"];
+        this.faces = _occt_faces__WEBPACK_IMPORTED_MODULE_4__["default"];
+        this.shapes = _occt_shapes__WEBPACK_IMPORTED_MODULE_5__["default"];
+        this.sweeps = _occt_sweeps__WEBPACK_IMPORTED_MODULE_6__["default"];
+        
+        this.compounds = _compounds__WEBPACK_IMPORTED_MODULE_7__["default"];
+        this.wires = _wires_js__WEBPACK_IMPORTED_MODULE_8__["default"];
+        this.wireToSolid = _wireToSolid_js__WEBPACK_IMPORTED_MODULE_9__["default"];
+        this.visualize = _common_visualize__WEBPACK_IMPORTED_MODULE_11__["default"];
     },
     
     tessellate(shape) {
-        let facelist = _openCascadeHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"].tessellate(shape);
+        let facelist = _openCascadeHelper_js__WEBPACK_IMPORTED_MODULE_0__["default"].tessellate(shape);
         return { faces: facelist };
     },
     
     makeIntoSingleMesh(shape) {
-        const facelist = _openCascadeHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"].tessellate(shape);
-        const [locVertexcoord, locNormalcoord, locTriIndices] = _openCascadeHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"].joinPrimitives(facelist);
+        const facelist = _openCascadeHelper_js__WEBPACK_IMPORTED_MODULE_0__["default"].tessellate(shape);
+        const [locVertexcoord, locNormalcoord, locTriIndices] = _openCascadeHelper_js__WEBPACK_IMPORTED_MODULE_0__["default"].joinPrimitives(facelist);
         const tot_triangle_count = facelist.reduce((a, b) => a + b.number_of_triangles, 0);
-        const [vertices, faces] = _openCascadeHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"].generateGeometry(tot_triangle_count, locVertexcoord, locNormalcoord, locTriIndices);
+        const [vertices, faces] = _openCascadeHelper_js__WEBPACK_IMPORTED_MODULE_0__["default"].generateGeometry(tot_triangle_count, locVertexcoord, locNormalcoord, locTriIndices);
         
         // openCascadeHelper.setOpenCascade(openCascade);
         // const facelist = await openCascadeHelper.tessellate(shape);
@@ -52330,35 +52462,6 @@ const geometry = {
         return shape;
     },
 
-    makeUnion(shapesToJoin, keepEdges) {
-        const oc = this.openCascade;
-        
-        let explodedShapes = shapesToJoin
-            .map(shape => this.shapes.deCompoundShape(shape))
-            .flat(1);
-        
-        let combined = explodedShapes[0];
-        
-        for (let i = 1; i < explodedShapes.length; i++) {
-            let shape1 = combined;
-            let shape2 = explodedShapes[i];
-            
-            let progressRange = new oc.Message_ProgressRange_1();
-            let combinedFuse = new oc.BRepAlgoAPI_Fuse_3(shape1, shape2, progressRange);
-            
-            // combinedFuse.SetFuzzyValue(fuzzValue);
-            // combinedFuse.Build(progressRange);
-            combined = combinedFuse.Shape();
-        }
-
-        if (!keepEdges) {
-            let fusor = new oc.ShapeUpgrade_UnifySameDomain_2(combined, true, false, false); fusor.Build();
-            combined = fusor.Shape();
-        }
-    
-        return combined;
-    },
-
     /**
      * 
      * @param normal
@@ -52385,8 +52488,8 @@ const geometry = {
         let rotate = new oc.gp_Quaternion_3(from, to);
 
         let polygon = this.makePolygon(points);
-        _shapes_js__WEBPACK_IMPORTED_MODULE_5__["default"].rotate_gp_Quaternion(polygon, rotate);
-        _shapes_js__WEBPACK_IMPORTED_MODULE_5__["default"].translate(polygon, point);
+        _occt_shapes__WEBPACK_IMPORTED_MODULE_5__["default"].rotate_gp_Quaternion(polygon, rotate);
+        _occt_shapes__WEBPACK_IMPORTED_MODULE_5__["default"].translate(polygon, point);
         
         return polygon;
     },
@@ -52426,7 +52529,7 @@ const geometry = {
         let cut = new oc.BRepAlgoAPI_Cut_1();
 
         let explodedShapesToSubtract = shapesToSubtract
-            .map(shape => this.shapes.deCompoundShape(shape))
+            .map(shape => this.compounds.deCompoundShape(shape))
             .flat(1);
         
         let difference = mainShape;
@@ -52452,7 +52555,7 @@ const geometry = {
     makeDifferenceMulti(mainShapes, shapesToSubtract, keepEdges) {
         const oc = this.openCascade;
 
-        mainShapes = mainShapes.map(shape => this.shapes.deCompoundShape(shape))
+        mainShapes = mainShapes.map(shape => this.compounds.deCompoundShape(shape))
             .flat(1);
         
         let results = [];
@@ -52466,7 +52569,7 @@ const geometry = {
         // console.log("results: ",results.length);
         
         return results.length > 1
-            ? this.makeCompound(results)
+            ? this.compounds.makeCompound(results)
             : results[0];
     },
 
@@ -52550,7 +52653,7 @@ const geometry = {
         const negativeSubShapes = [];
         const onPlaneSubShapes = [];
         
-        const subShapes = this.shapes.listCompoundShapes(splittedShape);
+        const subShapes = this.compounds.listCompoundShapes(splittedShape);
         subShapes.forEach(subShape => {
             const planeRelation = this.shapes.getShapeToPlaneOrientation(subShape, planePoint, planeNormal);
             //console.log("planeRelation.isPositive: "+planeRelation.isPositive+" planeRelation.isNegative: "+planeRelation.isNegative);
@@ -52575,7 +52678,7 @@ const geometry = {
 
         //console.log("returning positiveCompound from positiveSubShapes: "+positiveSubShapes.length);
         
-        const positiveCompound = this.makeCompound(positiveSubShapes);
+        const positiveCompound = this.compounds.makeCompound(positiveSubShapes);
         return positiveCompound;
     },
 
@@ -52667,7 +52770,7 @@ const geometry = {
         /// 2 - Position and orient face
 
         const zAxisVec = new oc.gp_Vec_4(0,0,1);
-        const zAngleRad = _math__WEBPACK_IMPORTED_MODULE_7__["default"].degToRad(planeRotationZ);
+        const zAngleRad = _math__WEBPACK_IMPORTED_MODULE_10__["default"].degToRad(planeRotationZ);
         let rotateZ = new oc.gp_Quaternion_5(zAxisVec, zAngleRad);
         this.shapes.rotate_gp_Quaternion(face, rotateZ);
         
@@ -52691,7 +52794,7 @@ const geometry = {
 
         // console.log("makeFaceFromWires oc: ", oc);
         
-        wireShapes = wireShapes.map(wireShape => _shapes_js__WEBPACK_IMPORTED_MODULE_5__["default"].listWiresInsideCompound(wireShape)).flat(1);
+        wireShapes = wireShapes.map(wireShape => _compounds__WEBPACK_IMPORTED_MODULE_7__["default"].listWiresInsideCompound(wireShape)).flat(1);
         
         const mkWire = new oc.BRepBuilderAPI_MakeWire_1();
         let index = 0;
@@ -52699,7 +52802,7 @@ const geometry = {
         {
             console.log(`### checking wire[${index++}]: ${this.shapes.getShapeTypeAsString(wireShape)}`);
             // let wire = this.wires.listWiresFromShape(wireShape);
-            // wireShape = shapes.listWiresInsideCompound(wireShape)[0];
+            // wireShape = compounds.listWiresInsideCompound(wireShape)[0];
             
             let wire = new oc.TopoDS.Wire_1(wireShape);
             if (index == 1)
@@ -52746,75 +52849,6 @@ const geometry = {
 
     /**
      * 
-     * @param wireShapes Array of shapes
-     * @return {TopoDS_Face}
-     */
-    wiresToFaces(wireShapes) {
-        const oc = this.openCascade;
-
-        wireShapes = wireShapes.map(wireShape => this.shapes.listWiresInsideCompound(wireShape)).flat(1);
-        let wiresCompound = this.makeCompound(wireShapes);
-        
-        let face = new oc.TopoDS_Face();
-        let done = oc.BOPAlgo_Tools.WiresToFaces(wiresCompound, face, .001);
-        
-        return face;
-    },
-    
-    /**
-     * 
-     * @param face TopoDS_Face shape.
-     * @param dir [x, y, z]
-     * @param length how for along dir to extrude
-     * @param lengthDown how for against dir to extrude
-     */
-    makeExtrude(face, dir, length, lengthDown) {
-        const oc = this.openCascade;
-        
-        const shapesToJoin = [];
-        
-        console.log("makeExtrude oc: ", oc)
-        console.log("makeExtrude face: ", face)
-        console.log("makeExtrude dir: ", dir)
-        console.log("makeExtrude length: ", length)
-        console.log("makeExtrude lengthDown: ", lengthDown)
-        
-        if (length > 0) {
-            const aPrismVec = new oc.gp_Vec_4(dir[0], dir[1], dir[2]);
-            aPrismVec.Normalize();
-            aPrismVec.Multiply(length);
-
-            console.log("makeExtrude making body for length, aPrismVec: ", aPrismVec)
-            const body = new oc.BRepPrimAPI_MakePrism_1(face, aPrismVec, false, true);
-            console.log("makeExtrude body created")
-            shapesToJoin.push(body.Shape());
-        }
-
-        if (lengthDown > 0) {
-            const aPrismVecDown = new oc.gp_Vec_4(dir[0], dir[1], dir[2]);
-            aPrismVecDown.Normalize();
-            aPrismVecDown.Multiply(lengthDown *-1);
-
-            console.log("makeExtrude making body for lengthDown, aPrismVecDown: ", aPrismVecDown)
-            const bodyDown = new oc.BRepPrimAPI_MakePrism_1(face, aPrismVecDown, false, true);
-            console.log("makeExtrude body created")
-            shapesToJoin.push(bodyDown.Shape());
-        }
-        
-        let shape = null;
-        if (shapesToJoin.length > 1) {
-            shape = this.makeUnion(shapesToJoin);    
-        }
-        else 
-        {
-            shape = shapesToJoin[0];
-        }
-        
-        return shape;
-    },
-
-    /**
-     * 
      * @param shape
      * @param offset
      */
@@ -52842,7 +52876,7 @@ const geometry = {
             thickener.PerformByJoin(
                 shape,
                 offset,
-                _math__WEBPACK_IMPORTED_MODULE_7__["default"].kEpsilon,
+                _math__WEBPACK_IMPORTED_MODULE_10__["default"].kEpsilon,
                 oc.BRepOffset_Mode.BRepOffset_Skin,
                 false,
                 false,
@@ -52867,27 +52901,7 @@ const geometry = {
         // return shape;
     },
 
-    /**
-     * 
-     * @param shapes Array of shapes
-     * @return {TopoDS_Compound}
-     */
-    makeCompound(shapes) {
-        const oc = this.openCascade;
-        
-        // Building the Resulting Compound
-        const aRes = new oc.TopoDS_Compound();
-        const aBuilder = new oc.BRep_Builder();
-        aBuilder.MakeCompound(aRes);
-        
-        shapes.forEach(shape => {
-            aBuilder.Add(aRes, shape);    
-        })
-        // aBuilder.Add(aRes, myBody.Shape());
-        // aBuilder.Add(aRes, myThreading);
-
-        return aRes;
-    },
+    
  
     /**
      * 
@@ -52902,7 +52916,7 @@ const geometry = {
             return [shape];
         }
             
-        let shapes = this.shapes.listCompoundShapes(shape);
+        let shapes = this.compounds.listCompoundShapes(shape);
         return shapes;
     },
 
@@ -53236,8 +53250,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var three__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
-/* harmony import */ var opencascade_js_dist_opencascade_full__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! opencascade.js/dist/opencascade.full */ "./node_modules/opencascade.js/dist/opencascade.full.js");
-
 
 
 const openCascadeHelper = {
@@ -53501,271 +53513,6 @@ class Performer
 
 /***/ }),
 
-/***/ "./src/common/shapes.js":
-/*!******************************!*\
-  !*** ./src/common/shapes.js ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _math__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./math */ "./src/common/math.js");
-/* harmony import */ var opencascade_js_dist_opencascade_full__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! opencascade.js/dist/opencascade.full */ "./node_modules/opencascade.js/dist/opencascade.full.js");
-
-
-
-let shapes = {
-    
-    setOpenCascade(openCascade) {
-        this.oc = openCascade;
-    },
-    
-    // export declare type TopAbs_ShapeEnum = {
-    //     TopAbs_COMPOUND: {};
-    //     TopAbs_COMPSOLID: {};
-    //     TopAbs_SOLID: {};
-    //     TopAbs_SHELL: {};
-    //     TopAbs_FACE: {};
-    //     TopAbs_WIRE: {};
-    //     TopAbs_EDGE: {};
-    //     TopAbs_VERTEX: {};
-    //     TopAbs_SHAPE: {};
-    // }
-    getShapeTypeAsString(shape) {
-        const oc = this.oc;
-        
-        let t = shape.ShapeType()
-        if (t === oc.TopAbs_ShapeEnum.TopAbs_COMPOUND) return "TopAbs_COMPOUND";
-        if (t === oc.TopAbs_ShapeEnum.TopAbs_COMPSOLID) return "TopAbs_COMPSOLID";
-        if (t === oc.TopAbs_ShapeEnum.TopAbs_SOLID) return "TopAbs_SOLID";
-        if (t === oc.TopAbs_ShapeEnum.TopAbs_SHELL) return "TopAbs_SHELL";
-        if (t === oc.TopAbs_ShapeEnum.TopAbs_FACE) return "TopAbs_FACE";
-        if (t === oc.TopAbs_ShapeEnum.TopAbs_WIRE) return "TopAbs_WIRE";
-        if (t === oc.TopAbs_ShapeEnum.TopAbs_EDGE) return "TopAbs_EDGE";
-        if (t === oc.TopAbs_ShapeEnum.TopAbs_VERTEX) return "TopAbs_VERTEX";
-        if (t === oc.TopAbs_ShapeEnum.TopAbs_SHAPE) return "TopAbs_SHAPE";
-        
-        throw new Error("Unknowsn shape type: '"+t+"'");
-    },
-    
-    clone() {
-        let transformation = new this.oc.gp_Trsf_1();
-        transformation.SetTranslation_1(new this.oc.gp_Vec_4(0,0,0));
-        let location = new this.oc.TopLoc_Location_2(transformation);
-        return shape.Moved(location, true);
-    },
-    
-    /**
-     * 
-     * @param shape
-     * @param v [x,y,z]
-     */
-    translate(shape, v) {
-        let transformation = new this.oc.gp_Trsf_1();
-        transformation.SetTranslation_1(new this.oc.gp_Vec_4(v[0], v[1], v[2]));
-        let location = new this.oc.TopLoc_Location_2(transformation);
-        shape.Move(location, true);
-        return shape;
-    },
-    
-    /**
-     *
-     * @param shape
-     * @param v gp_Vec
-     */
-    translate_gp_Vec(shape, v) {
-        let transformation = new this.oc.gp_Trsf_1();
-        transformation.SetTranslation_1(v);
-        let location = new this.oc.TopLoc_Location_2(transformation);
-        shape.Move(location, true);
-        return shape;
-    },
-    
-    rotate_gp_Quaternion(shape, q) {
-        let transformation = new this.oc.gp_Trsf_1();
-        transformation.SetRotation_2(q);
-        let location = new this.oc.TopLoc_Location_2(transformation);
-        shape.Move(location, true);
-        return shape;
-    },
-
-    /**
-     * 
-     * @param shape
-     * @param v gp_Vec
-     * @param q gp-Quaternion
-     * @returns {*}
-     */
-    translateAndRotate(shape, v, q) {
-        let transformation = new this.oc.gp_Trsf_1();
-        transformation.SetRotationPart(q);
-        transformation.SetTranslationPart(v);
-        let location = new this.oc.TopLoc_Location_2(transformation);
-        shape.Move(location, true);
-        return shape;
-    },
-    
-    deCompoundShape(shape, shapeTypeToAccept) {
-        const oc = this.oc;
-        
-        if (shape.ShapeType() !== oc.TopAbs_ShapeEnum.TopAbs_COMPOUND)
-        {
-            return shape;
-        }
-        
-        return this.listCompoundShapes(shape, shapeTypeToAccept);
-    },
-    
-    /**
-     * Lists shapes withign the compound shape.
-     * @param shape
-     * @param shapeTypeToAccept undefined by default
-     * @return {*[]} List of shapes withing a given compound shape
-     */
-    listCompoundShapes(shape, shapeTypeToAccept) {
-        const oc = this.oc;
-        
-        shapeTypeToAccept = shapeTypeToAccept ?? oc.TopAbs_ShapeEnum.TopAbs_SOLID;
-
-        if (shape.ShapeType() !== oc.TopAbs_ShapeEnum.TopAbs_COMPOUND)
-        {
-            throw new Error(`listCompoundShapes(): Shape is not a compound. shape: ${shape}`)
-        }
-
-        let shapes = [];
-
-        let anExplorer = new oc.TopExp_Explorer_1();
-        for (anExplorer.Init(shape, shapeTypeToAccept, oc.TopAbs_ShapeEnum.TopAbs_SHAPE); anExplorer.More(); anExplorer.Next()) {
-            let current = anExplorer.Current();
-            shapes.push(current);
-        }
-        return shapes;
-    },
-
-    /**
-     * 
-     * @param shape A topo shape, compound or not
-     * @return Array of shapes, if input shape is a wire the returned array contains just the input shape
-     */
-    listWiresInsideCompound(shape) {
-        const oc = this.oc;
-        if (shape.ShapeType() === oc.TopAbs_ShapeEnum.TopAbs_WIRE) {
-            return [ shape ];
-        }
-        
-        return this.deCompoundShape(shape, oc.TopAbs_ShapeEnum.TopAbs_WIRE);
-    },
-    
-    listShapeVerticesAsTopoDS_Vertex(shape) {
-        const oc = this.oc;
-        
-        let vertices = [];
-
-        let anExplorer = new oc.TopExp_Explorer_1();
-        for (anExplorer.Init(shape, oc.TopAbs_ShapeEnum.TopAbs_VERTEX, oc.TopAbs_ShapeEnum.TopAbs_SHAPE); anExplorer.More(); anExplorer.Next()) {
-            vertices.push(anExplorer.Current());
-        }
-        return vertices;
-    },
-    /**
-     * 
-     * @param shape
-     * @returns {*[]} list shape's vertices as gp_Points 
-     */
-    listShapeVerticesAsPoints(shape) {
-        const oc = this.oc;
-        
-        let points = [];
-
-        let anExplorer = new oc.TopExp_Explorer_1();
-        for (anExplorer.Init(shape, oc.TopAbs_ShapeEnum.TopAbs_VERTEX, oc.TopAbs_ShapeEnum.TopAbs_SHAPE); anExplorer.More(); anExplorer.Next()) {
-            // let vertex = anExplorer.Current();
-            let vertex = oc.TopoDS.Vertex_1(anExplorer.Current());
-            
-            // //console.log("listShapeVerticesAsPoints vertex: "+this.getShapeType(vertex))
-            let gp_Pnt_point = oc.BRep_Tool.Pnt(vertex);
-            points.push(gp_Pnt_point);
-        }
-        return points;
-    },
-
-    /**
-     * Checks shape to plane orientaiton.
-     * @param shape
-     * @param planePoint [x,y,z]
-     * @param planeNormal [x,y,z]
-     */
-    getShapeToPlaneOrientation(shape, planePoint, planeNormal)
-    {
-        //console.log("getShapeToPlaneOrientation() shape: "+shape);
-        
-        const oc = this.oc;
-        
-        const ppXYZ = new oc.gp_XYZ_2(planePoint[0], planePoint[1], planePoint[2]);
-        const pnXYZ = new oc.gp_XYZ_2(planeNormal[0], planeNormal[1], planeNormal[2]);
-        // pnXYZ.Normalize();
-        
-        const result = {
-            hasPositiveVertices: false,
-            hasNegativeVertices: false,
-            hasOnPlaneZeroVertices: false,
-            
-            get isAllPositive() { return this.hasPositiveVertices && !this.hasNegativeVertices && !this.hasOnPlaneZeroVertices },
-            get isPositive() { return this.hasPositiveVertices && !this.hasNegativeVertices },
-            get isAllNegative() { return !this.hasPositiveVertices && this.hasNegativeVertices && !this.hasOnPlaneZeroVertices },
-            get isNegative() { return !this.hasPositiveVertices && this.hasNegativeVertices },
-            get isAllOnPlane() { return !this.hasPositiveVertices && !this.hasNegativeVertices && this.hasOnPlaneZeroVertices }
-        }
-        
-        this.listShapeVerticesAsPoints(shape).forEach(vertex_gpPnt => {
-            const planeToVertexXYZ = vertex_gpPnt.XYZ().Subtracted(ppXYZ);
-            const dot = planeToVertexXYZ.Dot(pnXYZ);
-            
-            // on plane ?
-            if (dot <= Math.abs(_math__WEBPACK_IMPORTED_MODULE_0__["default"].kEpsilon)) {
-                result.hasOnPlaneZeroVertices = true;
-            }
-            
-            // on positive side of the plane ?
-            else if (dot > 0) {
-                result.hasPositiveVertices = true;
-            }
-
-            // on negative side of the plane ?
-            else if (dot < 0) {
-                result.hasNegativeVertices = true;
-            }
-        });
-
-        //console.log("getShapeToPlaneOrientation() result: "+JSON.stringify(result, null, 2));
-        
-        return result;
-    },
-
-    isAnyShapeVertexOnThePositiveSideOfThePlane(shape, planePoint, planeNormal)
-    {
-        const oc = this.oc;
-
-        const ppXYZ = new oc.gp_XYZ_2(planePoint[0], planePoint[1], planePoint[2]);
-        const pnXYZ = new oc.gp_XYZ_2(planeNormal[0], planeNormal[1], planeNormal[2]);
-
-        this.listShapeVerticesAsPoints(shape).forEach(vertex_gpPnt => {
-            const planeToVertexXYZ = vertex_gpPnt.XYZ().Subtracted(ppXYZ);
-            const dot = planeToVertexXYZ.Dot(pnXYZ);
-            if (dot > 0) return true;
-        });
-
-        return false;
-    }
-        
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (shapes);
-
-/***/ }),
-
 /***/ "./src/common/utils.js":
 /*!*****************************!*\
   !*** ./src/common/utils.js ***!
@@ -53778,7 +53525,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /**
  * Some utils taken directly from CascadeStudio's CascadeStudioStandardUtils.js
- * @type {{convertToPnt(*): gp_Pnt, setOpenCascade(*): void}}
+ * @type {{convertTo_gp_Pnt(*): gp_Pnt, setOpenCascade(*): void}}
  */
 const utils = {
     setOpenCascade(openCascade)
@@ -53788,8 +53535,12 @@ const utils = {
     
     /** This function converts either single dimensional
      * array or a gp_Pnt to a gp_Pnt.  Does not accept
-     * `TopoDS_Vertex`'s yet! */
-    convertToPnt(pnt)
+     * `TopoDS_Vertex`'s yet! 
+     * 
+     * @param pnt [x, y, z]
+     * @return gp_Pnt point
+     */
+    convertTo_gp_Pnt(pnt)
     {
         const oc = this.openCascade;
         
@@ -53800,6 +53551,25 @@ const utils = {
         }
         return point;
     },
+
+    /** This function converts either single dimensional
+     * array or a gp_Pnt to a gp_Pnt.  Does not accept
+     * `TopoDS_Vertex`'s yet! 
+     * 
+     * @param dir [x, y, z]
+     * @return gp_Dir direction
+     */
+    convertTo_gp_Dir(dir)
+    {
+        const oc = this.openCascade;
+
+        let direction = dir; // Accept raw gp_Points if we got 'em
+        if (direction.length) // direction is an js array
+        {
+            direction = new oc.gp_Dir_4(direction[0], direction[1], (direction[2]) ? direction[2] : 0);
+        }
+        return direction;
+    },
     
     parseJoinType(joinType) {
         const oc = this.openCascade;
@@ -53809,6 +53579,23 @@ const utils = {
         if (joinType === "Intersection") return oc.GeomAbs_JoinType.GeomAbs_Intersection;
         
         throw new Error("Unsupported joint type: "+joinType);
+    },
+
+    /**
+     * 
+     * @param points Array of points [ [x,y,z], [x2, y2, z2], ... ]
+     */
+    convertTo_TColgp_Array1OfPnt(points) {
+        const oc = this.openCascade;
+        
+        let controlPoints = new oc.TColgp_Array1OfPnt_2(1, points.length);
+        for (let i = 1; i <= points.length; i++)
+        {
+            let pnt = this.convertTo_gp_Pnt(points[i-1]);
+            controlPoints.SetValue(i, pnt);
+        }
+        
+        return controlPoints;
     }
 };
 
@@ -53950,24 +53737,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
-/* harmony import */ var _openCascadeHelper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./openCascadeHelper.js */ "./src/common/openCascadeHelper.js");
-/* harmony import */ var opencascade_js_dist_opencascade_full__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! opencascade.js/dist/opencascade.full */ "./node_modules/opencascade.js/dist/opencascade.full.js");
-
-
+/* harmony import */ var _openCascadeHelper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./openCascadeHelper.js */ "./src/common/openCascadeHelper.js");
 
 
 const visualize  = {
-  
+    
   setOpenCascade(openCascade) {
     this.openCascade = openCascade;
   },
   
-  /**
-   *
-   */
-  meshFromWire() {},
-
   ShapeToMesh(shape, maxDeviation) {
     const oc = this.openCascade;
     
@@ -53987,7 +53765,7 @@ const visualize  = {
       // Iterate through the faces and triangulate each one
       let triangulations = []; let uv_boxes = []; let curFace = 0;
 
-      _openCascadeHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"].ForEachFace(shape, (faceIndex, myFace) =>
+      _openCascadeHelper_js__WEBPACK_IMPORTED_MODULE_0__["default"].ForEachFace(shape, (faceIndex, myFace) =>
       {
         var aLocation = new oc.TopLoc_Location_1();
         var myT = oc.BRep_Tool.Triangulation(myFace, aLocation, 0);
@@ -54145,7 +53923,7 @@ const visualize  = {
         // console.log("### tesselate edges ...");
         
         try {
-          _openCascadeHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"].ForEachEdge(myFace, (index, myEdge) => {
+          _openCascadeHelper_js__WEBPACK_IMPORTED_MODULE_0__["default"].ForEachEdge(myFace, (index, myEdge) => {
 
             let edgeHash = myEdge.HashCode(100000000);
             if (fullShapeEdgeHashes2.hasOwnProperty(edgeHash)) {
@@ -54221,7 +53999,7 @@ const visualize  = {
       // for (let i = 0; i < triangulations.length; i++) { triangulations[i].Nullify(); }
 
       // Get the free edges that aren't on any triangulated face/surface
-      _openCascadeHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"].ForEachEdge(shape, (index, myEdge) => {
+      _openCascadeHelper_js__WEBPACK_IMPORTED_MODULE_0__["default"].ForEachEdge(shape, (index, myEdge) => {
         let edgeHash = myEdge.HashCode(100000000);
         if (!fullShapeEdgeHashes2.hasOwnProperty(edgeHash)) {
           let this_edge = {
@@ -54274,6 +54052,84 @@ const visualize  = {
 
 /***/ }),
 
+/***/ "./src/common/wireToSolid.js":
+/*!***********************************!*\
+  !*** ./src/common/wireToSolid.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _math__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./math */ "./src/common/math.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils */ "./src/common/utils.js");
+/* harmony import */ var _occt_shapes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../occt/shapes */ "./src/occt/shapes.js");
+/* harmony import */ var _compounds__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./compounds */ "./src/common/compounds.js");
+/* harmony import */ var _occt_faces__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../occt/faces */ "./src/occt/faces.js");
+
+
+
+
+
+
+const wireToSolid = {
+    
+    setOpenCascade(openCascade)
+    {
+        this.openCascade = openCascade;
+    },
+
+    /**
+     * 
+     * @param wireShape Wire shape
+     * @param axisPoint [x, y, z]
+     * @param axisDirection [x, y, z]
+     * @param angleDeg angle in degrees
+     */
+    revolveWireToMakeSolid(wireShape, axisPoint, axisDirection, angleDeg) {
+        const oc = this.openCascade;
+
+        let point = _utils__WEBPACK_IMPORTED_MODULE_1__["default"].convertTo_gp_Pnt(axisPoint);
+        let direction = _utils__WEBPACK_IMPORTED_MODULE_1__["default"].convertTo_gp_Dir(axisDirection);
+        
+        let axis = new oc.gp_Ax1_2(point, direction);
+        let angleRad = _math__WEBPACK_IMPORTED_MODULE_0__["default"].degToRad(angleDeg);
+
+        let profileFace = _occt_faces__WEBPACK_IMPORTED_MODULE_4__["default"].wiresToFaces([wireShape]);
+        let revolBuilder = new oc.BRepPrimAPI_MakeRevol_1(profileFace, axis, angleRad, true);
+        let solid = revolBuilder.Shape();
+        return solid;
+        
+        
+        // console.log("first shape: ", shapes.getShapeTypeAsString(revolBuilder.FirstShape_1()))
+        // console.log("last shape: ", shapes.getShapeTypeAsString(revolBuilder.LastShape_1()))
+        //
+        // let firstFaceShape = new oc.BRepBuilderAPI_MakeFace_15(revolBuilder.FirstShape_1(), false);
+        // let endFaceShape = new oc.BRepBuilderAPI_MakeFace_15(revolBuilder.LastShape_1(), false);
+        //
+        // let firstFace = compounds.listCompoundShapes(shape);
+        //
+        // let sewingBuilder = new oc.BRepBuilderAPI_FastSewing(0.01);
+        // sewingBuilder.Add_1(shell);
+        // sewingBuilder.Add_1(startFace);
+        // sewingBuilder.Add_1(endFace);
+        // sewingBuilder.Perform();
+        //
+        // let closedShell = sewingBuilder.GetResult();
+        //
+        // let solidBuilder = new oc.BRepBuilderAPI_MakeSolid_3(closedShell);
+        // let solid = solidBuilder.Solid();
+        //
+        // return solid;
+    }
+    
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (wireToSolid);
+
+/***/ }),
+
 /***/ "./src/common/wires.js":
 /*!*****************************!*\
   !*** ./src/common/wires.js ***!
@@ -54285,7 +54141,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils.js */ "./src/common/utils.js");
-/* harmony import */ var _shapes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./shapes */ "./src/common/shapes.js");
+/* harmony import */ var _occt_shapes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../occt/shapes */ "./src/occt/shapes.js");
+/* harmony import */ var _compounds__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./compounds */ "./src/common/compounds.js");
+/* harmony import */ var _csg_csgTypes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../csg/csgTypes */ "./src/csg/csgTypes.js");
+
+
 
 
 
@@ -54313,24 +54173,6 @@ const wires = {
         let key = `GeomAbs_${continuity}`;
         return oc.GeomAbs_Shape[key];
     },
-
-    // listWiresFromShape(shape) {
-    //     const oc = this.openCascade;
-    //
-    //     if (shape.ShapeType() === oc.TopAbs_ShapeEnum.TopAbs_WIRE)
-    //     {
-    //         return [ shape ];
-    //     }
-    //
-    //     if (shape.ShapeType() === oc.TopAbs_ShapeEnum.TopAbs_COMPOUND)
-    //     {
-    //         return _shapes.listCompoundShapes(shape, oc.TopAbs_ShapeEnum.TopAbs_WIRE)[0];
-    //     }
-    //
-    //     throw new Error("Cannot get wires from shape of type: "+
-    //         _shapes.getShapeTypeAsString(shape)+
-    //         "Given shape in not an TopAbs_WIRE and does not have any TopAbs_WIRE inside.");
-    // },
 
     /**
      * 
@@ -54374,7 +54216,7 @@ const wires = {
         let ptList = new oc.TColgp_Array1OfPnt_2(1, points.length + (closed ? 1 : 0));
         for (let pIndex = 1; pIndex <= points.length; pIndex++)
         {
-            ptList.SetValue(pIndex, _utils_js__WEBPACK_IMPORTED_MODULE_0__["default"].convertToPnt(points[pIndex - 1]));
+            ptList.SetValue(pIndex, _utils_js__WEBPACK_IMPORTED_MODULE_0__["default"].convertTo_gp_Pnt(points[pIndex - 1]));
         }
         
         if (closed) { ptList.SetValue(points.length + 1, ptList.Value(1)); }
@@ -54401,7 +54243,7 @@ const wires = {
         let controlPoints = new oc.TColgp_Array1OfPnt_2(1, points.length);
         for (let i = 1; i <= points.length; i++)
         {
-            let pnt = _utils_js__WEBPACK_IMPORTED_MODULE_0__["default"].convertToPnt(points[i-1]);
+            let pnt = _utils_js__WEBPACK_IMPORTED_MODULE_0__["default"].convertTo_gp_Pnt(points[i-1]);
             controlPoints.SetValue(i, pnt);
         }
         
@@ -54411,6 +54253,69 @@ const wires = {
         let wire = new oc.BRepBuilderAPI_MakeWire_2(edge).Wire();
         
         return wire;
+    },
+
+    /**
+     * 
+     * @param svgEdges An array of SVGEdge
+     * @param isClosed
+     */
+    makeBezierFromSVGPath(svgEdges, isClosed) {
+        const oc = this.openCascade;
+
+        let mkWire = new oc.BRepBuilderAPI_MakeWire_1();
+
+        svgEdges.forEach(svgEdge => {
+            switch(svgEdge.EdgeType)
+            {
+                case _csg_csgTypes__WEBPACK_IMPORTED_MODULE_3__.SVGEdgeType.Line: {
+                    let a = new oc.gp_Pnt_3(svgEdge.Points[0][0], svgEdge.Points[0][1], 0);
+                    let b = new oc.gp_Pnt_3(svgEdge.Points[1][0], svgEdge.Points[1][1], 0);
+
+                    let edge = new oc.BRepBuilderAPI_MakeEdge_3(a, b).Edge();
+                    mkWire.Add_1(edge);
+                    break;
+                }
+                
+                case _csg_csgTypes__WEBPACK_IMPORTED_MODULE_3__.SVGEdgeType.BezierQuadratic:
+                case _csg_csgTypes__WEBPACK_IMPORTED_MODULE_3__.SVGEdgeType.BezierCubic: {
+                    let controlPoints = _utils_js__WEBPACK_IMPORTED_MODULE_0__["default"].convertTo_TColgp_Array1OfPnt(svgEdge.Points);
+                    let bezierCurve = new oc.Geom_BezierCurve_1(controlPoints);
+                    let geomCurveHandle2 = new oc.Handle_Geom_Curve_2(bezierCurve);
+                    let edge = new oc.BRepBuilderAPI_MakeEdge_24(geomCurveHandle2).Edge();
+                    mkWire.Add_1(edge);
+                    break;
+                }
+            }
+        });
+
+        let svgPathWire = mkWire.Wire();
+        return svgPathWire;
+    },
+
+    /**
+     * 
+     * @param svgPaths [ [svgPath], ...]
+     */
+    makeSVGPathsWire(svgPaths) {
+        
+        let wires = [];
+        svgPaths.forEach(svgPath => {
+            try {
+                let wire = this.makeBezierFromSVGPath(svgPath.Edges, svgPath.IsClosed);
+                wires.push(wire);    
+            }
+            catch(error)
+            {
+                console.error("error while making svg path wire: ", error);
+            }
+            
+        });
+        
+        console.log("wires: ",wires)
+        
+        let compound = _compounds__WEBPACK_IMPORTED_MODULE_2__["default"].makeCompound(wires);
+        return compound;
     },
 
     /**
@@ -54427,7 +54332,7 @@ const wires = {
         let controlPoints = new oc.TColgp_Array1OfPnt_2(1, points.length);
         for (let i = 1; i <= points.length; i++)
         {
-            let pnt = _utils_js__WEBPACK_IMPORTED_MODULE_0__["default"].convertToPnt(points[i-1]);
+            let pnt = _utils_js__WEBPACK_IMPORTED_MODULE_0__["default"].convertTo_gp_Pnt(points[i-1]);
             controlPoints.SetValue(i, pnt);
         }
         
@@ -54475,8 +54380,7 @@ const wires = {
 
         joinType = _utils_js__WEBPACK_IMPORTED_MODULE_0__["default"].parseJoinType(joinType);
         
-        // let wire = this.listWiresFromShape(wireShape);
-        wireShape = _shapes__WEBPACK_IMPORTED_MODULE_1__["default"].listWiresInsideCompound(wireShape)[0];
+        wireShape = _compounds__WEBPACK_IMPORTED_MODULE_2__["default"].listWiresInsideCompound(wireShape)[0];
         let wire = new oc.TopoDS.Wire_1(wireShape);
  
         let offseter = new oc.BRepOffsetAPI_MakeOffset_3(wire, joinType, false);
@@ -54495,18 +54399,18 @@ const wires = {
      * @param wiresShape A compound of wires.
      */
     reconstructWires(wireShapes) {
-        wireShapes = wireShapes.map(wireShape => _shapes__WEBPACK_IMPORTED_MODULE_1__["default"].listWiresInsideCompound(wireShape)).flat(1);
+        wireShapes = wireShapes.map(wireShape => _occt_shapes__WEBPACK_IMPORTED_MODULE_1__["default"].listWiresInsideCompound(wireShape)).flat(1);
 
         let edges = [];
         wireShapes.forEach(wireShape => {
             openCascadeHelper.ForEachEdge(wireShape, (index, edge) => {
                 edges.push(edge);
                 console.log("### adding edge: ",edge);
-                console.log("### adding edge: of type: ", _shapes__WEBPACK_IMPORTED_MODULE_1__["default"].getShapeTypeAsString(edge));
+                console.log("### adding edge: of type: ", _occt_shapes__WEBPACK_IMPORTED_MODULE_1__["default"].getShapeTypeAsString(edge));
             });
         })
 
-        let edgesCompound = this.makeCompound(edges);
+        let edgesCompound = _compounds__WEBPACK_IMPORTED_MODULE_2__["default"].makeCompound(edges);
         let wiresCompound = new oc.TopoDS_Wire();
         let wireDone = oc.BOPAlgo_Tools.EdgesToWires(edgesCompound, wiresCompound, false, .001);
 
@@ -54767,7 +54671,7 @@ class CSGNodeCalculator
     {
         const oc = this.#geometry.openCascade;
         
-        if (shape.ShapeType() === oc.TopAbs_ShapeEnum.TopAbs_WIRE)
+        if (shape.ShapeType() === oc.TopAbs_ShapeEnum.TopAbs_WIRE || true)
         {
             let facesAndEdges = this.#prepareResultMesh2(shape);
             let faceListData = {
@@ -54884,7 +54788,7 @@ class CSGOperationCalculator
 
     #union(nodes) {
         let shapes = nodes.map( node => this.#nodeCalculator.calculateNodeShapesWithCache(node) ).flat(1);
-        let union = this.#geometry.makeUnion(shapes);
+        let union = this.#geometry.booleans.makeUnion(shapes);
         return [ union ];
     }
 
@@ -54916,7 +54820,7 @@ class CSGOperationCalculator
 
     #join(nodes) {
         let shapes = nodes.map( node => this.#nodeCalculator.calculateNodeShapesWithCache(node) ).flat(1);
-        let joined = this.#geometry.makeCompound(shapes);
+        let joined = this.#geometry.compounds.makeCompound(shapes);
         return [ joined ];
     }
 
@@ -55055,6 +54959,14 @@ class CSGSolidFactory
             case _csgTypes_js__WEBPACK_IMPORTED_MODULE_0__.CSGSolidType.ExtrudeWire:
                 shape = this.#createExtrudeWire(node.Solid);
                 break;
+
+            case _csgTypes_js__WEBPACK_IMPORTED_MODULE_0__.CSGSolidType.RevolveWire:
+                shape = this.#createRevolveWire(node.Solid);
+                break;
+
+            case _csgTypes_js__WEBPACK_IMPORTED_MODULE_0__.CSGSolidType.SweepWire:
+                shape = this.#createSweepWire(node.Solid);
+                break;
                 
             default:
                 throw new Error(`Solid type ${node.Solid.Type} is not supported.`)
@@ -55107,7 +55019,7 @@ class CSGSolidFactory
             
         const face = this.#geometry.makeFaceFromLinesAndPlane(lines, planePoint, planeNormal, planeRotationZ);
         // const dir = [0, 0, solid.LengthUp];
-        let extrude = this.#geometry.makeExtrude(face, planeNormal, solid.LengthUp, solid.LengthDown);
+        let extrude = this.#geometry.sweeps.makeExtrude(face, planeNormal, solid.LengthUp, solid.LengthDown);
         return extrude;
     }
 
@@ -55118,11 +55030,33 @@ class CSGSolidFactory
         let lengthDown = solid.LengthDown;
 
         let wireShape = this.#nodeCalculator.calculateNodeShapesWithCache(wireNode)[0];
-        let face = this.#geometry.wiresToFaces([wireShape]);
+        let face = this.#geometry.faces.wiresToFaces([wireShape]);
         
-        let extrude = this.#geometry.makeExtrude(face, direction, lengthUp, lengthDown);
-        
+        let extrude = this.#geometry.sweeps.makeExtrude(face, direction, lengthUp, lengthDown);
         return extrude;
+    }
+
+    #createRevolveWire(solid) {
+        let wireNode = solid.Wire;
+        let axisPoint = solid.AxisPoint;
+        let axisDirection = solid.AxisDirection;
+        let angleDeg = solid.Angle;
+
+        let wireShape = this.#nodeCalculator.calculateNodeShapesWithCache(wireNode)[0];
+        
+        let revolve = this.#geometry.wireToSolid.revolveWireToMakeSolid(wireShape, axisPoint, axisDirection, angleDeg);
+        return revolve;
+    }
+    
+    #createSweepWire(solid) {
+        let profileNode = solid.Profile;
+        let pathNode = solid.Path;
+        
+        let profileShape = this.#nodeCalculator.calculateNodeShapesWithCache(profileNode)[0];
+        let pathShape = this.#nodeCalculator.calculateNodeShapesWithCache(pathNode)[0];
+
+        let sweep = this.#geometry.sweeps.pipeSolidFromWire(profileShape, pathShape);
+        return sweep;
     }
 }
 
@@ -55255,7 +55189,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "CSGOperationType": () => (/* binding */ CSGOperationType),
 /* harmony export */   "CSGSolidType": () => (/* binding */ CSGSolidType),
 /* harmony export */   "CSGWireOperationType": () => (/* binding */ CSGWireOperationType),
-/* harmony export */   "CSGWireType": () => (/* binding */ CSGWireType)
+/* harmony export */   "CSGWireType": () => (/* binding */ CSGWireType),
+/* harmony export */   "SVGEdgeType": () => (/* binding */ SVGEdgeType)
 /* harmony export */ });
 let  CSGNodeType =
     {
@@ -55297,7 +55232,9 @@ let CSGSolidType =
         Cylinder: "Cylinder",
         Mesh: "Mesh",
         Extrude: "Extrude",
-        ExtrudeWire: "ExtrudeWire"
+        ExtrudeWire: "ExtrudeWire",
+        RevolveWire: "RevolveWire",
+        SweepWire: "SweepWire"
     }
     
 let CSGWireType =
@@ -55305,6 +55242,14 @@ let CSGWireType =
         Polygon: "Polygon",
         Bezier: "Bezier",
         BSpline: "BSpline"
+    }
+
+let SVGEdgeType = 
+    {
+        Line: "Line",
+        BezierCubic: "BezierCubic",
+        BezierQuadratic: "BezierQuadratic"
+        //TODO add Arc: "Arc"
     }
     
 
@@ -55377,9 +55322,43 @@ class CSGWireFactory
     #createBezier(wireData) {
         let continuity = this.#geometry.wires.parseContinuityAs_GeomAbs_Shape(wireData.CurveContinuity);
         
+        if (wireData.Points !== undefined && wireData.Points != null)
+        {
+            return this.#fitBezier(wireData);
+        }
+        
+        else if (wireData.BezierSegments !== undefined && wireData.BezierSegments !== null)
+        {
+            return this.#createBezierFromSVGPath(wireData);
+        }
+        
+        else if (wireData.SVGPaths !== undefined && wireData.SVGPaths !== null)
+        {
+            return this.#createWireFromSVGPaths(wireData);
+        }
+        
+        else
+        {
+            throw new Error("WireData was wrong. WireData: "+JSON.stringify(wireData, null, 2));
+        }
+    }
+
+    #createBezierFromSVGPath(wireData) {
+        let wireShape = this.#geometry.wires.makeBezierFromSVGPath(wireData.BezierSegments, wireData.IsClosed);
+        return wireShape;
+    }
+
+    #createWireFromSVGPaths(wireData) {
+        let wireShape = this.#geometry.wires.makeSVGPathsWire(wireData.SVGPaths);
+        return wireShape;
+    }
+    
+    #fitBezier(wireData) {
+        let continuity = this.#geometry.wires.parseContinuityAs_GeomAbs_Shape(wireData.CurveContinuity);
+
         let wireShape = this.#geometry.wires.makeBezierWireFromControlPoints(wireData.Points, wireData.IsClosed, continuity);
         // let wireShape = this.#geometry.wires.fitBezierWireFromPoints(wireData.Points, wireData.IsClosed, continuity);
-        
+
         return wireShape;
     }
 }
@@ -55468,6 +55447,425 @@ class CSGWireOperationCalculator
 
 /***/ }),
 
+/***/ "./src/occt/booleans.js":
+/*!******************************!*\
+  !*** ./src/occt/booleans.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _common_math__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../common/math */ "./src/common/math.js");
+/* harmony import */ var _common_compounds__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../common/compounds */ "./src/common/compounds.js");
+
+
+
+const booleans = {
+    setOpenCascade(openCascade) {
+        this.oc = openCascade;
+    },
+
+    makeUnion(shapesToJoin, keepEdges) {
+        const oc = this.oc;
+
+        let explodedShapes = shapesToJoin
+            .map(shape => _common_compounds__WEBPACK_IMPORTED_MODULE_1__["default"].deCompoundShape(shape))
+            .flat(1);
+
+        let combined = explodedShapes[0];
+
+        for (let i = 1; i < explodedShapes.length; i++) {
+            let shape1 = combined;
+            let shape2 = explodedShapes[i];
+
+            let progressRange = new oc.Message_ProgressRange_1();
+            let combinedFuse = new oc.BRepAlgoAPI_Fuse_3(shape1, shape2, progressRange);
+
+            // combinedFuse.SetFuzzyValue(fuzzValue);
+            // combinedFuse.Build(progressRange);
+            combined = combinedFuse.Shape();
+        }
+
+        if (!keepEdges) {
+            let fusor = new oc.ShapeUpgrade_UnifySameDomain_2(combined, true, false, false);
+            fusor.Build();
+            combined = fusor.Shape();
+        }
+
+        return combined;
+    },
+    
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (booleans);
+
+/***/ }),
+
+/***/ "./src/occt/faces.js":
+/*!***************************!*\
+  !*** ./src/occt/faces.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _common_math__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../common/math */ "./src/common/math.js");
+/* harmony import */ var _common_compounds__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../common/compounds */ "./src/common/compounds.js");
+
+
+
+let faces = {
+
+    setOpenCascade(openCascade) {
+        this.oc = openCascade;
+    },
+
+    /**
+     * @param wireShapes [wire, wire, ...] Array of shapes
+     * @return {TopoDS_Face}
+     */
+    wiresToFaces(wireShapes) {
+        const oc = this.oc;
+
+        wireShapes = wireShapes.map(wireShape => _common_compounds__WEBPACK_IMPORTED_MODULE_1__["default"].listWiresInsideCompound(wireShape)).flat(1);
+        // wireShapes = wireShapes.map(wireShape => compounds.listWiresInsideCompound(wireShape)).flat(1);
+
+        let wiresCompound = _common_compounds__WEBPACK_IMPORTED_MODULE_1__["default"].makeCompound(wireShapes);
+
+        let face = new oc.TopoDS_Face();
+        let done = oc.BOPAlgo_Tools.WiresToFaces(wiresCompound, face, .001);
+
+        return face;
+    },
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (faces);
+
+/***/ }),
+
+/***/ "./src/occt/shapes.js":
+/*!****************************!*\
+  !*** ./src/occt/shapes.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _common_math__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../common/math */ "./src/common/math.js");
+
+
+let shapes = {
+    
+    setOpenCascade(openCascade) {
+        this.oc = openCascade;
+    },
+    
+    // export declare type TopAbs_ShapeEnum = {
+    //     TopAbs_COMPOUND: {};
+    //     TopAbs_COMPSOLID: {};
+    //     TopAbs_SOLID: {};
+    //     TopAbs_SHELL: {};
+    //     TopAbs_FACE: {};
+    //     TopAbs_WIRE: {};
+    //     TopAbs_EDGE: {};
+    //     TopAbs_VERTEX: {};
+    //     TopAbs_SHAPE: {};
+    // }
+    getShapeTypeAsString(shape) {
+        const oc = this.oc;
+        
+        let t = shape.ShapeType()
+        if (t === oc.TopAbs_ShapeEnum.TopAbs_COMPOUND) return "TopAbs_COMPOUND";
+        if (t === oc.TopAbs_ShapeEnum.TopAbs_COMPSOLID) return "TopAbs_COMPSOLID";
+        if (t === oc.TopAbs_ShapeEnum.TopAbs_SOLID) return "TopAbs_SOLID";
+        if (t === oc.TopAbs_ShapeEnum.TopAbs_SHELL) return "TopAbs_SHELL";
+        if (t === oc.TopAbs_ShapeEnum.TopAbs_FACE) return "TopAbs_FACE";
+        if (t === oc.TopAbs_ShapeEnum.TopAbs_WIRE) return "TopAbs_WIRE";
+        if (t === oc.TopAbs_ShapeEnum.TopAbs_EDGE) return "TopAbs_EDGE";
+        if (t === oc.TopAbs_ShapeEnum.TopAbs_VERTEX) return "TopAbs_VERTEX";
+        if (t === oc.TopAbs_ShapeEnum.TopAbs_SHAPE) return "TopAbs_SHAPE";
+        
+        throw new Error("Unknowsn shape type: '"+t+"'");
+    },
+    
+    clone() {
+        let transformation = new this.oc.gp_Trsf_1();
+        transformation.SetTranslation_1(new this.oc.gp_Vec_4(0,0,0));
+        let location = new this.oc.TopLoc_Location_2(transformation);
+        return shape.Moved(location, true);
+    },
+    
+    /**
+     * 
+     * @param shape
+     * @param v [x,y,z]
+     */
+    translate(shape, v) {
+        let transformation = new this.oc.gp_Trsf_1();
+        transformation.SetTranslation_1(new this.oc.gp_Vec_4(v[0], v[1], v[2]));
+        let location = new this.oc.TopLoc_Location_2(transformation);
+        shape.Move(location, true);
+        return shape;
+    },
+    
+    /**
+     *
+     * @param shape
+     * @param v gp_Vec
+     */
+    translate_gp_Vec(shape, v) {
+        let transformation = new this.oc.gp_Trsf_1();
+        transformation.SetTranslation_1(v);
+        let location = new this.oc.TopLoc_Location_2(transformation);
+        shape.Move(location, true);
+        return shape;
+    },
+    
+    rotate_gp_Quaternion(shape, q) {
+        let transformation = new this.oc.gp_Trsf_1();
+        transformation.SetRotation_2(q);
+        let location = new this.oc.TopLoc_Location_2(transformation);
+        shape.Move(location, true);
+        return shape;
+    },
+
+    /**
+     * 
+     * @param shape
+     * @param v gp_Vec
+     * @param q gp-Quaternion
+     * @returns {*}
+     */
+    translateAndRotate(shape, v, q) {
+        let transformation = new this.oc.gp_Trsf_1();
+        transformation.SetRotationPart(q);
+        transformation.SetTranslationPart(v);
+        let location = new this.oc.TopLoc_Location_2(transformation);
+        shape.Move(location, true);
+        return shape;
+    },
+    
+    listShapeVerticesAsTopoDS_Vertex(shape) {
+        const oc = this.oc;
+        
+        let vertices = [];
+
+        let anExplorer = new oc.TopExp_Explorer_1();
+        for (anExplorer.Init(shape, oc.TopAbs_ShapeEnum.TopAbs_VERTEX, oc.TopAbs_ShapeEnum.TopAbs_SHAPE); anExplorer.More(); anExplorer.Next()) {
+            vertices.push(anExplorer.Current());
+        }
+        return vertices;
+    },
+    /**
+     * 
+     * @param shape
+     * @returns {*[]} list shape's vertices as gp_Points 
+     */
+    listShapeVerticesAsPoints(shape) {
+        const oc = this.oc;
+        
+        let points = [];
+
+        let anExplorer = new oc.TopExp_Explorer_1();
+        for (anExplorer.Init(shape, oc.TopAbs_ShapeEnum.TopAbs_VERTEX, oc.TopAbs_ShapeEnum.TopAbs_SHAPE); anExplorer.More(); anExplorer.Next()) {
+            // let vertex = anExplorer.Current();
+            let vertex = oc.TopoDS.Vertex_1(anExplorer.Current());
+            
+            // //console.log("listShapeVerticesAsPoints vertex: "+this.getShapeType(vertex))
+            let gp_Pnt_point = oc.BRep_Tool.Pnt(vertex);
+            points.push(gp_Pnt_point);
+        }
+        return points;
+    },
+
+    /**
+     * Checks shape to plane orientaiton.
+     * @param shape
+     * @param planePoint [x,y,z]
+     * @param planeNormal [x,y,z]
+     */
+    getShapeToPlaneOrientation(shape, planePoint, planeNormal)
+    {
+        //console.log("getShapeToPlaneOrientation() shape: "+shape);
+        
+        const oc = this.oc;
+        
+        const ppXYZ = new oc.gp_XYZ_2(planePoint[0], planePoint[1], planePoint[2]);
+        const pnXYZ = new oc.gp_XYZ_2(planeNormal[0], planeNormal[1], planeNormal[2]);
+        // pnXYZ.Normalize();
+        
+        const result = {
+            hasPositiveVertices: false,
+            hasNegativeVertices: false,
+            hasOnPlaneZeroVertices: false,
+            
+            get isAllPositive() { return this.hasPositiveVertices && !this.hasNegativeVertices && !this.hasOnPlaneZeroVertices },
+            get isPositive() { return this.hasPositiveVertices && !this.hasNegativeVertices },
+            get isAllNegative() { return !this.hasPositiveVertices && this.hasNegativeVertices && !this.hasOnPlaneZeroVertices },
+            get isNegative() { return !this.hasPositiveVertices && this.hasNegativeVertices },
+            get isAllOnPlane() { return !this.hasPositiveVertices && !this.hasNegativeVertices && this.hasOnPlaneZeroVertices }
+        }
+        
+        this.listShapeVerticesAsPoints(shape).forEach(vertex_gpPnt => {
+            const planeToVertexXYZ = vertex_gpPnt.XYZ().Subtracted(ppXYZ);
+            const dot = planeToVertexXYZ.Dot(pnXYZ);
+            
+            // on plane ?
+            if (dot <= Math.abs(_common_math__WEBPACK_IMPORTED_MODULE_0__["default"].kEpsilon)) {
+                result.hasOnPlaneZeroVertices = true;
+            }
+            
+            // on positive side of the plane ?
+            else if (dot > 0) {
+                result.hasPositiveVertices = true;
+            }
+
+            // on negative side of the plane ?
+            else if (dot < 0) {
+                result.hasNegativeVertices = true;
+            }
+        });
+
+        //console.log("getShapeToPlaneOrientation() result: "+JSON.stringify(result, null, 2));
+        
+        return result;
+    },
+
+    isAnyShapeVertexOnThePositiveSideOfThePlane(shape, planePoint, planeNormal)
+    {
+        const oc = this.oc;
+
+        const ppXYZ = new oc.gp_XYZ_2(planePoint[0], planePoint[1], planePoint[2]);
+        const pnXYZ = new oc.gp_XYZ_2(planeNormal[0], planeNormal[1], planeNormal[2]);
+
+        this.listShapeVerticesAsPoints(shape).forEach(vertex_gpPnt => {
+            const planeToVertexXYZ = vertex_gpPnt.XYZ().Subtracted(ppXYZ);
+            const dot = planeToVertexXYZ.Dot(pnXYZ);
+            if (dot > 0) return true;
+        });
+
+        return false;
+    }
+        
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (shapes);
+
+/***/ }),
+
+/***/ "./src/occt/sweeps.js":
+/*!****************************!*\
+  !*** ./src/occt/sweeps.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _common_math__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../common/math */ "./src/common/math.js");
+/* harmony import */ var _booleans__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./booleans */ "./src/occt/booleans.js");
+/* harmony import */ var _faces__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./faces */ "./src/occt/faces.js");
+/* harmony import */ var opencascade_js_dist_opencascade_full__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! opencascade.js/dist/opencascade.full */ "./node_modules/opencascade.js/dist/opencascade.full.js");
+
+
+
+
+
+const sweeps = {
+    setOpenCascade(openCascade) {
+        this.oc = openCascade;
+    },
+
+    /**
+     * 
+     * @param wire TopoDS_Wire shape
+     * @param direction [x, y, z]
+     * @param lengthUp Number
+     * @param lengthDown Number
+     */
+    extrudeSolidFromWire(wire, direction, lengthUp, lengthDown) {
+        let face = _faces__WEBPACK_IMPORTED_MODULE_2__["default"].wiresToFaces([wire]);
+        let extrude = this.makeExtrude(face, direction, lengthUp, lengthDown);
+        return extrude;
+    },
+    
+    /**
+     *
+     * @param face TopoDS_Face shape.
+     * @param dir [x, y, z]
+     * @param length how for along dir to extrude
+     * @param lengthDown how for against dir to extrude
+     */
+    makeExtrude(face, dir, length, lengthDown) {
+        const oc = this.oc;
+
+        const shapesToJoin = [];
+
+        console.log("makeExtrude oc: ", oc)
+        console.log("makeExtrude face: ", face)
+        console.log("makeExtrude dir: ", dir)
+        console.log("makeExtrude length: ", length)
+        console.log("makeExtrude lengthDown: ", lengthDown)
+
+        if (length > 0) {
+            const aPrismVec = new oc.gp_Vec_4(dir[0], dir[1], dir[2]);
+            aPrismVec.Normalize();
+            aPrismVec.Multiply(length);
+
+            console.log("makeExtrude making body for length, aPrismVec: ", aPrismVec)
+            const body = new oc.BRepPrimAPI_MakePrism_1(face, aPrismVec, false, true);
+            console.log("makeExtrude body created")
+            shapesToJoin.push(body.Shape());
+        }
+
+        if (lengthDown > 0) {
+            const aPrismVecDown = new oc.gp_Vec_4(dir[0], dir[1], dir[2]);
+            aPrismVecDown.Normalize();
+            aPrismVecDown.Multiply(lengthDown *-1);
+
+            console.log("makeExtrude making body for lengthDown, aPrismVecDown: ", aPrismVecDown)
+            const bodyDown = new oc.BRepPrimAPI_MakePrism_1(face, aPrismVecDown, false, true);
+            console.log("makeExtrude body created")
+            shapesToJoin.push(bodyDown.Shape());
+        }
+
+        let shape = null;
+        if (shapesToJoin.length > 1) {
+            shape = _booleans__WEBPACK_IMPORTED_MODULE_1__["default"].makeUnion(shapesToJoin);
+        }
+        else
+        {
+            shape = shapesToJoin[0];
+        }
+
+        return shape;
+    },
+    
+    makePipeSolid(profileFace, pathWire) {
+        const oc = this.oc;
+        const pipeSolidAPI = new oc.BRepOffsetAPI_MakePipe_1(pathWire, profileFace);
+        const pipeSolid = pipeSolidAPI.Shape();
+        return pipeSolid;
+    },
+    
+    pipeSolidFromWire(profileWire, pathWire) {
+        let face = _faces__WEBPACK_IMPORTED_MODULE_2__["default"].wiresToFaces([profileWire]);
+        let pipeSolid = this.makePipeSolid(face, pathWire);
+        return pipeSolid;
+    }
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sweeps);
+
+/***/ }),
+
 /***/ "./src/tests/testOperations.js":
 /*!*************************************!*\
   !*** ./src/tests/testOperations.js ***!
@@ -55489,7 +55887,7 @@ function testUnion()
     console.log("box: ",box);
     let sphere = _common_geometry_js__WEBPACK_IMPORTED_MODULE_0__["default"].makeSphere(0,0,0,15);
     console.log("sphere: ",sphere);
-    let union = _common_geometry_js__WEBPACK_IMPORTED_MODULE_0__["default"].makeUnion([box, sphere],true);
+    let union = _common_geometry_js__WEBPACK_IMPORTED_MODULE_0__["default"].booleans.makeUnion([box, sphere],true);
     console.log("union: ",union);
     
     return union;
@@ -55516,14 +55914,14 @@ function testCompounds()
     let box2 = _common_geometry_js__WEBPACK_IMPORTED_MODULE_0__["default"].makeBox(0,0,0,70,80,90);
     let box3 = _common_geometry_js__WEBPACK_IMPORTED_MODULE_0__["default"].makeBox(0,0,0,100,110,120);
     
-    let compound0 = _common_geometry_js__WEBPACK_IMPORTED_MODULE_0__["default"].makeCompound([box0, box1]);
-    let compound1 = _common_geometry_js__WEBPACK_IMPORTED_MODULE_0__["default"].makeCompound([box2, box3]);
+    let compound0 = _common_geometry_js__WEBPACK_IMPORTED_MODULE_0__["default"].compounds.makeCompound([box0, box1]);
+    let compound1 = _common_geometry_js__WEBPACK_IMPORTED_MODULE_0__["default"].compounds.makeCompound([box2, box3]);
     
-    let compoundOfCompounds = _common_geometry_js__WEBPACK_IMPORTED_MODULE_0__["default"].makeCompound([compound0, compound1]);
+    let compoundOfCompounds = _common_geometry_js__WEBPACK_IMPORTED_MODULE_0__["default"].compounds.makeCompound([compound0, compound1]);
     console.log("compoundOfCompounds is: ",compoundOfCompounds)
     console.log("compoundOfCompounds type is: ",_common_geometry_js__WEBPACK_IMPORTED_MODULE_0__["default"].shapes.getShapeTypeAsString(compoundOfCompounds));
 
-    let listed = _common_geometry_js__WEBPACK_IMPORTED_MODULE_0__["default"].shapes.listCompoundShapes(compoundOfCompounds, _common_geometry_js__WEBPACK_IMPORTED_MODULE_0__["default"].openCascade.TopAbs_ShapeEnum.TopAbs_COMPOUND);
+    let listed = _common_geometry_js__WEBPACK_IMPORTED_MODULE_0__["default"].compounds.listCompoundShapes(compoundOfCompounds, _common_geometry_js__WEBPACK_IMPORTED_MODULE_0__["default"].openCascade.TopAbs_ShapeEnum.TopAbs_COMPOUND);
     console.log("listed type is: ",listed);
 }
 
