@@ -56192,13 +56192,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _common_math__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../common/math */ "./src/common/math.js");
-/* harmony import */ var _booleans__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./booleans */ "./src/occt/booleans.ts");
-/* harmony import */ var _faces__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./faces */ "./src/occt/faces.ts");
-/* harmony import */ var opencascade_js_dist_opencascade_full__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! opencascade.js/dist/opencascade.full */ "./node_modules/opencascade.js/dist/opencascade.full.js");
-/* harmony import */ var _common_compounds__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../common/compounds */ "./src/common/compounds.ts");
-
-
+/* harmony import */ var _booleans__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./booleans */ "./src/occt/booleans.ts");
+/* harmony import */ var _faces__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./faces */ "./src/occt/faces.ts");
+/* harmony import */ var _common_compounds__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../common/compounds */ "./src/common/compounds.ts");
 
 
 
@@ -56214,7 +56210,7 @@ var sweeps = {
      * @param lengthDown Number
      */
     extrudeSolidFromWire: function (wire, direction, lengthUp, lengthDown) {
-        var face = _faces__WEBPACK_IMPORTED_MODULE_2__["default"].wiresToFaces([wire]);
+        var face = _faces__WEBPACK_IMPORTED_MODULE_1__["default"].wiresToFaces([wire]);
         var extrude = this.makeExtrude(face, direction, lengthUp, lengthDown);
         face.delete();
         return extrude;
@@ -56257,7 +56253,7 @@ var sweeps = {
         }
         var shape = null;
         if (shapesToJoin.length > 1) {
-            shape = _booleans__WEBPACK_IMPORTED_MODULE_1__["default"].makeUnion(shapesToJoin);
+            shape = _booleans__WEBPACK_IMPORTED_MODULE_0__["default"].makeUnion(shapesToJoin);
         }
         else {
             shape = shapesToJoin[0];
@@ -56266,15 +56262,19 @@ var sweeps = {
     },
     makePipeSolid: function (profileFace, pathWire) {
         var oc = this.oc;
-        var pipeSolidAPI = new oc.BRepOffsetAPI_MakePipe_1(pathWire, profileFace);
+        var pipeSolidAPI = new oc.BRepOffsetAPI_MakePipe_2(pathWire, profileFace, oc.GeomFill_Trihedron.GeomFill_IsFrenet, false);
+        // export declare class BRepOffsetAPI_MakePipe_2 extends BRepOffsetAPI_MakePipe {
+        //         constructor(Spine: TopoDS_Wire, Profile: TopoDS_Shape, aMode: GeomFill_Trihedron, ForceApproxC1: Standard_Boolean);
+        //     }
+        // pipeSolidAPI.SetMode(true);
         var pipeSolid = pipeSolidAPI.Shape();
         return pipeSolid;
     },
     pipeSolidFromWire: function (profileWire, pathWire) {
         var oc = this.oc;
-        pathWire = _common_compounds__WEBPACK_IMPORTED_MODULE_4__["default"].listWiresInsideCompound(pathWire)[0];
+        pathWire = _common_compounds__WEBPACK_IMPORTED_MODULE_2__["default"].listWiresInsideCompound(pathWire)[0];
         var wire = new oc.TopoDS.Wire_1(pathWire);
-        var face = _faces__WEBPACK_IMPORTED_MODULE_2__["default"].wiresToFaces([profileWire]);
+        var face = _faces__WEBPACK_IMPORTED_MODULE_1__["default"].wiresToFaces([profileWire]);
         var pipeSolid = this.makePipeSolid(face, wire);
         face.delete();
         wire.delete();
