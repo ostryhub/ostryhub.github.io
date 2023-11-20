@@ -34,473 +34,473 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ACESFilmicToneMapping": () => (/* binding */ ACESFilmicToneMapping),
-/* harmony export */   "AddEquation": () => (/* binding */ AddEquation),
-/* harmony export */   "AddOperation": () => (/* binding */ AddOperation),
-/* harmony export */   "AdditiveAnimationBlendMode": () => (/* binding */ AdditiveAnimationBlendMode),
-/* harmony export */   "AdditiveBlending": () => (/* binding */ AdditiveBlending),
-/* harmony export */   "AlphaFormat": () => (/* binding */ AlphaFormat),
-/* harmony export */   "AlwaysDepth": () => (/* binding */ AlwaysDepth),
-/* harmony export */   "AlwaysStencilFunc": () => (/* binding */ AlwaysStencilFunc),
-/* harmony export */   "AmbientLight": () => (/* binding */ AmbientLight),
-/* harmony export */   "AmbientLightProbe": () => (/* binding */ AmbientLightProbe),
-/* harmony export */   "AnimationClip": () => (/* binding */ AnimationClip),
-/* harmony export */   "AnimationLoader": () => (/* binding */ AnimationLoader),
-/* harmony export */   "AnimationMixer": () => (/* binding */ AnimationMixer),
-/* harmony export */   "AnimationObjectGroup": () => (/* binding */ AnimationObjectGroup),
-/* harmony export */   "AnimationUtils": () => (/* binding */ AnimationUtils),
-/* harmony export */   "ArcCurve": () => (/* binding */ ArcCurve),
-/* harmony export */   "ArrayCamera": () => (/* binding */ ArrayCamera),
-/* harmony export */   "ArrowHelper": () => (/* binding */ ArrowHelper),
-/* harmony export */   "Audio": () => (/* binding */ Audio),
-/* harmony export */   "AudioAnalyser": () => (/* binding */ AudioAnalyser),
-/* harmony export */   "AudioContext": () => (/* binding */ AudioContext),
-/* harmony export */   "AudioListener": () => (/* binding */ AudioListener),
-/* harmony export */   "AudioLoader": () => (/* binding */ AudioLoader),
-/* harmony export */   "AxesHelper": () => (/* binding */ AxesHelper),
-/* harmony export */   "AxisHelper": () => (/* binding */ AxisHelper),
-/* harmony export */   "BackSide": () => (/* binding */ BackSide),
-/* harmony export */   "BasicDepthPacking": () => (/* binding */ BasicDepthPacking),
-/* harmony export */   "BasicShadowMap": () => (/* binding */ BasicShadowMap),
-/* harmony export */   "BinaryTextureLoader": () => (/* binding */ BinaryTextureLoader),
-/* harmony export */   "Bone": () => (/* binding */ Bone),
-/* harmony export */   "BooleanKeyframeTrack": () => (/* binding */ BooleanKeyframeTrack),
-/* harmony export */   "BoundingBoxHelper": () => (/* binding */ BoundingBoxHelper),
-/* harmony export */   "Box2": () => (/* binding */ Box2),
-/* harmony export */   "Box3": () => (/* binding */ Box3),
-/* harmony export */   "Box3Helper": () => (/* binding */ Box3Helper),
-/* harmony export */   "BoxBufferGeometry": () => (/* binding */ BoxBufferGeometry),
-/* harmony export */   "BoxGeometry": () => (/* binding */ BoxGeometry),
-/* harmony export */   "BoxHelper": () => (/* binding */ BoxHelper),
-/* harmony export */   "BufferAttribute": () => (/* binding */ BufferAttribute),
-/* harmony export */   "BufferGeometry": () => (/* binding */ BufferGeometry),
-/* harmony export */   "BufferGeometryLoader": () => (/* binding */ BufferGeometryLoader),
-/* harmony export */   "ByteType": () => (/* binding */ ByteType),
-/* harmony export */   "Cache": () => (/* binding */ Cache),
-/* harmony export */   "Camera": () => (/* binding */ Camera),
-/* harmony export */   "CameraHelper": () => (/* binding */ CameraHelper),
-/* harmony export */   "CanvasRenderer": () => (/* binding */ CanvasRenderer),
-/* harmony export */   "CanvasTexture": () => (/* binding */ CanvasTexture),
-/* harmony export */   "CatmullRomCurve3": () => (/* binding */ CatmullRomCurve3),
-/* harmony export */   "CineonToneMapping": () => (/* binding */ CineonToneMapping),
-/* harmony export */   "CircleBufferGeometry": () => (/* binding */ CircleBufferGeometry),
-/* harmony export */   "CircleGeometry": () => (/* binding */ CircleGeometry),
-/* harmony export */   "ClampToEdgeWrapping": () => (/* binding */ ClampToEdgeWrapping),
-/* harmony export */   "Clock": () => (/* binding */ Clock),
-/* harmony export */   "ClosedSplineCurve3": () => (/* binding */ ClosedSplineCurve3),
-/* harmony export */   "Color": () => (/* binding */ Color),
-/* harmony export */   "ColorKeyframeTrack": () => (/* binding */ ColorKeyframeTrack),
-/* harmony export */   "CompressedTexture": () => (/* binding */ CompressedTexture),
-/* harmony export */   "CompressedTextureLoader": () => (/* binding */ CompressedTextureLoader),
-/* harmony export */   "ConeBufferGeometry": () => (/* binding */ ConeBufferGeometry),
-/* harmony export */   "ConeGeometry": () => (/* binding */ ConeGeometry),
-/* harmony export */   "CubeCamera": () => (/* binding */ CubeCamera),
-/* harmony export */   "CubeGeometry": () => (/* binding */ BoxGeometry),
-/* harmony export */   "CubeReflectionMapping": () => (/* binding */ CubeReflectionMapping),
-/* harmony export */   "CubeRefractionMapping": () => (/* binding */ CubeRefractionMapping),
-/* harmony export */   "CubeTexture": () => (/* binding */ CubeTexture),
-/* harmony export */   "CubeTextureLoader": () => (/* binding */ CubeTextureLoader),
-/* harmony export */   "CubeUVReflectionMapping": () => (/* binding */ CubeUVReflectionMapping),
-/* harmony export */   "CubeUVRefractionMapping": () => (/* binding */ CubeUVRefractionMapping),
-/* harmony export */   "CubicBezierCurve": () => (/* binding */ CubicBezierCurve),
-/* harmony export */   "CubicBezierCurve3": () => (/* binding */ CubicBezierCurve3),
-/* harmony export */   "CubicInterpolant": () => (/* binding */ CubicInterpolant),
-/* harmony export */   "CullFaceBack": () => (/* binding */ CullFaceBack),
-/* harmony export */   "CullFaceFront": () => (/* binding */ CullFaceFront),
-/* harmony export */   "CullFaceFrontBack": () => (/* binding */ CullFaceFrontBack),
-/* harmony export */   "CullFaceNone": () => (/* binding */ CullFaceNone),
-/* harmony export */   "Curve": () => (/* binding */ Curve),
-/* harmony export */   "CurvePath": () => (/* binding */ CurvePath),
-/* harmony export */   "CustomBlending": () => (/* binding */ CustomBlending),
-/* harmony export */   "CustomToneMapping": () => (/* binding */ CustomToneMapping),
-/* harmony export */   "CylinderBufferGeometry": () => (/* binding */ CylinderBufferGeometry),
-/* harmony export */   "CylinderGeometry": () => (/* binding */ CylinderGeometry),
-/* harmony export */   "Cylindrical": () => (/* binding */ Cylindrical),
-/* harmony export */   "DataTexture": () => (/* binding */ DataTexture),
-/* harmony export */   "DataTexture2DArray": () => (/* binding */ DataTexture2DArray),
-/* harmony export */   "DataTexture3D": () => (/* binding */ DataTexture3D),
-/* harmony export */   "DataTextureLoader": () => (/* binding */ DataTextureLoader),
-/* harmony export */   "DataUtils": () => (/* binding */ DataUtils),
-/* harmony export */   "DecrementStencilOp": () => (/* binding */ DecrementStencilOp),
-/* harmony export */   "DecrementWrapStencilOp": () => (/* binding */ DecrementWrapStencilOp),
-/* harmony export */   "DefaultLoadingManager": () => (/* binding */ DefaultLoadingManager),
-/* harmony export */   "DepthFormat": () => (/* binding */ DepthFormat),
-/* harmony export */   "DepthStencilFormat": () => (/* binding */ DepthStencilFormat),
-/* harmony export */   "DepthTexture": () => (/* binding */ DepthTexture),
-/* harmony export */   "DirectionalLight": () => (/* binding */ DirectionalLight),
-/* harmony export */   "DirectionalLightHelper": () => (/* binding */ DirectionalLightHelper),
-/* harmony export */   "DiscreteInterpolant": () => (/* binding */ DiscreteInterpolant),
-/* harmony export */   "DodecahedronBufferGeometry": () => (/* binding */ DodecahedronBufferGeometry),
-/* harmony export */   "DodecahedronGeometry": () => (/* binding */ DodecahedronGeometry),
-/* harmony export */   "DoubleSide": () => (/* binding */ DoubleSide),
-/* harmony export */   "DstAlphaFactor": () => (/* binding */ DstAlphaFactor),
-/* harmony export */   "DstColorFactor": () => (/* binding */ DstColorFactor),
-/* harmony export */   "DynamicBufferAttribute": () => (/* binding */ DynamicBufferAttribute),
-/* harmony export */   "DynamicCopyUsage": () => (/* binding */ DynamicCopyUsage),
-/* harmony export */   "DynamicDrawUsage": () => (/* binding */ DynamicDrawUsage),
-/* harmony export */   "DynamicReadUsage": () => (/* binding */ DynamicReadUsage),
-/* harmony export */   "EdgesGeometry": () => (/* binding */ EdgesGeometry),
-/* harmony export */   "EdgesHelper": () => (/* binding */ EdgesHelper),
-/* harmony export */   "EllipseCurve": () => (/* binding */ EllipseCurve),
-/* harmony export */   "EqualDepth": () => (/* binding */ EqualDepth),
-/* harmony export */   "EqualStencilFunc": () => (/* binding */ EqualStencilFunc),
-/* harmony export */   "EquirectangularReflectionMapping": () => (/* binding */ EquirectangularReflectionMapping),
-/* harmony export */   "EquirectangularRefractionMapping": () => (/* binding */ EquirectangularRefractionMapping),
-/* harmony export */   "Euler": () => (/* binding */ Euler),
-/* harmony export */   "EventDispatcher": () => (/* binding */ EventDispatcher),
-/* harmony export */   "ExtrudeBufferGeometry": () => (/* binding */ ExtrudeBufferGeometry),
-/* harmony export */   "ExtrudeGeometry": () => (/* binding */ ExtrudeGeometry),
-/* harmony export */   "Face3": () => (/* binding */ Face3),
-/* harmony export */   "Face4": () => (/* binding */ Face4),
-/* harmony export */   "FaceColors": () => (/* binding */ FaceColors),
-/* harmony export */   "FileLoader": () => (/* binding */ FileLoader),
-/* harmony export */   "FlatShading": () => (/* binding */ FlatShading),
-/* harmony export */   "Float16BufferAttribute": () => (/* binding */ Float16BufferAttribute),
-/* harmony export */   "Float32Attribute": () => (/* binding */ Float32Attribute),
-/* harmony export */   "Float32BufferAttribute": () => (/* binding */ Float32BufferAttribute),
-/* harmony export */   "Float64Attribute": () => (/* binding */ Float64Attribute),
-/* harmony export */   "Float64BufferAttribute": () => (/* binding */ Float64BufferAttribute),
-/* harmony export */   "FloatType": () => (/* binding */ FloatType),
-/* harmony export */   "Fog": () => (/* binding */ Fog),
-/* harmony export */   "FogExp2": () => (/* binding */ FogExp2),
-/* harmony export */   "Font": () => (/* binding */ Font),
-/* harmony export */   "FontLoader": () => (/* binding */ FontLoader),
-/* harmony export */   "FrontSide": () => (/* binding */ FrontSide),
-/* harmony export */   "Frustum": () => (/* binding */ Frustum),
-/* harmony export */   "GLBufferAttribute": () => (/* binding */ GLBufferAttribute),
-/* harmony export */   "GLSL1": () => (/* binding */ GLSL1),
-/* harmony export */   "GLSL3": () => (/* binding */ GLSL3),
-/* harmony export */   "GammaEncoding": () => (/* binding */ GammaEncoding),
-/* harmony export */   "Geometry": () => (/* binding */ Geometry),
-/* harmony export */   "GeometryUtils": () => (/* binding */ GeometryUtils),
-/* harmony export */   "GreaterDepth": () => (/* binding */ GreaterDepth),
-/* harmony export */   "GreaterEqualDepth": () => (/* binding */ GreaterEqualDepth),
-/* harmony export */   "GreaterEqualStencilFunc": () => (/* binding */ GreaterEqualStencilFunc),
-/* harmony export */   "GreaterStencilFunc": () => (/* binding */ GreaterStencilFunc),
-/* harmony export */   "GridHelper": () => (/* binding */ GridHelper),
-/* harmony export */   "Group": () => (/* binding */ Group),
-/* harmony export */   "HalfFloatType": () => (/* binding */ HalfFloatType),
-/* harmony export */   "HemisphereLight": () => (/* binding */ HemisphereLight),
-/* harmony export */   "HemisphereLightHelper": () => (/* binding */ HemisphereLightHelper),
-/* harmony export */   "HemisphereLightProbe": () => (/* binding */ HemisphereLightProbe),
-/* harmony export */   "IcosahedronBufferGeometry": () => (/* binding */ IcosahedronBufferGeometry),
-/* harmony export */   "IcosahedronGeometry": () => (/* binding */ IcosahedronGeometry),
-/* harmony export */   "ImageBitmapLoader": () => (/* binding */ ImageBitmapLoader),
-/* harmony export */   "ImageLoader": () => (/* binding */ ImageLoader),
-/* harmony export */   "ImageUtils": () => (/* binding */ ImageUtils),
-/* harmony export */   "ImmediateRenderObject": () => (/* binding */ ImmediateRenderObject),
-/* harmony export */   "IncrementStencilOp": () => (/* binding */ IncrementStencilOp),
-/* harmony export */   "IncrementWrapStencilOp": () => (/* binding */ IncrementWrapStencilOp),
-/* harmony export */   "InstancedBufferAttribute": () => (/* binding */ InstancedBufferAttribute),
-/* harmony export */   "InstancedBufferGeometry": () => (/* binding */ InstancedBufferGeometry),
-/* harmony export */   "InstancedInterleavedBuffer": () => (/* binding */ InstancedInterleavedBuffer),
-/* harmony export */   "InstancedMesh": () => (/* binding */ InstancedMesh),
-/* harmony export */   "Int16Attribute": () => (/* binding */ Int16Attribute),
-/* harmony export */   "Int16BufferAttribute": () => (/* binding */ Int16BufferAttribute),
-/* harmony export */   "Int32Attribute": () => (/* binding */ Int32Attribute),
-/* harmony export */   "Int32BufferAttribute": () => (/* binding */ Int32BufferAttribute),
-/* harmony export */   "Int8Attribute": () => (/* binding */ Int8Attribute),
-/* harmony export */   "Int8BufferAttribute": () => (/* binding */ Int8BufferAttribute),
-/* harmony export */   "IntType": () => (/* binding */ IntType),
-/* harmony export */   "InterleavedBuffer": () => (/* binding */ InterleavedBuffer),
-/* harmony export */   "InterleavedBufferAttribute": () => (/* binding */ InterleavedBufferAttribute),
-/* harmony export */   "Interpolant": () => (/* binding */ Interpolant),
-/* harmony export */   "InterpolateDiscrete": () => (/* binding */ InterpolateDiscrete),
-/* harmony export */   "InterpolateLinear": () => (/* binding */ InterpolateLinear),
-/* harmony export */   "InterpolateSmooth": () => (/* binding */ InterpolateSmooth),
-/* harmony export */   "InvertStencilOp": () => (/* binding */ InvertStencilOp),
-/* harmony export */   "JSONLoader": () => (/* binding */ JSONLoader),
-/* harmony export */   "KeepStencilOp": () => (/* binding */ KeepStencilOp),
-/* harmony export */   "KeyframeTrack": () => (/* binding */ KeyframeTrack),
-/* harmony export */   "LOD": () => (/* binding */ LOD),
-/* harmony export */   "LatheBufferGeometry": () => (/* binding */ LatheBufferGeometry),
-/* harmony export */   "LatheGeometry": () => (/* binding */ LatheGeometry),
-/* harmony export */   "Layers": () => (/* binding */ Layers),
-/* harmony export */   "LensFlare": () => (/* binding */ LensFlare),
-/* harmony export */   "LessDepth": () => (/* binding */ LessDepth),
-/* harmony export */   "LessEqualDepth": () => (/* binding */ LessEqualDepth),
-/* harmony export */   "LessEqualStencilFunc": () => (/* binding */ LessEqualStencilFunc),
-/* harmony export */   "LessStencilFunc": () => (/* binding */ LessStencilFunc),
-/* harmony export */   "Light": () => (/* binding */ Light),
-/* harmony export */   "LightProbe": () => (/* binding */ LightProbe),
-/* harmony export */   "Line": () => (/* binding */ Line),
-/* harmony export */   "Line3": () => (/* binding */ Line3),
-/* harmony export */   "LineBasicMaterial": () => (/* binding */ LineBasicMaterial),
-/* harmony export */   "LineCurve": () => (/* binding */ LineCurve),
-/* harmony export */   "LineCurve3": () => (/* binding */ LineCurve3),
-/* harmony export */   "LineDashedMaterial": () => (/* binding */ LineDashedMaterial),
-/* harmony export */   "LineLoop": () => (/* binding */ LineLoop),
-/* harmony export */   "LinePieces": () => (/* binding */ LinePieces),
-/* harmony export */   "LineSegments": () => (/* binding */ LineSegments),
-/* harmony export */   "LineStrip": () => (/* binding */ LineStrip),
-/* harmony export */   "LinearEncoding": () => (/* binding */ LinearEncoding),
-/* harmony export */   "LinearFilter": () => (/* binding */ LinearFilter),
-/* harmony export */   "LinearInterpolant": () => (/* binding */ LinearInterpolant),
-/* harmony export */   "LinearMipMapLinearFilter": () => (/* binding */ LinearMipMapLinearFilter),
-/* harmony export */   "LinearMipMapNearestFilter": () => (/* binding */ LinearMipMapNearestFilter),
-/* harmony export */   "LinearMipmapLinearFilter": () => (/* binding */ LinearMipmapLinearFilter),
-/* harmony export */   "LinearMipmapNearestFilter": () => (/* binding */ LinearMipmapNearestFilter),
-/* harmony export */   "LinearToneMapping": () => (/* binding */ LinearToneMapping),
-/* harmony export */   "Loader": () => (/* binding */ Loader),
-/* harmony export */   "LoaderUtils": () => (/* binding */ LoaderUtils),
-/* harmony export */   "LoadingManager": () => (/* binding */ LoadingManager),
-/* harmony export */   "LogLuvEncoding": () => (/* binding */ LogLuvEncoding),
-/* harmony export */   "LoopOnce": () => (/* binding */ LoopOnce),
-/* harmony export */   "LoopPingPong": () => (/* binding */ LoopPingPong),
-/* harmony export */   "LoopRepeat": () => (/* binding */ LoopRepeat),
-/* harmony export */   "LuminanceAlphaFormat": () => (/* binding */ LuminanceAlphaFormat),
-/* harmony export */   "LuminanceFormat": () => (/* binding */ LuminanceFormat),
-/* harmony export */   "MOUSE": () => (/* binding */ MOUSE),
-/* harmony export */   "Material": () => (/* binding */ Material),
-/* harmony export */   "MaterialLoader": () => (/* binding */ MaterialLoader),
-/* harmony export */   "Math": () => (/* binding */ MathUtils),
-/* harmony export */   "MathUtils": () => (/* binding */ MathUtils),
-/* harmony export */   "Matrix3": () => (/* binding */ Matrix3),
-/* harmony export */   "Matrix4": () => (/* binding */ Matrix4),
-/* harmony export */   "MaxEquation": () => (/* binding */ MaxEquation),
-/* harmony export */   "Mesh": () => (/* binding */ Mesh),
-/* harmony export */   "MeshBasicMaterial": () => (/* binding */ MeshBasicMaterial),
-/* harmony export */   "MeshDepthMaterial": () => (/* binding */ MeshDepthMaterial),
-/* harmony export */   "MeshDistanceMaterial": () => (/* binding */ MeshDistanceMaterial),
-/* harmony export */   "MeshFaceMaterial": () => (/* binding */ MeshFaceMaterial),
-/* harmony export */   "MeshLambertMaterial": () => (/* binding */ MeshLambertMaterial),
-/* harmony export */   "MeshMatcapMaterial": () => (/* binding */ MeshMatcapMaterial),
-/* harmony export */   "MeshNormalMaterial": () => (/* binding */ MeshNormalMaterial),
-/* harmony export */   "MeshPhongMaterial": () => (/* binding */ MeshPhongMaterial),
-/* harmony export */   "MeshPhysicalMaterial": () => (/* binding */ MeshPhysicalMaterial),
-/* harmony export */   "MeshStandardMaterial": () => (/* binding */ MeshStandardMaterial),
-/* harmony export */   "MeshToonMaterial": () => (/* binding */ MeshToonMaterial),
-/* harmony export */   "MinEquation": () => (/* binding */ MinEquation),
-/* harmony export */   "MirroredRepeatWrapping": () => (/* binding */ MirroredRepeatWrapping),
-/* harmony export */   "MixOperation": () => (/* binding */ MixOperation),
-/* harmony export */   "MultiMaterial": () => (/* binding */ MultiMaterial),
-/* harmony export */   "MultiplyBlending": () => (/* binding */ MultiplyBlending),
-/* harmony export */   "MultiplyOperation": () => (/* binding */ MultiplyOperation),
-/* harmony export */   "NearestFilter": () => (/* binding */ NearestFilter),
-/* harmony export */   "NearestMipMapLinearFilter": () => (/* binding */ NearestMipMapLinearFilter),
-/* harmony export */   "NearestMipMapNearestFilter": () => (/* binding */ NearestMipMapNearestFilter),
-/* harmony export */   "NearestMipmapLinearFilter": () => (/* binding */ NearestMipmapLinearFilter),
-/* harmony export */   "NearestMipmapNearestFilter": () => (/* binding */ NearestMipmapNearestFilter),
-/* harmony export */   "NeverDepth": () => (/* binding */ NeverDepth),
-/* harmony export */   "NeverStencilFunc": () => (/* binding */ NeverStencilFunc),
-/* harmony export */   "NoBlending": () => (/* binding */ NoBlending),
-/* harmony export */   "NoColors": () => (/* binding */ NoColors),
-/* harmony export */   "NoToneMapping": () => (/* binding */ NoToneMapping),
-/* harmony export */   "NormalAnimationBlendMode": () => (/* binding */ NormalAnimationBlendMode),
-/* harmony export */   "NormalBlending": () => (/* binding */ NormalBlending),
-/* harmony export */   "NotEqualDepth": () => (/* binding */ NotEqualDepth),
-/* harmony export */   "NotEqualStencilFunc": () => (/* binding */ NotEqualStencilFunc),
-/* harmony export */   "NumberKeyframeTrack": () => (/* binding */ NumberKeyframeTrack),
-/* harmony export */   "Object3D": () => (/* binding */ Object3D),
-/* harmony export */   "ObjectLoader": () => (/* binding */ ObjectLoader),
-/* harmony export */   "ObjectSpaceNormalMap": () => (/* binding */ ObjectSpaceNormalMap),
-/* harmony export */   "OctahedronBufferGeometry": () => (/* binding */ OctahedronBufferGeometry),
-/* harmony export */   "OctahedronGeometry": () => (/* binding */ OctahedronGeometry),
-/* harmony export */   "OneFactor": () => (/* binding */ OneFactor),
-/* harmony export */   "OneMinusDstAlphaFactor": () => (/* binding */ OneMinusDstAlphaFactor),
-/* harmony export */   "OneMinusDstColorFactor": () => (/* binding */ OneMinusDstColorFactor),
-/* harmony export */   "OneMinusSrcAlphaFactor": () => (/* binding */ OneMinusSrcAlphaFactor),
-/* harmony export */   "OneMinusSrcColorFactor": () => (/* binding */ OneMinusSrcColorFactor),
-/* harmony export */   "OrthographicCamera": () => (/* binding */ OrthographicCamera),
-/* harmony export */   "PCFShadowMap": () => (/* binding */ PCFShadowMap),
-/* harmony export */   "PCFSoftShadowMap": () => (/* binding */ PCFSoftShadowMap),
-/* harmony export */   "PMREMGenerator": () => (/* binding */ PMREMGenerator),
-/* harmony export */   "ParametricBufferGeometry": () => (/* binding */ ParametricBufferGeometry),
-/* harmony export */   "ParametricGeometry": () => (/* binding */ ParametricGeometry),
-/* harmony export */   "Particle": () => (/* binding */ Particle),
-/* harmony export */   "ParticleBasicMaterial": () => (/* binding */ ParticleBasicMaterial),
-/* harmony export */   "ParticleSystem": () => (/* binding */ ParticleSystem),
-/* harmony export */   "ParticleSystemMaterial": () => (/* binding */ ParticleSystemMaterial),
-/* harmony export */   "Path": () => (/* binding */ Path),
-/* harmony export */   "PerspectiveCamera": () => (/* binding */ PerspectiveCamera),
-/* harmony export */   "Plane": () => (/* binding */ Plane),
-/* harmony export */   "PlaneBufferGeometry": () => (/* binding */ PlaneBufferGeometry),
-/* harmony export */   "PlaneGeometry": () => (/* binding */ PlaneGeometry),
-/* harmony export */   "PlaneHelper": () => (/* binding */ PlaneHelper),
-/* harmony export */   "PointCloud": () => (/* binding */ PointCloud),
-/* harmony export */   "PointCloudMaterial": () => (/* binding */ PointCloudMaterial),
-/* harmony export */   "PointLight": () => (/* binding */ PointLight),
-/* harmony export */   "PointLightHelper": () => (/* binding */ PointLightHelper),
-/* harmony export */   "Points": () => (/* binding */ Points),
-/* harmony export */   "PointsMaterial": () => (/* binding */ PointsMaterial),
-/* harmony export */   "PolarGridHelper": () => (/* binding */ PolarGridHelper),
-/* harmony export */   "PolyhedronBufferGeometry": () => (/* binding */ PolyhedronBufferGeometry),
-/* harmony export */   "PolyhedronGeometry": () => (/* binding */ PolyhedronGeometry),
-/* harmony export */   "PositionalAudio": () => (/* binding */ PositionalAudio),
-/* harmony export */   "PropertyBinding": () => (/* binding */ PropertyBinding),
-/* harmony export */   "PropertyMixer": () => (/* binding */ PropertyMixer),
-/* harmony export */   "QuadraticBezierCurve": () => (/* binding */ QuadraticBezierCurve),
-/* harmony export */   "QuadraticBezierCurve3": () => (/* binding */ QuadraticBezierCurve3),
-/* harmony export */   "Quaternion": () => (/* binding */ Quaternion),
-/* harmony export */   "QuaternionKeyframeTrack": () => (/* binding */ QuaternionKeyframeTrack),
-/* harmony export */   "QuaternionLinearInterpolant": () => (/* binding */ QuaternionLinearInterpolant),
-/* harmony export */   "REVISION": () => (/* binding */ REVISION),
-/* harmony export */   "RGBADepthPacking": () => (/* binding */ RGBADepthPacking),
-/* harmony export */   "RGBAFormat": () => (/* binding */ RGBAFormat),
-/* harmony export */   "RGBAIntegerFormat": () => (/* binding */ RGBAIntegerFormat),
-/* harmony export */   "RGBA_ASTC_10x10_Format": () => (/* binding */ RGBA_ASTC_10x10_Format),
-/* harmony export */   "RGBA_ASTC_10x5_Format": () => (/* binding */ RGBA_ASTC_10x5_Format),
-/* harmony export */   "RGBA_ASTC_10x6_Format": () => (/* binding */ RGBA_ASTC_10x6_Format),
-/* harmony export */   "RGBA_ASTC_10x8_Format": () => (/* binding */ RGBA_ASTC_10x8_Format),
-/* harmony export */   "RGBA_ASTC_12x10_Format": () => (/* binding */ RGBA_ASTC_12x10_Format),
-/* harmony export */   "RGBA_ASTC_12x12_Format": () => (/* binding */ RGBA_ASTC_12x12_Format),
-/* harmony export */   "RGBA_ASTC_4x4_Format": () => (/* binding */ RGBA_ASTC_4x4_Format),
-/* harmony export */   "RGBA_ASTC_5x4_Format": () => (/* binding */ RGBA_ASTC_5x4_Format),
-/* harmony export */   "RGBA_ASTC_5x5_Format": () => (/* binding */ RGBA_ASTC_5x5_Format),
-/* harmony export */   "RGBA_ASTC_6x5_Format": () => (/* binding */ RGBA_ASTC_6x5_Format),
-/* harmony export */   "RGBA_ASTC_6x6_Format": () => (/* binding */ RGBA_ASTC_6x6_Format),
-/* harmony export */   "RGBA_ASTC_8x5_Format": () => (/* binding */ RGBA_ASTC_8x5_Format),
-/* harmony export */   "RGBA_ASTC_8x6_Format": () => (/* binding */ RGBA_ASTC_8x6_Format),
-/* harmony export */   "RGBA_ASTC_8x8_Format": () => (/* binding */ RGBA_ASTC_8x8_Format),
-/* harmony export */   "RGBA_BPTC_Format": () => (/* binding */ RGBA_BPTC_Format),
-/* harmony export */   "RGBA_ETC2_EAC_Format": () => (/* binding */ RGBA_ETC2_EAC_Format),
-/* harmony export */   "RGBA_PVRTC_2BPPV1_Format": () => (/* binding */ RGBA_PVRTC_2BPPV1_Format),
-/* harmony export */   "RGBA_PVRTC_4BPPV1_Format": () => (/* binding */ RGBA_PVRTC_4BPPV1_Format),
-/* harmony export */   "RGBA_S3TC_DXT1_Format": () => (/* binding */ RGBA_S3TC_DXT1_Format),
-/* harmony export */   "RGBA_S3TC_DXT3_Format": () => (/* binding */ RGBA_S3TC_DXT3_Format),
-/* harmony export */   "RGBA_S3TC_DXT5_Format": () => (/* binding */ RGBA_S3TC_DXT5_Format),
-/* harmony export */   "RGBDEncoding": () => (/* binding */ RGBDEncoding),
-/* harmony export */   "RGBEEncoding": () => (/* binding */ RGBEEncoding),
-/* harmony export */   "RGBEFormat": () => (/* binding */ RGBEFormat),
-/* harmony export */   "RGBFormat": () => (/* binding */ RGBFormat),
-/* harmony export */   "RGBIntegerFormat": () => (/* binding */ RGBIntegerFormat),
-/* harmony export */   "RGBM16Encoding": () => (/* binding */ RGBM16Encoding),
-/* harmony export */   "RGBM7Encoding": () => (/* binding */ RGBM7Encoding),
-/* harmony export */   "RGB_ETC1_Format": () => (/* binding */ RGB_ETC1_Format),
-/* harmony export */   "RGB_ETC2_Format": () => (/* binding */ RGB_ETC2_Format),
-/* harmony export */   "RGB_PVRTC_2BPPV1_Format": () => (/* binding */ RGB_PVRTC_2BPPV1_Format),
-/* harmony export */   "RGB_PVRTC_4BPPV1_Format": () => (/* binding */ RGB_PVRTC_4BPPV1_Format),
-/* harmony export */   "RGB_S3TC_DXT1_Format": () => (/* binding */ RGB_S3TC_DXT1_Format),
-/* harmony export */   "RGFormat": () => (/* binding */ RGFormat),
-/* harmony export */   "RGIntegerFormat": () => (/* binding */ RGIntegerFormat),
-/* harmony export */   "RawShaderMaterial": () => (/* binding */ RawShaderMaterial),
-/* harmony export */   "Ray": () => (/* binding */ Ray),
-/* harmony export */   "Raycaster": () => (/* binding */ Raycaster),
-/* harmony export */   "RectAreaLight": () => (/* binding */ RectAreaLight),
-/* harmony export */   "RedFormat": () => (/* binding */ RedFormat),
-/* harmony export */   "RedIntegerFormat": () => (/* binding */ RedIntegerFormat),
-/* harmony export */   "ReinhardToneMapping": () => (/* binding */ ReinhardToneMapping),
-/* harmony export */   "RepeatWrapping": () => (/* binding */ RepeatWrapping),
-/* harmony export */   "ReplaceStencilOp": () => (/* binding */ ReplaceStencilOp),
-/* harmony export */   "ReverseSubtractEquation": () => (/* binding */ ReverseSubtractEquation),
-/* harmony export */   "RingBufferGeometry": () => (/* binding */ RingBufferGeometry),
-/* harmony export */   "RingGeometry": () => (/* binding */ RingGeometry),
-/* harmony export */   "SRGB8_ALPHA8_ASTC_10x10_Format": () => (/* binding */ SRGB8_ALPHA8_ASTC_10x10_Format),
-/* harmony export */   "SRGB8_ALPHA8_ASTC_10x5_Format": () => (/* binding */ SRGB8_ALPHA8_ASTC_10x5_Format),
-/* harmony export */   "SRGB8_ALPHA8_ASTC_10x6_Format": () => (/* binding */ SRGB8_ALPHA8_ASTC_10x6_Format),
-/* harmony export */   "SRGB8_ALPHA8_ASTC_10x8_Format": () => (/* binding */ SRGB8_ALPHA8_ASTC_10x8_Format),
-/* harmony export */   "SRGB8_ALPHA8_ASTC_12x10_Format": () => (/* binding */ SRGB8_ALPHA8_ASTC_12x10_Format),
-/* harmony export */   "SRGB8_ALPHA8_ASTC_12x12_Format": () => (/* binding */ SRGB8_ALPHA8_ASTC_12x12_Format),
-/* harmony export */   "SRGB8_ALPHA8_ASTC_4x4_Format": () => (/* binding */ SRGB8_ALPHA8_ASTC_4x4_Format),
-/* harmony export */   "SRGB8_ALPHA8_ASTC_5x4_Format": () => (/* binding */ SRGB8_ALPHA8_ASTC_5x4_Format),
-/* harmony export */   "SRGB8_ALPHA8_ASTC_5x5_Format": () => (/* binding */ SRGB8_ALPHA8_ASTC_5x5_Format),
-/* harmony export */   "SRGB8_ALPHA8_ASTC_6x5_Format": () => (/* binding */ SRGB8_ALPHA8_ASTC_6x5_Format),
-/* harmony export */   "SRGB8_ALPHA8_ASTC_6x6_Format": () => (/* binding */ SRGB8_ALPHA8_ASTC_6x6_Format),
-/* harmony export */   "SRGB8_ALPHA8_ASTC_8x5_Format": () => (/* binding */ SRGB8_ALPHA8_ASTC_8x5_Format),
-/* harmony export */   "SRGB8_ALPHA8_ASTC_8x6_Format": () => (/* binding */ SRGB8_ALPHA8_ASTC_8x6_Format),
-/* harmony export */   "SRGB8_ALPHA8_ASTC_8x8_Format": () => (/* binding */ SRGB8_ALPHA8_ASTC_8x8_Format),
-/* harmony export */   "Scene": () => (/* binding */ Scene),
-/* harmony export */   "SceneUtils": () => (/* binding */ SceneUtils),
-/* harmony export */   "ShaderChunk": () => (/* binding */ ShaderChunk),
-/* harmony export */   "ShaderLib": () => (/* binding */ ShaderLib),
-/* harmony export */   "ShaderMaterial": () => (/* binding */ ShaderMaterial),
-/* harmony export */   "ShadowMaterial": () => (/* binding */ ShadowMaterial),
-/* harmony export */   "Shape": () => (/* binding */ Shape),
-/* harmony export */   "ShapeBufferGeometry": () => (/* binding */ ShapeBufferGeometry),
-/* harmony export */   "ShapeGeometry": () => (/* binding */ ShapeGeometry),
-/* harmony export */   "ShapePath": () => (/* binding */ ShapePath),
-/* harmony export */   "ShapeUtils": () => (/* binding */ ShapeUtils),
-/* harmony export */   "ShortType": () => (/* binding */ ShortType),
-/* harmony export */   "Skeleton": () => (/* binding */ Skeleton),
-/* harmony export */   "SkeletonHelper": () => (/* binding */ SkeletonHelper),
-/* harmony export */   "SkinnedMesh": () => (/* binding */ SkinnedMesh),
-/* harmony export */   "SmoothShading": () => (/* binding */ SmoothShading),
-/* harmony export */   "Sphere": () => (/* binding */ Sphere),
-/* harmony export */   "SphereBufferGeometry": () => (/* binding */ SphereBufferGeometry),
-/* harmony export */   "SphereGeometry": () => (/* binding */ SphereGeometry),
-/* harmony export */   "Spherical": () => (/* binding */ Spherical),
-/* harmony export */   "SphericalHarmonics3": () => (/* binding */ SphericalHarmonics3),
-/* harmony export */   "Spline": () => (/* binding */ Spline),
-/* harmony export */   "SplineCurve": () => (/* binding */ SplineCurve),
-/* harmony export */   "SplineCurve3": () => (/* binding */ SplineCurve3),
-/* harmony export */   "SpotLight": () => (/* binding */ SpotLight),
-/* harmony export */   "SpotLightHelper": () => (/* binding */ SpotLightHelper),
-/* harmony export */   "Sprite": () => (/* binding */ Sprite),
-/* harmony export */   "SpriteMaterial": () => (/* binding */ SpriteMaterial),
-/* harmony export */   "SrcAlphaFactor": () => (/* binding */ SrcAlphaFactor),
-/* harmony export */   "SrcAlphaSaturateFactor": () => (/* binding */ SrcAlphaSaturateFactor),
-/* harmony export */   "SrcColorFactor": () => (/* binding */ SrcColorFactor),
-/* harmony export */   "StaticCopyUsage": () => (/* binding */ StaticCopyUsage),
-/* harmony export */   "StaticDrawUsage": () => (/* binding */ StaticDrawUsage),
-/* harmony export */   "StaticReadUsage": () => (/* binding */ StaticReadUsage),
-/* harmony export */   "StereoCamera": () => (/* binding */ StereoCamera),
-/* harmony export */   "StreamCopyUsage": () => (/* binding */ StreamCopyUsage),
-/* harmony export */   "StreamDrawUsage": () => (/* binding */ StreamDrawUsage),
-/* harmony export */   "StreamReadUsage": () => (/* binding */ StreamReadUsage),
-/* harmony export */   "StringKeyframeTrack": () => (/* binding */ StringKeyframeTrack),
-/* harmony export */   "SubtractEquation": () => (/* binding */ SubtractEquation),
-/* harmony export */   "SubtractiveBlending": () => (/* binding */ SubtractiveBlending),
-/* harmony export */   "TOUCH": () => (/* binding */ TOUCH),
-/* harmony export */   "TangentSpaceNormalMap": () => (/* binding */ TangentSpaceNormalMap),
-/* harmony export */   "TetrahedronBufferGeometry": () => (/* binding */ TetrahedronBufferGeometry),
-/* harmony export */   "TetrahedronGeometry": () => (/* binding */ TetrahedronGeometry),
-/* harmony export */   "TextBufferGeometry": () => (/* binding */ TextBufferGeometry),
-/* harmony export */   "TextGeometry": () => (/* binding */ TextGeometry),
-/* harmony export */   "Texture": () => (/* binding */ Texture),
-/* harmony export */   "TextureLoader": () => (/* binding */ TextureLoader),
-/* harmony export */   "TorusBufferGeometry": () => (/* binding */ TorusBufferGeometry),
-/* harmony export */   "TorusGeometry": () => (/* binding */ TorusGeometry),
-/* harmony export */   "TorusKnotBufferGeometry": () => (/* binding */ TorusKnotBufferGeometry),
-/* harmony export */   "TorusKnotGeometry": () => (/* binding */ TorusKnotGeometry),
-/* harmony export */   "Triangle": () => (/* binding */ Triangle),
-/* harmony export */   "TriangleFanDrawMode": () => (/* binding */ TriangleFanDrawMode),
-/* harmony export */   "TriangleStripDrawMode": () => (/* binding */ TriangleStripDrawMode),
-/* harmony export */   "TrianglesDrawMode": () => (/* binding */ TrianglesDrawMode),
-/* harmony export */   "TubeBufferGeometry": () => (/* binding */ TubeBufferGeometry),
-/* harmony export */   "TubeGeometry": () => (/* binding */ TubeGeometry),
-/* harmony export */   "UVMapping": () => (/* binding */ UVMapping),
-/* harmony export */   "Uint16Attribute": () => (/* binding */ Uint16Attribute),
-/* harmony export */   "Uint16BufferAttribute": () => (/* binding */ Uint16BufferAttribute),
-/* harmony export */   "Uint32Attribute": () => (/* binding */ Uint32Attribute),
-/* harmony export */   "Uint32BufferAttribute": () => (/* binding */ Uint32BufferAttribute),
-/* harmony export */   "Uint8Attribute": () => (/* binding */ Uint8Attribute),
-/* harmony export */   "Uint8BufferAttribute": () => (/* binding */ Uint8BufferAttribute),
-/* harmony export */   "Uint8ClampedAttribute": () => (/* binding */ Uint8ClampedAttribute),
-/* harmony export */   "Uint8ClampedBufferAttribute": () => (/* binding */ Uint8ClampedBufferAttribute),
-/* harmony export */   "Uniform": () => (/* binding */ Uniform),
-/* harmony export */   "UniformsLib": () => (/* binding */ UniformsLib),
-/* harmony export */   "UniformsUtils": () => (/* binding */ UniformsUtils),
-/* harmony export */   "UnsignedByteType": () => (/* binding */ UnsignedByteType),
-/* harmony export */   "UnsignedInt248Type": () => (/* binding */ UnsignedInt248Type),
-/* harmony export */   "UnsignedIntType": () => (/* binding */ UnsignedIntType),
-/* harmony export */   "UnsignedShort4444Type": () => (/* binding */ UnsignedShort4444Type),
-/* harmony export */   "UnsignedShort5551Type": () => (/* binding */ UnsignedShort5551Type),
-/* harmony export */   "UnsignedShort565Type": () => (/* binding */ UnsignedShort565Type),
-/* harmony export */   "UnsignedShortType": () => (/* binding */ UnsignedShortType),
-/* harmony export */   "VSMShadowMap": () => (/* binding */ VSMShadowMap),
-/* harmony export */   "Vector2": () => (/* binding */ Vector2),
-/* harmony export */   "Vector3": () => (/* binding */ Vector3),
-/* harmony export */   "Vector4": () => (/* binding */ Vector4),
-/* harmony export */   "VectorKeyframeTrack": () => (/* binding */ VectorKeyframeTrack),
-/* harmony export */   "Vertex": () => (/* binding */ Vertex),
-/* harmony export */   "VertexColors": () => (/* binding */ VertexColors),
-/* harmony export */   "VideoTexture": () => (/* binding */ VideoTexture),
-/* harmony export */   "WebGL1Renderer": () => (/* binding */ WebGL1Renderer),
-/* harmony export */   "WebGLCubeRenderTarget": () => (/* binding */ WebGLCubeRenderTarget),
-/* harmony export */   "WebGLMultisampleRenderTarget": () => (/* binding */ WebGLMultisampleRenderTarget),
-/* harmony export */   "WebGLRenderTarget": () => (/* binding */ WebGLRenderTarget),
-/* harmony export */   "WebGLRenderTargetCube": () => (/* binding */ WebGLRenderTargetCube),
-/* harmony export */   "WebGLRenderer": () => (/* binding */ WebGLRenderer),
-/* harmony export */   "WebGLUtils": () => (/* binding */ WebGLUtils),
-/* harmony export */   "WireframeGeometry": () => (/* binding */ WireframeGeometry),
-/* harmony export */   "WireframeHelper": () => (/* binding */ WireframeHelper),
-/* harmony export */   "WrapAroundEnding": () => (/* binding */ WrapAroundEnding),
-/* harmony export */   "XHRLoader": () => (/* binding */ XHRLoader),
-/* harmony export */   "ZeroCurvatureEnding": () => (/* binding */ ZeroCurvatureEnding),
-/* harmony export */   "ZeroFactor": () => (/* binding */ ZeroFactor),
-/* harmony export */   "ZeroSlopeEnding": () => (/* binding */ ZeroSlopeEnding),
-/* harmony export */   "ZeroStencilOp": () => (/* binding */ ZeroStencilOp),
-/* harmony export */   "sRGBEncoding": () => (/* binding */ sRGBEncoding)
+/* harmony export */   ACESFilmicToneMapping: () => (/* binding */ ACESFilmicToneMapping),
+/* harmony export */   AddEquation: () => (/* binding */ AddEquation),
+/* harmony export */   AddOperation: () => (/* binding */ AddOperation),
+/* harmony export */   AdditiveAnimationBlendMode: () => (/* binding */ AdditiveAnimationBlendMode),
+/* harmony export */   AdditiveBlending: () => (/* binding */ AdditiveBlending),
+/* harmony export */   AlphaFormat: () => (/* binding */ AlphaFormat),
+/* harmony export */   AlwaysDepth: () => (/* binding */ AlwaysDepth),
+/* harmony export */   AlwaysStencilFunc: () => (/* binding */ AlwaysStencilFunc),
+/* harmony export */   AmbientLight: () => (/* binding */ AmbientLight),
+/* harmony export */   AmbientLightProbe: () => (/* binding */ AmbientLightProbe),
+/* harmony export */   AnimationClip: () => (/* binding */ AnimationClip),
+/* harmony export */   AnimationLoader: () => (/* binding */ AnimationLoader),
+/* harmony export */   AnimationMixer: () => (/* binding */ AnimationMixer),
+/* harmony export */   AnimationObjectGroup: () => (/* binding */ AnimationObjectGroup),
+/* harmony export */   AnimationUtils: () => (/* binding */ AnimationUtils),
+/* harmony export */   ArcCurve: () => (/* binding */ ArcCurve),
+/* harmony export */   ArrayCamera: () => (/* binding */ ArrayCamera),
+/* harmony export */   ArrowHelper: () => (/* binding */ ArrowHelper),
+/* harmony export */   Audio: () => (/* binding */ Audio),
+/* harmony export */   AudioAnalyser: () => (/* binding */ AudioAnalyser),
+/* harmony export */   AudioContext: () => (/* binding */ AudioContext),
+/* harmony export */   AudioListener: () => (/* binding */ AudioListener),
+/* harmony export */   AudioLoader: () => (/* binding */ AudioLoader),
+/* harmony export */   AxesHelper: () => (/* binding */ AxesHelper),
+/* harmony export */   AxisHelper: () => (/* binding */ AxisHelper),
+/* harmony export */   BackSide: () => (/* binding */ BackSide),
+/* harmony export */   BasicDepthPacking: () => (/* binding */ BasicDepthPacking),
+/* harmony export */   BasicShadowMap: () => (/* binding */ BasicShadowMap),
+/* harmony export */   BinaryTextureLoader: () => (/* binding */ BinaryTextureLoader),
+/* harmony export */   Bone: () => (/* binding */ Bone),
+/* harmony export */   BooleanKeyframeTrack: () => (/* binding */ BooleanKeyframeTrack),
+/* harmony export */   BoundingBoxHelper: () => (/* binding */ BoundingBoxHelper),
+/* harmony export */   Box2: () => (/* binding */ Box2),
+/* harmony export */   Box3: () => (/* binding */ Box3),
+/* harmony export */   Box3Helper: () => (/* binding */ Box3Helper),
+/* harmony export */   BoxBufferGeometry: () => (/* binding */ BoxBufferGeometry),
+/* harmony export */   BoxGeometry: () => (/* binding */ BoxGeometry),
+/* harmony export */   BoxHelper: () => (/* binding */ BoxHelper),
+/* harmony export */   BufferAttribute: () => (/* binding */ BufferAttribute),
+/* harmony export */   BufferGeometry: () => (/* binding */ BufferGeometry),
+/* harmony export */   BufferGeometryLoader: () => (/* binding */ BufferGeometryLoader),
+/* harmony export */   ByteType: () => (/* binding */ ByteType),
+/* harmony export */   Cache: () => (/* binding */ Cache),
+/* harmony export */   Camera: () => (/* binding */ Camera),
+/* harmony export */   CameraHelper: () => (/* binding */ CameraHelper),
+/* harmony export */   CanvasRenderer: () => (/* binding */ CanvasRenderer),
+/* harmony export */   CanvasTexture: () => (/* binding */ CanvasTexture),
+/* harmony export */   CatmullRomCurve3: () => (/* binding */ CatmullRomCurve3),
+/* harmony export */   CineonToneMapping: () => (/* binding */ CineonToneMapping),
+/* harmony export */   CircleBufferGeometry: () => (/* binding */ CircleBufferGeometry),
+/* harmony export */   CircleGeometry: () => (/* binding */ CircleGeometry),
+/* harmony export */   ClampToEdgeWrapping: () => (/* binding */ ClampToEdgeWrapping),
+/* harmony export */   Clock: () => (/* binding */ Clock),
+/* harmony export */   ClosedSplineCurve3: () => (/* binding */ ClosedSplineCurve3),
+/* harmony export */   Color: () => (/* binding */ Color),
+/* harmony export */   ColorKeyframeTrack: () => (/* binding */ ColorKeyframeTrack),
+/* harmony export */   CompressedTexture: () => (/* binding */ CompressedTexture),
+/* harmony export */   CompressedTextureLoader: () => (/* binding */ CompressedTextureLoader),
+/* harmony export */   ConeBufferGeometry: () => (/* binding */ ConeBufferGeometry),
+/* harmony export */   ConeGeometry: () => (/* binding */ ConeGeometry),
+/* harmony export */   CubeCamera: () => (/* binding */ CubeCamera),
+/* harmony export */   CubeGeometry: () => (/* binding */ BoxGeometry),
+/* harmony export */   CubeReflectionMapping: () => (/* binding */ CubeReflectionMapping),
+/* harmony export */   CubeRefractionMapping: () => (/* binding */ CubeRefractionMapping),
+/* harmony export */   CubeTexture: () => (/* binding */ CubeTexture),
+/* harmony export */   CubeTextureLoader: () => (/* binding */ CubeTextureLoader),
+/* harmony export */   CubeUVReflectionMapping: () => (/* binding */ CubeUVReflectionMapping),
+/* harmony export */   CubeUVRefractionMapping: () => (/* binding */ CubeUVRefractionMapping),
+/* harmony export */   CubicBezierCurve: () => (/* binding */ CubicBezierCurve),
+/* harmony export */   CubicBezierCurve3: () => (/* binding */ CubicBezierCurve3),
+/* harmony export */   CubicInterpolant: () => (/* binding */ CubicInterpolant),
+/* harmony export */   CullFaceBack: () => (/* binding */ CullFaceBack),
+/* harmony export */   CullFaceFront: () => (/* binding */ CullFaceFront),
+/* harmony export */   CullFaceFrontBack: () => (/* binding */ CullFaceFrontBack),
+/* harmony export */   CullFaceNone: () => (/* binding */ CullFaceNone),
+/* harmony export */   Curve: () => (/* binding */ Curve),
+/* harmony export */   CurvePath: () => (/* binding */ CurvePath),
+/* harmony export */   CustomBlending: () => (/* binding */ CustomBlending),
+/* harmony export */   CustomToneMapping: () => (/* binding */ CustomToneMapping),
+/* harmony export */   CylinderBufferGeometry: () => (/* binding */ CylinderBufferGeometry),
+/* harmony export */   CylinderGeometry: () => (/* binding */ CylinderGeometry),
+/* harmony export */   Cylindrical: () => (/* binding */ Cylindrical),
+/* harmony export */   DataTexture: () => (/* binding */ DataTexture),
+/* harmony export */   DataTexture2DArray: () => (/* binding */ DataTexture2DArray),
+/* harmony export */   DataTexture3D: () => (/* binding */ DataTexture3D),
+/* harmony export */   DataTextureLoader: () => (/* binding */ DataTextureLoader),
+/* harmony export */   DataUtils: () => (/* binding */ DataUtils),
+/* harmony export */   DecrementStencilOp: () => (/* binding */ DecrementStencilOp),
+/* harmony export */   DecrementWrapStencilOp: () => (/* binding */ DecrementWrapStencilOp),
+/* harmony export */   DefaultLoadingManager: () => (/* binding */ DefaultLoadingManager),
+/* harmony export */   DepthFormat: () => (/* binding */ DepthFormat),
+/* harmony export */   DepthStencilFormat: () => (/* binding */ DepthStencilFormat),
+/* harmony export */   DepthTexture: () => (/* binding */ DepthTexture),
+/* harmony export */   DirectionalLight: () => (/* binding */ DirectionalLight),
+/* harmony export */   DirectionalLightHelper: () => (/* binding */ DirectionalLightHelper),
+/* harmony export */   DiscreteInterpolant: () => (/* binding */ DiscreteInterpolant),
+/* harmony export */   DodecahedronBufferGeometry: () => (/* binding */ DodecahedronBufferGeometry),
+/* harmony export */   DodecahedronGeometry: () => (/* binding */ DodecahedronGeometry),
+/* harmony export */   DoubleSide: () => (/* binding */ DoubleSide),
+/* harmony export */   DstAlphaFactor: () => (/* binding */ DstAlphaFactor),
+/* harmony export */   DstColorFactor: () => (/* binding */ DstColorFactor),
+/* harmony export */   DynamicBufferAttribute: () => (/* binding */ DynamicBufferAttribute),
+/* harmony export */   DynamicCopyUsage: () => (/* binding */ DynamicCopyUsage),
+/* harmony export */   DynamicDrawUsage: () => (/* binding */ DynamicDrawUsage),
+/* harmony export */   DynamicReadUsage: () => (/* binding */ DynamicReadUsage),
+/* harmony export */   EdgesGeometry: () => (/* binding */ EdgesGeometry),
+/* harmony export */   EdgesHelper: () => (/* binding */ EdgesHelper),
+/* harmony export */   EllipseCurve: () => (/* binding */ EllipseCurve),
+/* harmony export */   EqualDepth: () => (/* binding */ EqualDepth),
+/* harmony export */   EqualStencilFunc: () => (/* binding */ EqualStencilFunc),
+/* harmony export */   EquirectangularReflectionMapping: () => (/* binding */ EquirectangularReflectionMapping),
+/* harmony export */   EquirectangularRefractionMapping: () => (/* binding */ EquirectangularRefractionMapping),
+/* harmony export */   Euler: () => (/* binding */ Euler),
+/* harmony export */   EventDispatcher: () => (/* binding */ EventDispatcher),
+/* harmony export */   ExtrudeBufferGeometry: () => (/* binding */ ExtrudeBufferGeometry),
+/* harmony export */   ExtrudeGeometry: () => (/* binding */ ExtrudeGeometry),
+/* harmony export */   Face3: () => (/* binding */ Face3),
+/* harmony export */   Face4: () => (/* binding */ Face4),
+/* harmony export */   FaceColors: () => (/* binding */ FaceColors),
+/* harmony export */   FileLoader: () => (/* binding */ FileLoader),
+/* harmony export */   FlatShading: () => (/* binding */ FlatShading),
+/* harmony export */   Float16BufferAttribute: () => (/* binding */ Float16BufferAttribute),
+/* harmony export */   Float32Attribute: () => (/* binding */ Float32Attribute),
+/* harmony export */   Float32BufferAttribute: () => (/* binding */ Float32BufferAttribute),
+/* harmony export */   Float64Attribute: () => (/* binding */ Float64Attribute),
+/* harmony export */   Float64BufferAttribute: () => (/* binding */ Float64BufferAttribute),
+/* harmony export */   FloatType: () => (/* binding */ FloatType),
+/* harmony export */   Fog: () => (/* binding */ Fog),
+/* harmony export */   FogExp2: () => (/* binding */ FogExp2),
+/* harmony export */   Font: () => (/* binding */ Font),
+/* harmony export */   FontLoader: () => (/* binding */ FontLoader),
+/* harmony export */   FrontSide: () => (/* binding */ FrontSide),
+/* harmony export */   Frustum: () => (/* binding */ Frustum),
+/* harmony export */   GLBufferAttribute: () => (/* binding */ GLBufferAttribute),
+/* harmony export */   GLSL1: () => (/* binding */ GLSL1),
+/* harmony export */   GLSL3: () => (/* binding */ GLSL3),
+/* harmony export */   GammaEncoding: () => (/* binding */ GammaEncoding),
+/* harmony export */   Geometry: () => (/* binding */ Geometry),
+/* harmony export */   GeometryUtils: () => (/* binding */ GeometryUtils),
+/* harmony export */   GreaterDepth: () => (/* binding */ GreaterDepth),
+/* harmony export */   GreaterEqualDepth: () => (/* binding */ GreaterEqualDepth),
+/* harmony export */   GreaterEqualStencilFunc: () => (/* binding */ GreaterEqualStencilFunc),
+/* harmony export */   GreaterStencilFunc: () => (/* binding */ GreaterStencilFunc),
+/* harmony export */   GridHelper: () => (/* binding */ GridHelper),
+/* harmony export */   Group: () => (/* binding */ Group),
+/* harmony export */   HalfFloatType: () => (/* binding */ HalfFloatType),
+/* harmony export */   HemisphereLight: () => (/* binding */ HemisphereLight),
+/* harmony export */   HemisphereLightHelper: () => (/* binding */ HemisphereLightHelper),
+/* harmony export */   HemisphereLightProbe: () => (/* binding */ HemisphereLightProbe),
+/* harmony export */   IcosahedronBufferGeometry: () => (/* binding */ IcosahedronBufferGeometry),
+/* harmony export */   IcosahedronGeometry: () => (/* binding */ IcosahedronGeometry),
+/* harmony export */   ImageBitmapLoader: () => (/* binding */ ImageBitmapLoader),
+/* harmony export */   ImageLoader: () => (/* binding */ ImageLoader),
+/* harmony export */   ImageUtils: () => (/* binding */ ImageUtils),
+/* harmony export */   ImmediateRenderObject: () => (/* binding */ ImmediateRenderObject),
+/* harmony export */   IncrementStencilOp: () => (/* binding */ IncrementStencilOp),
+/* harmony export */   IncrementWrapStencilOp: () => (/* binding */ IncrementWrapStencilOp),
+/* harmony export */   InstancedBufferAttribute: () => (/* binding */ InstancedBufferAttribute),
+/* harmony export */   InstancedBufferGeometry: () => (/* binding */ InstancedBufferGeometry),
+/* harmony export */   InstancedInterleavedBuffer: () => (/* binding */ InstancedInterleavedBuffer),
+/* harmony export */   InstancedMesh: () => (/* binding */ InstancedMesh),
+/* harmony export */   Int16Attribute: () => (/* binding */ Int16Attribute),
+/* harmony export */   Int16BufferAttribute: () => (/* binding */ Int16BufferAttribute),
+/* harmony export */   Int32Attribute: () => (/* binding */ Int32Attribute),
+/* harmony export */   Int32BufferAttribute: () => (/* binding */ Int32BufferAttribute),
+/* harmony export */   Int8Attribute: () => (/* binding */ Int8Attribute),
+/* harmony export */   Int8BufferAttribute: () => (/* binding */ Int8BufferAttribute),
+/* harmony export */   IntType: () => (/* binding */ IntType),
+/* harmony export */   InterleavedBuffer: () => (/* binding */ InterleavedBuffer),
+/* harmony export */   InterleavedBufferAttribute: () => (/* binding */ InterleavedBufferAttribute),
+/* harmony export */   Interpolant: () => (/* binding */ Interpolant),
+/* harmony export */   InterpolateDiscrete: () => (/* binding */ InterpolateDiscrete),
+/* harmony export */   InterpolateLinear: () => (/* binding */ InterpolateLinear),
+/* harmony export */   InterpolateSmooth: () => (/* binding */ InterpolateSmooth),
+/* harmony export */   InvertStencilOp: () => (/* binding */ InvertStencilOp),
+/* harmony export */   JSONLoader: () => (/* binding */ JSONLoader),
+/* harmony export */   KeepStencilOp: () => (/* binding */ KeepStencilOp),
+/* harmony export */   KeyframeTrack: () => (/* binding */ KeyframeTrack),
+/* harmony export */   LOD: () => (/* binding */ LOD),
+/* harmony export */   LatheBufferGeometry: () => (/* binding */ LatheBufferGeometry),
+/* harmony export */   LatheGeometry: () => (/* binding */ LatheGeometry),
+/* harmony export */   Layers: () => (/* binding */ Layers),
+/* harmony export */   LensFlare: () => (/* binding */ LensFlare),
+/* harmony export */   LessDepth: () => (/* binding */ LessDepth),
+/* harmony export */   LessEqualDepth: () => (/* binding */ LessEqualDepth),
+/* harmony export */   LessEqualStencilFunc: () => (/* binding */ LessEqualStencilFunc),
+/* harmony export */   LessStencilFunc: () => (/* binding */ LessStencilFunc),
+/* harmony export */   Light: () => (/* binding */ Light),
+/* harmony export */   LightProbe: () => (/* binding */ LightProbe),
+/* harmony export */   Line: () => (/* binding */ Line),
+/* harmony export */   Line3: () => (/* binding */ Line3),
+/* harmony export */   LineBasicMaterial: () => (/* binding */ LineBasicMaterial),
+/* harmony export */   LineCurve: () => (/* binding */ LineCurve),
+/* harmony export */   LineCurve3: () => (/* binding */ LineCurve3),
+/* harmony export */   LineDashedMaterial: () => (/* binding */ LineDashedMaterial),
+/* harmony export */   LineLoop: () => (/* binding */ LineLoop),
+/* harmony export */   LinePieces: () => (/* binding */ LinePieces),
+/* harmony export */   LineSegments: () => (/* binding */ LineSegments),
+/* harmony export */   LineStrip: () => (/* binding */ LineStrip),
+/* harmony export */   LinearEncoding: () => (/* binding */ LinearEncoding),
+/* harmony export */   LinearFilter: () => (/* binding */ LinearFilter),
+/* harmony export */   LinearInterpolant: () => (/* binding */ LinearInterpolant),
+/* harmony export */   LinearMipMapLinearFilter: () => (/* binding */ LinearMipMapLinearFilter),
+/* harmony export */   LinearMipMapNearestFilter: () => (/* binding */ LinearMipMapNearestFilter),
+/* harmony export */   LinearMipmapLinearFilter: () => (/* binding */ LinearMipmapLinearFilter),
+/* harmony export */   LinearMipmapNearestFilter: () => (/* binding */ LinearMipmapNearestFilter),
+/* harmony export */   LinearToneMapping: () => (/* binding */ LinearToneMapping),
+/* harmony export */   Loader: () => (/* binding */ Loader),
+/* harmony export */   LoaderUtils: () => (/* binding */ LoaderUtils),
+/* harmony export */   LoadingManager: () => (/* binding */ LoadingManager),
+/* harmony export */   LogLuvEncoding: () => (/* binding */ LogLuvEncoding),
+/* harmony export */   LoopOnce: () => (/* binding */ LoopOnce),
+/* harmony export */   LoopPingPong: () => (/* binding */ LoopPingPong),
+/* harmony export */   LoopRepeat: () => (/* binding */ LoopRepeat),
+/* harmony export */   LuminanceAlphaFormat: () => (/* binding */ LuminanceAlphaFormat),
+/* harmony export */   LuminanceFormat: () => (/* binding */ LuminanceFormat),
+/* harmony export */   MOUSE: () => (/* binding */ MOUSE),
+/* harmony export */   Material: () => (/* binding */ Material),
+/* harmony export */   MaterialLoader: () => (/* binding */ MaterialLoader),
+/* harmony export */   Math: () => (/* binding */ MathUtils),
+/* harmony export */   MathUtils: () => (/* binding */ MathUtils),
+/* harmony export */   Matrix3: () => (/* binding */ Matrix3),
+/* harmony export */   Matrix4: () => (/* binding */ Matrix4),
+/* harmony export */   MaxEquation: () => (/* binding */ MaxEquation),
+/* harmony export */   Mesh: () => (/* binding */ Mesh),
+/* harmony export */   MeshBasicMaterial: () => (/* binding */ MeshBasicMaterial),
+/* harmony export */   MeshDepthMaterial: () => (/* binding */ MeshDepthMaterial),
+/* harmony export */   MeshDistanceMaterial: () => (/* binding */ MeshDistanceMaterial),
+/* harmony export */   MeshFaceMaterial: () => (/* binding */ MeshFaceMaterial),
+/* harmony export */   MeshLambertMaterial: () => (/* binding */ MeshLambertMaterial),
+/* harmony export */   MeshMatcapMaterial: () => (/* binding */ MeshMatcapMaterial),
+/* harmony export */   MeshNormalMaterial: () => (/* binding */ MeshNormalMaterial),
+/* harmony export */   MeshPhongMaterial: () => (/* binding */ MeshPhongMaterial),
+/* harmony export */   MeshPhysicalMaterial: () => (/* binding */ MeshPhysicalMaterial),
+/* harmony export */   MeshStandardMaterial: () => (/* binding */ MeshStandardMaterial),
+/* harmony export */   MeshToonMaterial: () => (/* binding */ MeshToonMaterial),
+/* harmony export */   MinEquation: () => (/* binding */ MinEquation),
+/* harmony export */   MirroredRepeatWrapping: () => (/* binding */ MirroredRepeatWrapping),
+/* harmony export */   MixOperation: () => (/* binding */ MixOperation),
+/* harmony export */   MultiMaterial: () => (/* binding */ MultiMaterial),
+/* harmony export */   MultiplyBlending: () => (/* binding */ MultiplyBlending),
+/* harmony export */   MultiplyOperation: () => (/* binding */ MultiplyOperation),
+/* harmony export */   NearestFilter: () => (/* binding */ NearestFilter),
+/* harmony export */   NearestMipMapLinearFilter: () => (/* binding */ NearestMipMapLinearFilter),
+/* harmony export */   NearestMipMapNearestFilter: () => (/* binding */ NearestMipMapNearestFilter),
+/* harmony export */   NearestMipmapLinearFilter: () => (/* binding */ NearestMipmapLinearFilter),
+/* harmony export */   NearestMipmapNearestFilter: () => (/* binding */ NearestMipmapNearestFilter),
+/* harmony export */   NeverDepth: () => (/* binding */ NeverDepth),
+/* harmony export */   NeverStencilFunc: () => (/* binding */ NeverStencilFunc),
+/* harmony export */   NoBlending: () => (/* binding */ NoBlending),
+/* harmony export */   NoColors: () => (/* binding */ NoColors),
+/* harmony export */   NoToneMapping: () => (/* binding */ NoToneMapping),
+/* harmony export */   NormalAnimationBlendMode: () => (/* binding */ NormalAnimationBlendMode),
+/* harmony export */   NormalBlending: () => (/* binding */ NormalBlending),
+/* harmony export */   NotEqualDepth: () => (/* binding */ NotEqualDepth),
+/* harmony export */   NotEqualStencilFunc: () => (/* binding */ NotEqualStencilFunc),
+/* harmony export */   NumberKeyframeTrack: () => (/* binding */ NumberKeyframeTrack),
+/* harmony export */   Object3D: () => (/* binding */ Object3D),
+/* harmony export */   ObjectLoader: () => (/* binding */ ObjectLoader),
+/* harmony export */   ObjectSpaceNormalMap: () => (/* binding */ ObjectSpaceNormalMap),
+/* harmony export */   OctahedronBufferGeometry: () => (/* binding */ OctahedronBufferGeometry),
+/* harmony export */   OctahedronGeometry: () => (/* binding */ OctahedronGeometry),
+/* harmony export */   OneFactor: () => (/* binding */ OneFactor),
+/* harmony export */   OneMinusDstAlphaFactor: () => (/* binding */ OneMinusDstAlphaFactor),
+/* harmony export */   OneMinusDstColorFactor: () => (/* binding */ OneMinusDstColorFactor),
+/* harmony export */   OneMinusSrcAlphaFactor: () => (/* binding */ OneMinusSrcAlphaFactor),
+/* harmony export */   OneMinusSrcColorFactor: () => (/* binding */ OneMinusSrcColorFactor),
+/* harmony export */   OrthographicCamera: () => (/* binding */ OrthographicCamera),
+/* harmony export */   PCFShadowMap: () => (/* binding */ PCFShadowMap),
+/* harmony export */   PCFSoftShadowMap: () => (/* binding */ PCFSoftShadowMap),
+/* harmony export */   PMREMGenerator: () => (/* binding */ PMREMGenerator),
+/* harmony export */   ParametricBufferGeometry: () => (/* binding */ ParametricBufferGeometry),
+/* harmony export */   ParametricGeometry: () => (/* binding */ ParametricGeometry),
+/* harmony export */   Particle: () => (/* binding */ Particle),
+/* harmony export */   ParticleBasicMaterial: () => (/* binding */ ParticleBasicMaterial),
+/* harmony export */   ParticleSystem: () => (/* binding */ ParticleSystem),
+/* harmony export */   ParticleSystemMaterial: () => (/* binding */ ParticleSystemMaterial),
+/* harmony export */   Path: () => (/* binding */ Path),
+/* harmony export */   PerspectiveCamera: () => (/* binding */ PerspectiveCamera),
+/* harmony export */   Plane: () => (/* binding */ Plane),
+/* harmony export */   PlaneBufferGeometry: () => (/* binding */ PlaneBufferGeometry),
+/* harmony export */   PlaneGeometry: () => (/* binding */ PlaneGeometry),
+/* harmony export */   PlaneHelper: () => (/* binding */ PlaneHelper),
+/* harmony export */   PointCloud: () => (/* binding */ PointCloud),
+/* harmony export */   PointCloudMaterial: () => (/* binding */ PointCloudMaterial),
+/* harmony export */   PointLight: () => (/* binding */ PointLight),
+/* harmony export */   PointLightHelper: () => (/* binding */ PointLightHelper),
+/* harmony export */   Points: () => (/* binding */ Points),
+/* harmony export */   PointsMaterial: () => (/* binding */ PointsMaterial),
+/* harmony export */   PolarGridHelper: () => (/* binding */ PolarGridHelper),
+/* harmony export */   PolyhedronBufferGeometry: () => (/* binding */ PolyhedronBufferGeometry),
+/* harmony export */   PolyhedronGeometry: () => (/* binding */ PolyhedronGeometry),
+/* harmony export */   PositionalAudio: () => (/* binding */ PositionalAudio),
+/* harmony export */   PropertyBinding: () => (/* binding */ PropertyBinding),
+/* harmony export */   PropertyMixer: () => (/* binding */ PropertyMixer),
+/* harmony export */   QuadraticBezierCurve: () => (/* binding */ QuadraticBezierCurve),
+/* harmony export */   QuadraticBezierCurve3: () => (/* binding */ QuadraticBezierCurve3),
+/* harmony export */   Quaternion: () => (/* binding */ Quaternion),
+/* harmony export */   QuaternionKeyframeTrack: () => (/* binding */ QuaternionKeyframeTrack),
+/* harmony export */   QuaternionLinearInterpolant: () => (/* binding */ QuaternionLinearInterpolant),
+/* harmony export */   REVISION: () => (/* binding */ REVISION),
+/* harmony export */   RGBADepthPacking: () => (/* binding */ RGBADepthPacking),
+/* harmony export */   RGBAFormat: () => (/* binding */ RGBAFormat),
+/* harmony export */   RGBAIntegerFormat: () => (/* binding */ RGBAIntegerFormat),
+/* harmony export */   RGBA_ASTC_10x10_Format: () => (/* binding */ RGBA_ASTC_10x10_Format),
+/* harmony export */   RGBA_ASTC_10x5_Format: () => (/* binding */ RGBA_ASTC_10x5_Format),
+/* harmony export */   RGBA_ASTC_10x6_Format: () => (/* binding */ RGBA_ASTC_10x6_Format),
+/* harmony export */   RGBA_ASTC_10x8_Format: () => (/* binding */ RGBA_ASTC_10x8_Format),
+/* harmony export */   RGBA_ASTC_12x10_Format: () => (/* binding */ RGBA_ASTC_12x10_Format),
+/* harmony export */   RGBA_ASTC_12x12_Format: () => (/* binding */ RGBA_ASTC_12x12_Format),
+/* harmony export */   RGBA_ASTC_4x4_Format: () => (/* binding */ RGBA_ASTC_4x4_Format),
+/* harmony export */   RGBA_ASTC_5x4_Format: () => (/* binding */ RGBA_ASTC_5x4_Format),
+/* harmony export */   RGBA_ASTC_5x5_Format: () => (/* binding */ RGBA_ASTC_5x5_Format),
+/* harmony export */   RGBA_ASTC_6x5_Format: () => (/* binding */ RGBA_ASTC_6x5_Format),
+/* harmony export */   RGBA_ASTC_6x6_Format: () => (/* binding */ RGBA_ASTC_6x6_Format),
+/* harmony export */   RGBA_ASTC_8x5_Format: () => (/* binding */ RGBA_ASTC_8x5_Format),
+/* harmony export */   RGBA_ASTC_8x6_Format: () => (/* binding */ RGBA_ASTC_8x6_Format),
+/* harmony export */   RGBA_ASTC_8x8_Format: () => (/* binding */ RGBA_ASTC_8x8_Format),
+/* harmony export */   RGBA_BPTC_Format: () => (/* binding */ RGBA_BPTC_Format),
+/* harmony export */   RGBA_ETC2_EAC_Format: () => (/* binding */ RGBA_ETC2_EAC_Format),
+/* harmony export */   RGBA_PVRTC_2BPPV1_Format: () => (/* binding */ RGBA_PVRTC_2BPPV1_Format),
+/* harmony export */   RGBA_PVRTC_4BPPV1_Format: () => (/* binding */ RGBA_PVRTC_4BPPV1_Format),
+/* harmony export */   RGBA_S3TC_DXT1_Format: () => (/* binding */ RGBA_S3TC_DXT1_Format),
+/* harmony export */   RGBA_S3TC_DXT3_Format: () => (/* binding */ RGBA_S3TC_DXT3_Format),
+/* harmony export */   RGBA_S3TC_DXT5_Format: () => (/* binding */ RGBA_S3TC_DXT5_Format),
+/* harmony export */   RGBDEncoding: () => (/* binding */ RGBDEncoding),
+/* harmony export */   RGBEEncoding: () => (/* binding */ RGBEEncoding),
+/* harmony export */   RGBEFormat: () => (/* binding */ RGBEFormat),
+/* harmony export */   RGBFormat: () => (/* binding */ RGBFormat),
+/* harmony export */   RGBIntegerFormat: () => (/* binding */ RGBIntegerFormat),
+/* harmony export */   RGBM16Encoding: () => (/* binding */ RGBM16Encoding),
+/* harmony export */   RGBM7Encoding: () => (/* binding */ RGBM7Encoding),
+/* harmony export */   RGB_ETC1_Format: () => (/* binding */ RGB_ETC1_Format),
+/* harmony export */   RGB_ETC2_Format: () => (/* binding */ RGB_ETC2_Format),
+/* harmony export */   RGB_PVRTC_2BPPV1_Format: () => (/* binding */ RGB_PVRTC_2BPPV1_Format),
+/* harmony export */   RGB_PVRTC_4BPPV1_Format: () => (/* binding */ RGB_PVRTC_4BPPV1_Format),
+/* harmony export */   RGB_S3TC_DXT1_Format: () => (/* binding */ RGB_S3TC_DXT1_Format),
+/* harmony export */   RGFormat: () => (/* binding */ RGFormat),
+/* harmony export */   RGIntegerFormat: () => (/* binding */ RGIntegerFormat),
+/* harmony export */   RawShaderMaterial: () => (/* binding */ RawShaderMaterial),
+/* harmony export */   Ray: () => (/* binding */ Ray),
+/* harmony export */   Raycaster: () => (/* binding */ Raycaster),
+/* harmony export */   RectAreaLight: () => (/* binding */ RectAreaLight),
+/* harmony export */   RedFormat: () => (/* binding */ RedFormat),
+/* harmony export */   RedIntegerFormat: () => (/* binding */ RedIntegerFormat),
+/* harmony export */   ReinhardToneMapping: () => (/* binding */ ReinhardToneMapping),
+/* harmony export */   RepeatWrapping: () => (/* binding */ RepeatWrapping),
+/* harmony export */   ReplaceStencilOp: () => (/* binding */ ReplaceStencilOp),
+/* harmony export */   ReverseSubtractEquation: () => (/* binding */ ReverseSubtractEquation),
+/* harmony export */   RingBufferGeometry: () => (/* binding */ RingBufferGeometry),
+/* harmony export */   RingGeometry: () => (/* binding */ RingGeometry),
+/* harmony export */   SRGB8_ALPHA8_ASTC_10x10_Format: () => (/* binding */ SRGB8_ALPHA8_ASTC_10x10_Format),
+/* harmony export */   SRGB8_ALPHA8_ASTC_10x5_Format: () => (/* binding */ SRGB8_ALPHA8_ASTC_10x5_Format),
+/* harmony export */   SRGB8_ALPHA8_ASTC_10x6_Format: () => (/* binding */ SRGB8_ALPHA8_ASTC_10x6_Format),
+/* harmony export */   SRGB8_ALPHA8_ASTC_10x8_Format: () => (/* binding */ SRGB8_ALPHA8_ASTC_10x8_Format),
+/* harmony export */   SRGB8_ALPHA8_ASTC_12x10_Format: () => (/* binding */ SRGB8_ALPHA8_ASTC_12x10_Format),
+/* harmony export */   SRGB8_ALPHA8_ASTC_12x12_Format: () => (/* binding */ SRGB8_ALPHA8_ASTC_12x12_Format),
+/* harmony export */   SRGB8_ALPHA8_ASTC_4x4_Format: () => (/* binding */ SRGB8_ALPHA8_ASTC_4x4_Format),
+/* harmony export */   SRGB8_ALPHA8_ASTC_5x4_Format: () => (/* binding */ SRGB8_ALPHA8_ASTC_5x4_Format),
+/* harmony export */   SRGB8_ALPHA8_ASTC_5x5_Format: () => (/* binding */ SRGB8_ALPHA8_ASTC_5x5_Format),
+/* harmony export */   SRGB8_ALPHA8_ASTC_6x5_Format: () => (/* binding */ SRGB8_ALPHA8_ASTC_6x5_Format),
+/* harmony export */   SRGB8_ALPHA8_ASTC_6x6_Format: () => (/* binding */ SRGB8_ALPHA8_ASTC_6x6_Format),
+/* harmony export */   SRGB8_ALPHA8_ASTC_8x5_Format: () => (/* binding */ SRGB8_ALPHA8_ASTC_8x5_Format),
+/* harmony export */   SRGB8_ALPHA8_ASTC_8x6_Format: () => (/* binding */ SRGB8_ALPHA8_ASTC_8x6_Format),
+/* harmony export */   SRGB8_ALPHA8_ASTC_8x8_Format: () => (/* binding */ SRGB8_ALPHA8_ASTC_8x8_Format),
+/* harmony export */   Scene: () => (/* binding */ Scene),
+/* harmony export */   SceneUtils: () => (/* binding */ SceneUtils),
+/* harmony export */   ShaderChunk: () => (/* binding */ ShaderChunk),
+/* harmony export */   ShaderLib: () => (/* binding */ ShaderLib),
+/* harmony export */   ShaderMaterial: () => (/* binding */ ShaderMaterial),
+/* harmony export */   ShadowMaterial: () => (/* binding */ ShadowMaterial),
+/* harmony export */   Shape: () => (/* binding */ Shape),
+/* harmony export */   ShapeBufferGeometry: () => (/* binding */ ShapeBufferGeometry),
+/* harmony export */   ShapeGeometry: () => (/* binding */ ShapeGeometry),
+/* harmony export */   ShapePath: () => (/* binding */ ShapePath),
+/* harmony export */   ShapeUtils: () => (/* binding */ ShapeUtils),
+/* harmony export */   ShortType: () => (/* binding */ ShortType),
+/* harmony export */   Skeleton: () => (/* binding */ Skeleton),
+/* harmony export */   SkeletonHelper: () => (/* binding */ SkeletonHelper),
+/* harmony export */   SkinnedMesh: () => (/* binding */ SkinnedMesh),
+/* harmony export */   SmoothShading: () => (/* binding */ SmoothShading),
+/* harmony export */   Sphere: () => (/* binding */ Sphere),
+/* harmony export */   SphereBufferGeometry: () => (/* binding */ SphereBufferGeometry),
+/* harmony export */   SphereGeometry: () => (/* binding */ SphereGeometry),
+/* harmony export */   Spherical: () => (/* binding */ Spherical),
+/* harmony export */   SphericalHarmonics3: () => (/* binding */ SphericalHarmonics3),
+/* harmony export */   Spline: () => (/* binding */ Spline),
+/* harmony export */   SplineCurve: () => (/* binding */ SplineCurve),
+/* harmony export */   SplineCurve3: () => (/* binding */ SplineCurve3),
+/* harmony export */   SpotLight: () => (/* binding */ SpotLight),
+/* harmony export */   SpotLightHelper: () => (/* binding */ SpotLightHelper),
+/* harmony export */   Sprite: () => (/* binding */ Sprite),
+/* harmony export */   SpriteMaterial: () => (/* binding */ SpriteMaterial),
+/* harmony export */   SrcAlphaFactor: () => (/* binding */ SrcAlphaFactor),
+/* harmony export */   SrcAlphaSaturateFactor: () => (/* binding */ SrcAlphaSaturateFactor),
+/* harmony export */   SrcColorFactor: () => (/* binding */ SrcColorFactor),
+/* harmony export */   StaticCopyUsage: () => (/* binding */ StaticCopyUsage),
+/* harmony export */   StaticDrawUsage: () => (/* binding */ StaticDrawUsage),
+/* harmony export */   StaticReadUsage: () => (/* binding */ StaticReadUsage),
+/* harmony export */   StereoCamera: () => (/* binding */ StereoCamera),
+/* harmony export */   StreamCopyUsage: () => (/* binding */ StreamCopyUsage),
+/* harmony export */   StreamDrawUsage: () => (/* binding */ StreamDrawUsage),
+/* harmony export */   StreamReadUsage: () => (/* binding */ StreamReadUsage),
+/* harmony export */   StringKeyframeTrack: () => (/* binding */ StringKeyframeTrack),
+/* harmony export */   SubtractEquation: () => (/* binding */ SubtractEquation),
+/* harmony export */   SubtractiveBlending: () => (/* binding */ SubtractiveBlending),
+/* harmony export */   TOUCH: () => (/* binding */ TOUCH),
+/* harmony export */   TangentSpaceNormalMap: () => (/* binding */ TangentSpaceNormalMap),
+/* harmony export */   TetrahedronBufferGeometry: () => (/* binding */ TetrahedronBufferGeometry),
+/* harmony export */   TetrahedronGeometry: () => (/* binding */ TetrahedronGeometry),
+/* harmony export */   TextBufferGeometry: () => (/* binding */ TextBufferGeometry),
+/* harmony export */   TextGeometry: () => (/* binding */ TextGeometry),
+/* harmony export */   Texture: () => (/* binding */ Texture),
+/* harmony export */   TextureLoader: () => (/* binding */ TextureLoader),
+/* harmony export */   TorusBufferGeometry: () => (/* binding */ TorusBufferGeometry),
+/* harmony export */   TorusGeometry: () => (/* binding */ TorusGeometry),
+/* harmony export */   TorusKnotBufferGeometry: () => (/* binding */ TorusKnotBufferGeometry),
+/* harmony export */   TorusKnotGeometry: () => (/* binding */ TorusKnotGeometry),
+/* harmony export */   Triangle: () => (/* binding */ Triangle),
+/* harmony export */   TriangleFanDrawMode: () => (/* binding */ TriangleFanDrawMode),
+/* harmony export */   TriangleStripDrawMode: () => (/* binding */ TriangleStripDrawMode),
+/* harmony export */   TrianglesDrawMode: () => (/* binding */ TrianglesDrawMode),
+/* harmony export */   TubeBufferGeometry: () => (/* binding */ TubeBufferGeometry),
+/* harmony export */   TubeGeometry: () => (/* binding */ TubeGeometry),
+/* harmony export */   UVMapping: () => (/* binding */ UVMapping),
+/* harmony export */   Uint16Attribute: () => (/* binding */ Uint16Attribute),
+/* harmony export */   Uint16BufferAttribute: () => (/* binding */ Uint16BufferAttribute),
+/* harmony export */   Uint32Attribute: () => (/* binding */ Uint32Attribute),
+/* harmony export */   Uint32BufferAttribute: () => (/* binding */ Uint32BufferAttribute),
+/* harmony export */   Uint8Attribute: () => (/* binding */ Uint8Attribute),
+/* harmony export */   Uint8BufferAttribute: () => (/* binding */ Uint8BufferAttribute),
+/* harmony export */   Uint8ClampedAttribute: () => (/* binding */ Uint8ClampedAttribute),
+/* harmony export */   Uint8ClampedBufferAttribute: () => (/* binding */ Uint8ClampedBufferAttribute),
+/* harmony export */   Uniform: () => (/* binding */ Uniform),
+/* harmony export */   UniformsLib: () => (/* binding */ UniformsLib),
+/* harmony export */   UniformsUtils: () => (/* binding */ UniformsUtils),
+/* harmony export */   UnsignedByteType: () => (/* binding */ UnsignedByteType),
+/* harmony export */   UnsignedInt248Type: () => (/* binding */ UnsignedInt248Type),
+/* harmony export */   UnsignedIntType: () => (/* binding */ UnsignedIntType),
+/* harmony export */   UnsignedShort4444Type: () => (/* binding */ UnsignedShort4444Type),
+/* harmony export */   UnsignedShort5551Type: () => (/* binding */ UnsignedShort5551Type),
+/* harmony export */   UnsignedShort565Type: () => (/* binding */ UnsignedShort565Type),
+/* harmony export */   UnsignedShortType: () => (/* binding */ UnsignedShortType),
+/* harmony export */   VSMShadowMap: () => (/* binding */ VSMShadowMap),
+/* harmony export */   Vector2: () => (/* binding */ Vector2),
+/* harmony export */   Vector3: () => (/* binding */ Vector3),
+/* harmony export */   Vector4: () => (/* binding */ Vector4),
+/* harmony export */   VectorKeyframeTrack: () => (/* binding */ VectorKeyframeTrack),
+/* harmony export */   Vertex: () => (/* binding */ Vertex),
+/* harmony export */   VertexColors: () => (/* binding */ VertexColors),
+/* harmony export */   VideoTexture: () => (/* binding */ VideoTexture),
+/* harmony export */   WebGL1Renderer: () => (/* binding */ WebGL1Renderer),
+/* harmony export */   WebGLCubeRenderTarget: () => (/* binding */ WebGLCubeRenderTarget),
+/* harmony export */   WebGLMultisampleRenderTarget: () => (/* binding */ WebGLMultisampleRenderTarget),
+/* harmony export */   WebGLRenderTarget: () => (/* binding */ WebGLRenderTarget),
+/* harmony export */   WebGLRenderTargetCube: () => (/* binding */ WebGLRenderTargetCube),
+/* harmony export */   WebGLRenderer: () => (/* binding */ WebGLRenderer),
+/* harmony export */   WebGLUtils: () => (/* binding */ WebGLUtils),
+/* harmony export */   WireframeGeometry: () => (/* binding */ WireframeGeometry),
+/* harmony export */   WireframeHelper: () => (/* binding */ WireframeHelper),
+/* harmony export */   WrapAroundEnding: () => (/* binding */ WrapAroundEnding),
+/* harmony export */   XHRLoader: () => (/* binding */ XHRLoader),
+/* harmony export */   ZeroCurvatureEnding: () => (/* binding */ ZeroCurvatureEnding),
+/* harmony export */   ZeroFactor: () => (/* binding */ ZeroFactor),
+/* harmony export */   ZeroSlopeEnding: () => (/* binding */ ZeroSlopeEnding),
+/* harmony export */   ZeroStencilOp: () => (/* binding */ ZeroStencilOp),
+/* harmony export */   sRGBEncoding: () => (/* binding */ sRGBEncoding)
 /* harmony export */ });
 // threejs.org/license
 const REVISION = '124';
@@ -51975,7 +51975,7 @@ if ( typeof __THREE_DEVTOOLS__ !== 'undefined' ) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "CSGCommandKind": () => (/* binding */ CSGCommandKind)
+/* harmony export */   CSGCommandKind: () => (/* binding */ CSGCommandKind)
 /* harmony export */ });
 var CSGCommandKind;
 (function (CSGCommandKind) {
@@ -51993,7 +51993,7 @@ var CSGCommandKind;
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "CommandExecutor": () => (/* binding */ CommandExecutor)
+/* harmony export */   CommandExecutor: () => (/* binding */ CommandExecutor)
 /* harmony export */ });
 /* harmony import */ var _CSGCommandKind__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CSGCommandKind */ "./src/commands/CSGCommandKind.ts");
 /* harmony import */ var _csg_csgTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../csg/csgTypes */ "./src/csg/csgTypes.ts");
@@ -52101,8 +52101,13 @@ var compounds = {
     },
     deCompoundShape: function (shape, shapeTypeToAccept) {
         var oc = this.oc;
-        if (shape.ShapeType() === shapeTypeToAccept || shapeTypeToAccept === undefined) {
+        shapeTypeToAccept = shapeTypeToAccept !== null && shapeTypeToAccept !== void 0 ? shapeTypeToAccept : oc.TopAbs_ShapeEnum.TopAbs_SOLID;
+        var shapeType = shape.ShapeType();
+        if (shapeType === shapeTypeToAccept) {
             return [shape];
+        }
+        if (shapeType !== oc.TopAbs_ShapeEnum.TopAbs_COMPOUND) {
+            return [];
         }
         return this.listCompoundShapes(shape, shapeTypeToAccept);
     },
@@ -52164,7 +52169,7 @@ var compounds = {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "createPromise": () => (/* binding */ createPromise)
+/* harmony export */   createPromise: () => (/* binding */ createPromise)
 /* harmony export */ });
 function createPromise() {
     var _resolve, _reject;
@@ -53301,7 +53306,7 @@ var Performer = /** @class */ (function () {
     Performer.prototype.measure = function (label) {
         var timeEndLayout = new Date().getTime();
         var durationInMs = (timeEndLayout - this.timeStart);
-        console.log("#perf# " + label + " " + durationInMs + " ms.");
+        // console.log("#perf# "+label +" "+ durationInMs +" ms.")
         __classPrivateFieldSet(this, _Performer_lastMeasureMs, durationInMs, "f");
         return durationInMs;
     };
@@ -54164,6 +54169,67 @@ var wires = {
 
 /***/ }),
 
+/***/ "./src/csg/csgCompoundFactory.js":
+/*!***************************************!*\
+  !*** ./src/csg/csgCompoundFactory.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _csgTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./csgTypes */ "./src/csg/csgTypes.ts");
+/* harmony import */ var _occt_occtio__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../occt/occtio */ "./src/occt/occtio.ts");
+var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+};
+var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var _CSGCompoundFactory_instances, _CSGCompoundFactory_geometry, _CSGCompoundFactory_nodeCalculator, _CSGCompoundFactory_createFromFilE;
+
+
+var CSGCompoundFactory = /** @class */ (function () {
+    function CSGCompoundFactory(geometry, nodeCalculator) {
+        _CSGCompoundFactory_instances.add(this);
+        _CSGCompoundFactory_geometry.set(this, void 0);
+        _CSGCompoundFactory_nodeCalculator.set(this, void 0);
+        __classPrivateFieldSet(this, _CSGCompoundFactory_geometry, geometry, "f");
+        __classPrivateFieldSet(this, _CSGCompoundFactory_nodeCalculator, nodeCalculator, "f");
+    }
+    /**
+        return: a shape.
+     */
+    CSGCompoundFactory.prototype.createNodeShape = function (node) {
+        if (node.Type !== _csgTypes__WEBPACK_IMPORTED_MODULE_0__.CSGNodeType.Compound)
+            throw new Error("Given node is not a ".concat(_csgTypes__WEBPACK_IMPORTED_MODULE_0__.CSGNodeType.Compound));
+        var shape = undefined;
+        switch (node.Compound.Type) {
+            case _csgTypes__WEBPACK_IMPORTED_MODULE_0__.CSGCompoundType.FromFile:
+                shape = __classPrivateFieldGet(this, _CSGCompoundFactory_instances, "m", _CSGCompoundFactory_createFromFilE).call(this, node.Compound);
+                break;
+            default:
+                throw new Error("Compound type ".concat(node.Compound.Type, " is not supported."));
+        }
+        return shape;
+    };
+    return CSGCompoundFactory;
+}());
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CSGCompoundFactory);
+_CSGCompoundFactory_geometry = new WeakMap(), _CSGCompoundFactory_nodeCalculator = new WeakMap(), _CSGCompoundFactory_instances = new WeakSet(), _CSGCompoundFactory_createFromFilE = function _CSGCompoundFactory_createFromFilE(compound) {
+    var shape = __classPrivateFieldGet(this, _CSGCompoundFactory_geometry, "f").occtio.textToShape(compound.FileText, compound.FileType);
+    return shape;
+};
+
+
+/***/ }),
+
 /***/ "./src/csg/csgFaceFactory.js":
 /*!***********************************!*\
   !*** ./src/csg/csgFaceFactory.js ***!
@@ -54253,6 +54319,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_performer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../common/performer */ "./src/common/performer.js");
 /* harmony import */ var _common_featureFlags__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../common/featureFlags */ "./src/common/featureFlags.js");
 /* harmony import */ var _csgVertexFactory_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./csgVertexFactory.js */ "./src/csg/csgVertexFactory.js");
+/* harmony import */ var _csgCompoundFactory__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./csgCompoundFactory */ "./src/csg/csgCompoundFactory.js");
 var __classPrivateFieldSet = (undefined && undefined.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
     if (kind === "m") throw new TypeError("Private method is not writable");
     if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
@@ -54264,7 +54331,8 @@ var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || 
     if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
-var _CSGNodeCalculator_instances, _CSGNodeCalculator_geometry, _CSGNodeCalculator_solidFactory, _CSGNodeCalculator_planeFactory, _CSGNodeCalculator_wireFactory, _CSGNodeCalculator_faceFactory, _CSGNodeCalculator_vertexFactory, _CSGNodeCalculator_wireOperationCalculator, _CSGNodeCalculator_operationCalculator, _CSGNodeCalculator_transformCalculator, _CSGNodeCalculator_nodeCacheMap, _CSGNodeCalculator_calculateNodeShapes, _CSGNodeCalculator_calculateReferenceNodeShapes, _CSGNodeCalculator_prepareResultMeshForShape;
+var _CSGNodeCalculator_instances, _CSGNodeCalculator_geometry, _CSGNodeCalculator_solidFactory, _CSGNodeCalculator_planeFactory, _CSGNodeCalculator_wireFactory, _CSGNodeCalculator_faceFactory, _CSGNodeCalculator_vertexFactory, _CSGNodeCalculator_compoundFactory, _CSGNodeCalculator_wireOperationCalculator, _CSGNodeCalculator_operationCalculator, _CSGNodeCalculator_transformCalculator, _CSGNodeCalculator_nodeCacheMap, _CSGNodeCalculator_calculateNodeShapes, _CSGNodeCalculator_calculateReferenceNodeShapes, _CSGNodeCalculator_prepareResultMeshForShape;
+
 
 
 
@@ -54285,6 +54353,7 @@ var CSGNodeCalculator = /** @class */ (function () {
         _CSGNodeCalculator_wireFactory.set(this, void 0);
         _CSGNodeCalculator_faceFactory.set(this, void 0);
         _CSGNodeCalculator_vertexFactory.set(this, void 0);
+        _CSGNodeCalculator_compoundFactory.set(this, void 0);
         _CSGNodeCalculator_wireOperationCalculator.set(this, void 0);
         _CSGNodeCalculator_operationCalculator.set(this, void 0);
         _CSGNodeCalculator_transformCalculator.set(this, void 0);
@@ -54295,6 +54364,7 @@ var CSGNodeCalculator = /** @class */ (function () {
         __classPrivateFieldSet(this, _CSGNodeCalculator_wireFactory, new _csgWireFactory_js__WEBPACK_IMPORTED_MODULE_3__["default"](geometry), "f");
         __classPrivateFieldSet(this, _CSGNodeCalculator_faceFactory, new _csgFaceFactory_js__WEBPACK_IMPORTED_MODULE_5__["default"](geometry, this), "f");
         __classPrivateFieldSet(this, _CSGNodeCalculator_vertexFactory, new _csgVertexFactory_js__WEBPACK_IMPORTED_MODULE_10__["default"](geometry, this), "f");
+        __classPrivateFieldSet(this, _CSGNodeCalculator_compoundFactory, new _csgCompoundFactory__WEBPACK_IMPORTED_MODULE_11__["default"](geometry, this), "f");
         __classPrivateFieldSet(this, _CSGNodeCalculator_wireOperationCalculator, new _csgWireOperationCalculator_js__WEBPACK_IMPORTED_MODULE_4__["default"](geometry, this), "f");
         __classPrivateFieldSet(this, _CSGNodeCalculator_operationCalculator, new _csgOperationCalculator_js__WEBPACK_IMPORTED_MODULE_6__["default"](geometry, this), "f");
         __classPrivateFieldSet(this, _CSGNodeCalculator_transformCalculator, new _csgTransformCalculator_js__WEBPACK_IMPORTED_MODULE_7__["default"](geometry, this), "f");
@@ -54351,6 +54421,7 @@ var CSGNodeCalculator = /** @class */ (function () {
                 // console.log();
             }
             console.error("".concat(this.constructor.name, ".calculateNodeResult(").concat(node.PartName, " error: ").concat(errorMessage));
+            console.log("".concat(this.constructor.name, ".calculateNodeResult(").concat(node.PartName, " error: ").concat(errorMessage));
             return JSON.stringify({
                 error: "".concat(errorMessage)
             });
@@ -54400,7 +54471,7 @@ var CSGNodeCalculator = /** @class */ (function () {
         topoShapeData.ShapeType = __classPrivateFieldGet(this, _CSGNodeCalculator_geometry, "f").shapes.getShapeTypeAsString(shape);
         topoShapesData.topoShapes.push(topoShapeData);
         shape.topoShapeData = topoShapeData;
-        console.log("### topoShapeData: " + topoShapeData);
+        // console.log("### topoShapeData: "+topoShapeData);
     };
     /**
      *
@@ -54435,7 +54506,7 @@ var CSGNodeCalculator = /** @class */ (function () {
     return CSGNodeCalculator;
 }());
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CSGNodeCalculator);
-_CSGNodeCalculator_geometry = new WeakMap(), _CSGNodeCalculator_solidFactory = new WeakMap(), _CSGNodeCalculator_planeFactory = new WeakMap(), _CSGNodeCalculator_wireFactory = new WeakMap(), _CSGNodeCalculator_faceFactory = new WeakMap(), _CSGNodeCalculator_vertexFactory = new WeakMap(), _CSGNodeCalculator_wireOperationCalculator = new WeakMap(), _CSGNodeCalculator_operationCalculator = new WeakMap(), _CSGNodeCalculator_transformCalculator = new WeakMap(), _CSGNodeCalculator_nodeCacheMap = new WeakMap(), _CSGNodeCalculator_instances = new WeakSet(), _CSGNodeCalculator_calculateNodeShapes = function _CSGNodeCalculator_calculateNodeShapes(node) {
+_CSGNodeCalculator_geometry = new WeakMap(), _CSGNodeCalculator_solidFactory = new WeakMap(), _CSGNodeCalculator_planeFactory = new WeakMap(), _CSGNodeCalculator_wireFactory = new WeakMap(), _CSGNodeCalculator_faceFactory = new WeakMap(), _CSGNodeCalculator_vertexFactory = new WeakMap(), _CSGNodeCalculator_compoundFactory = new WeakMap(), _CSGNodeCalculator_wireOperationCalculator = new WeakMap(), _CSGNodeCalculator_operationCalculator = new WeakMap(), _CSGNodeCalculator_transformCalculator = new WeakMap(), _CSGNodeCalculator_nodeCacheMap = new WeakMap(), _CSGNodeCalculator_instances = new WeakSet(), _CSGNodeCalculator_calculateNodeShapes = function _CSGNodeCalculator_calculateNodeShapes(node) {
     //// console.log(`${this.constructor.name}.calculateNodeShape(${node.PartName} called...`);
     var shapes = undefined;
     var perf = _common_performer__WEBPACK_IMPORTED_MODULE_8__["default"].create().start();
@@ -54463,6 +54534,9 @@ _CSGNodeCalculator_geometry = new WeakMap(), _CSGNodeCalculator_solidFactory = n
             break;
         case _csgTypes__WEBPACK_IMPORTED_MODULE_0__.CSGNodeType.Vertex:
             shapes = [__classPrivateFieldGet(this, _CSGNodeCalculator_vertexFactory, "f").createNodeShape(node)];
+            break;
+        case _csgTypes__WEBPACK_IMPORTED_MODULE_0__.CSGNodeType.Compound:
+            shapes = [__classPrivateFieldGet(this, _CSGNodeCalculator_compoundFactory, "f").createNodeShape(node)];
             break;
         case _csgTypes__WEBPACK_IMPORTED_MODULE_0__.CSGNodeType.Transform:
             shapes = __classPrivateFieldGet(this, _CSGNodeCalculator_transformCalculator, "f").calculateTransforms(node);
@@ -54960,15 +55034,16 @@ _CSGTransformCalculator_geometry = new WeakMap(), _CSGTransformCalculator_nodeCa
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "CSGFaceType": () => (/* binding */ CSGFaceType),
-/* harmony export */   "CSGNodeMetadataKind": () => (/* binding */ CSGNodeMetadataKind),
-/* harmony export */   "CSGNodeType": () => (/* binding */ CSGNodeType),
-/* harmony export */   "CSGOperationType": () => (/* binding */ CSGOperationType),
-/* harmony export */   "CSGSolidType": () => (/* binding */ CSGSolidType),
-/* harmony export */   "CSGVertexType": () => (/* binding */ CSGVertexType),
-/* harmony export */   "CSGWireOperationType": () => (/* binding */ CSGWireOperationType),
-/* harmony export */   "CSGWireType": () => (/* binding */ CSGWireType),
-/* harmony export */   "SVGEdgeType": () => (/* binding */ SVGEdgeType)
+/* harmony export */   CSGCompoundType: () => (/* binding */ CSGCompoundType),
+/* harmony export */   CSGFaceType: () => (/* binding */ CSGFaceType),
+/* harmony export */   CSGNodeMetadataKind: () => (/* binding */ CSGNodeMetadataKind),
+/* harmony export */   CSGNodeType: () => (/* binding */ CSGNodeType),
+/* harmony export */   CSGOperationType: () => (/* binding */ CSGOperationType),
+/* harmony export */   CSGSolidType: () => (/* binding */ CSGSolidType),
+/* harmony export */   CSGVertexType: () => (/* binding */ CSGVertexType),
+/* harmony export */   CSGWireOperationType: () => (/* binding */ CSGWireOperationType),
+/* harmony export */   CSGWireType: () => (/* binding */ CSGWireType),
+/* harmony export */   SVGEdgeType: () => (/* binding */ SVGEdgeType)
 /* harmony export */ });
 var CSGNodeType;
 (function (CSGNodeType) {
@@ -54980,6 +55055,7 @@ var CSGNodeType;
     CSGNodeType["Wire"] = "Wire";
     CSGNodeType["WireOperation"] = "WireOperation";
     CSGNodeType["Vertex"] = "Vertex";
+    CSGNodeType["Compound"] = "Compound";
     CSGNodeType["Reference"] = "Reference";
     CSGNodeType["Transform"] = "Transform";
 })(CSGNodeType || (CSGNodeType = {}));
@@ -55043,6 +55119,10 @@ var CSGVertexType;
     CSGVertexType["FromToShapeProjection"] = "FromToShapeProjection";
     CSGVertexType["FromClosestPointOnShapeProjection"] = "FromClosestPointOnShapeProjection";
 })(CSGVertexType || (CSGVertexType = {}));
+var CSGCompoundType;
+(function (CSGCompoundType) {
+    CSGCompoundType["FromFile"] = "FromFile";
+})(CSGCompoundType || (CSGCompoundType = {}));
 
 
 
@@ -55111,7 +55191,7 @@ _CSGVertexFactory_geometry = new WeakMap(), _CSGVertexFactory_nodeCalculator = n
 }, _CSGVertexFactory_createVertexFromToShapeProjection = function _CSGVertexFactory_createVertexFromToShapeProjection(vertex) {
     var projectionTargetShape = __classPrivateFieldGet(this, _CSGVertexFactory_nodeCalculator, "f").calculateNodeShapesWithCache(vertex.Shape)[0];
     var _a = __classPrivateFieldGet(this, _CSGVertexFactory_geometry, "f").projections.projectPointOntoShape(vertex.Point, vertex.Direction, projectionTargetShape), intersectionFound = _a.intersectionFound, point = _a.point, normal = _a.normal;
-    console.log("if: " + intersectionFound + " p: " + point);
+    // console.log("if: "+intersectionFound +" p: "+point);
     if (!intersectionFound) {
         throw new Error("No intersection found.");
     }
@@ -55576,8 +55656,8 @@ var occtio = {
         var result = oc.BRepTools.Write_3(shape, "test", theProgress);
         var brep = oc.FS.readFile("/" + "test", { encoding: "utf8" });
         oc.FS.unlink("/" + "test");
-        console.log(result);
-        console.log(brep);
+        // console.log(result)
+        // console.log(brep)
         return brep;
     },
     bRepToShape: function (shapeBRepText) {
@@ -55592,6 +55672,61 @@ var occtio = {
             throw new Error("Could not read a shape from string:\n" + shapeBRepText);
         }
         return shape;
+    },
+    textToShape: function (stepText, fileType) {
+        var oc = this.oc;
+        // const fileName = "ubinputs.filename";
+        // const stepText = stepText;
+        // const fileType = "step";
+        // console.log(" ### stepText: ", stepText);
+        // console.log(" ### stepType: ", fileType);
+        // return undefined;
+        if (fileType === "brep") {
+            return this.bRepToShape(stepText);
+        }
+        // Writes the uploaded file to Emscripten's Virtual Filesystem
+        oc.FS.createDataFile('/', "file.".concat(fileType), stepText, true, true, true);
+        // Choose the correct OpenCascade file parsers to read the CAD file
+        var reader = null;
+        if (fileType === 'step') {
+            reader = new oc.STEPControl_Reader_1();
+        }
+        else if (fileType === 'iges') {
+            reader = new oc.IGESControl_Reader_1();
+        }
+        else {
+            console.error('opencascade can\'t parse this extension! (yet)');
+        }
+        var readResult = reader.ReadFile("file.".concat(fileType)); // Read the file
+        if (readResult === oc.IFSelect_ReturnStatus.IFSelect_RetDone) {
+            // Translate all transferable roots to OpenCascade
+            var messageProgress = new oc.Message_ProgressRange_1();
+            var numRootsTransferred = reader.TransferRoots(messageProgress);
+            messageProgress.delete();
+            var stepShape = reader.OneShape();
+            // let adjustedShape;
+            // if (adjustZtoY)
+            // {
+            //     let mirroredShape = this.och.mirrorAlongNormal(
+            //         { shape: stepShape, origin: [0, 0, 0], normal: [0, 0, 1] }
+            //     );
+            //     adjustedShape = this.och.rotate({ shape: mirroredShape, axis: [1, 0, 0], angle: 90 });
+            //     mirroredShape.delete();
+            // }
+            // Out with the old, in with the new!
+            // Remove the file when we're done (otherwise we run into errors on reupload)
+            oc.FS.unlink("/file.".concat(fileType));
+            // if(adjustedShape)
+            // {
+            //     stepShape.delete();
+            //     stepShape = adjustedShape;
+            // }
+            return stepShape;
+        }
+        else {
+            console.error('Something in OCCT went wrong trying to read a shape from step text: ', stepText);
+        }
+        return undefined;
     }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (occtio);
@@ -55811,7 +55946,7 @@ var projections = {
             oc.BRepTools.UVBounds_1(face, uMin, uMax, vMin, vMax);
             var pnt = _common_utils_js__WEBPACK_IMPORTED_MODULE_1__["default"].convertTo_gp_Pnt(point);
             var proj = new oc.GeomAPI_ProjectPointOnSurf_2(pnt, surface, oc.Extrema_ExtAlgo);
-            console.log("### projection points: " + proj.NbPoints());
+            // console.log("### projection points: "+proj.NbPoints());
             var nearestPnt = proj.NearestPoint();
             // Check if this nearest point is truly within the face's actual boundaries
             // let uv: gp_Pnt2d = proj.LowerDistanceParameters();
@@ -56294,9 +56429,9 @@ var sweeps = {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "testCompounds": () => (/* binding */ testCompounds),
-/* harmony export */   "testDifference": () => (/* binding */ testDifference),
-/* harmony export */   "testUnion": () => (/* binding */ testUnion)
+/* harmony export */   testCompounds: () => (/* binding */ testCompounds),
+/* harmony export */   testDifference: () => (/* binding */ testDifference),
+/* harmony export */   testUnion: () => (/* binding */ testUnion)
 /* harmony export */ });
 /* harmony import */ var _common_geometry_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../common/geometry.js */ "./src/common/geometry.js");
 
@@ -56488,13 +56623,13 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "commandExecutor": () => (/* binding */ commandExecutor),
-/* harmony export */   "geometry": () => (/* reexport safe */ _common_geometry_js__WEBPACK_IMPORTED_MODULE_2__["default"]),
-/* harmony export */   "init": () => (/* binding */ init),
-/* harmony export */   "nodeCalculator": () => (/* binding */ nodeCalculator),
-/* harmony export */   "testCompounds": () => (/* reexport safe */ _tests_testOperations__WEBPACK_IMPORTED_MODULE_4__.testCompounds),
-/* harmony export */   "testDifference": () => (/* reexport safe */ _tests_testOperations__WEBPACK_IMPORTED_MODULE_4__.testDifference),
-/* harmony export */   "testUnion": () => (/* reexport safe */ _tests_testOperations__WEBPACK_IMPORTED_MODULE_4__.testUnion)
+/* harmony export */   commandExecutor: () => (/* binding */ commandExecutor),
+/* harmony export */   geometry: () => (/* reexport safe */ _common_geometry_js__WEBPACK_IMPORTED_MODULE_2__["default"]),
+/* harmony export */   init: () => (/* binding */ init),
+/* harmony export */   nodeCalculator: () => (/* binding */ nodeCalculator),
+/* harmony export */   testCompounds: () => (/* reexport safe */ _tests_testOperations__WEBPACK_IMPORTED_MODULE_4__.testCompounds),
+/* harmony export */   testDifference: () => (/* reexport safe */ _tests_testOperations__WEBPACK_IMPORTED_MODULE_4__.testDifference),
+/* harmony export */   testUnion: () => (/* reexport safe */ _tests_testOperations__WEBPACK_IMPORTED_MODULE_4__.testUnion)
 /* harmony export */ });
 /* harmony import */ var opencascade_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! opencascade.js */ "./node_modules/opencascade.js/dist/index.js");
 /* harmony import */ var _common_createPromise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./common/createPromise */ "./src/common/createPromise.js");
@@ -56549,7 +56684,7 @@ function initIntoScope(scope) {
         .then(function (openCascade) {
         //// console.log("open cascade initialised, openCascade: ", openCascade)
         //// console.log("open cascade initialised, scope: ", scope)
-        console.log("openCascade OCJS: " + openCascade.OCJS);
+        // console.log("openCascade OCJS: "+openCascade.OCJS)
         _common_geometry_js__WEBPACK_IMPORTED_MODULE_2__["default"].setOpenCascade(openCascade);
         scope.openCascade = openCascade;
     })

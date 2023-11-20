@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <style>
+            /* Remove margins and padding from the body to ensure the iframe can fill the whole window */
+            body, html {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+    
+            /* Ensure the iframe takes up all the available space */
+            iframe {
+                display: block; /* Remove the default inline-frame space */
+                width: 100%;
+                height: 100%;
+                border: none; /* Optional: Removes the border around the iframe */
+            }
+        </style>
+    </head>
     <body>
-
-        <h1>My First Heading</h1>
-        <p>My first paragraph.</p>
-
         <script src="webpack-numbers.js"></script>
-        <iframe src="unity/index.html" width="1920" height="1080"></iframe>
+        <iframe src="unity/index.html"></iframe>
         <script src="inject.js"></script>
-
     </body>
 </html>
