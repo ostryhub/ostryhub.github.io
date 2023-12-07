@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "239718959770",
+    "project_id": "cadnodes",
+    "storage_bucket": "cadnodes.appspot.com",
+    "firebase_url": "https://cadnodes.firebaseio.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239718959770:android:0d7a5f709f5ed4b9b5ed23",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.ltblunity"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBij6BXdNhox1ExdP20ybOjG-vX9vTN5TU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
