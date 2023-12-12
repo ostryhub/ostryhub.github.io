@@ -170,6 +170,22 @@ var compounds = {
         }
         return this.listCompoundShapes(shape, shapeTypeToAccept);
     },
+    // filterOutWires(shapes) {
+    //     let filtered = [];
+    //
+    //     let wireShapes =  shapes
+    //         .map(shape => this.listWiresInsideCompound(shape) )
+    //         .flat();
+    //
+    //     wireShapes.forEach(shape => {
+    //         if (shape.ShapeType() === this.oc.TopAbs_ShapeEnum.TopAbs_WIRE)
+    //         {
+    //             filtered.push(this.oc.TopoDS.Wire_1(shape));
+    //         }
+    //     });
+    //
+    //     return filtered;
+    // },
     /**
      * Lists shapes withign the compound compoundShape.
      * @param compoundShape
@@ -282,15 +298,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _occt_faces__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../occt/faces */ "./src/occt/faces.ts");
 /* harmony import */ var _occt_shapes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../occt/shapes */ "./src/occt/shapes.js");
 /* harmony import */ var _occt_sweeps__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../occt/sweeps */ "./src/occt/sweeps.js");
-/* harmony import */ var _occt_projections__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../occt/projections */ "./src/occt/projections.ts");
-/* harmony import */ var _occt_solidOperations__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../occt/solidOperations */ "./src/occt/solidOperations.ts");
-/* harmony import */ var _occt_boundingBoxes__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../occt/boundingBoxes */ "./src/occt/boundingBoxes.ts");
-/* harmony import */ var _compounds__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./compounds */ "./src/common/compounds.ts");
-/* harmony import */ var _wires_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./wires.js */ "./src/common/wires.js");
-/* harmony import */ var _wireToSolid_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./wireToSolid.js */ "./src/common/wireToSolid.js");
-/* harmony import */ var _math__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./math */ "./src/common/math.js");
-/* harmony import */ var _common_visualize__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../common/visualize */ "./src/common/visualize.js");
-/* harmony import */ var _occt_occtio__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../occt/occtio */ "./src/occt/occtio.ts");
+/* harmony import */ var _occt_lofts__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../occt/lofts */ "./src/occt/lofts.ts");
+/* harmony import */ var _occt_projections__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../occt/projections */ "./src/occt/projections.ts");
+/* harmony import */ var _occt_solidOperations__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../occt/solidOperations */ "./src/occt/solidOperations.ts");
+/* harmony import */ var _occt_boundingBoxes__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../occt/boundingBoxes */ "./src/occt/boundingBoxes.ts");
+/* harmony import */ var _compounds__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./compounds */ "./src/common/compounds.ts");
+/* harmony import */ var _wires_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./wires.js */ "./src/common/wires.js");
+/* harmony import */ var _wireToSolid_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./wireToSolid.js */ "./src/common/wireToSolid.js");
+/* harmony import */ var _math__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./math */ "./src/common/math.js");
+/* harmony import */ var _common_visualize__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../common/visualize */ "./src/common/visualize.js");
+/* harmony import */ var _occt_occtio__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../occt/occtio */ "./src/occt/occtio.ts");
+
 
 
 
@@ -317,28 +335,30 @@ var geometry = {
         _occt_faces__WEBPACK_IMPORTED_MODULE_4__["default"].setOpenCascade(openCascade);
         _occt_shapes__WEBPACK_IMPORTED_MODULE_5__["default"].setOpenCascade(openCascade);
         _occt_sweeps__WEBPACK_IMPORTED_MODULE_6__["default"].setOpenCascade(openCascade);
-        _compounds__WEBPACK_IMPORTED_MODULE_10__["default"].setOpenCascade(openCascade);
-        _wires_js__WEBPACK_IMPORTED_MODULE_11__["default"].setOpenCascade(openCascade);
-        _wireToSolid_js__WEBPACK_IMPORTED_MODULE_12__["default"].setOpenCascade(openCascade);
-        _common_visualize__WEBPACK_IMPORTED_MODULE_14__["default"].setOpenCascade(openCascade);
-        _occt_projections__WEBPACK_IMPORTED_MODULE_7__["default"].setOpenCascade(openCascade);
-        _occt_solidOperations__WEBPACK_IMPORTED_MODULE_8__["default"].setOpenCascade(openCascade);
-        _occt_boundingBoxes__WEBPACK_IMPORTED_MODULE_9__["default"].setOpenCascade(openCascade);
-        _occt_occtio__WEBPACK_IMPORTED_MODULE_15__["default"].setOpenCascade(openCascade);
+        _occt_lofts__WEBPACK_IMPORTED_MODULE_7__["default"].setOpenCascade(openCascade);
+        _compounds__WEBPACK_IMPORTED_MODULE_11__["default"].setOpenCascade(openCascade);
+        _wires_js__WEBPACK_IMPORTED_MODULE_12__["default"].setOpenCascade(openCascade);
+        _wireToSolid_js__WEBPACK_IMPORTED_MODULE_13__["default"].setOpenCascade(openCascade);
+        _common_visualize__WEBPACK_IMPORTED_MODULE_15__["default"].setOpenCascade(openCascade);
+        _occt_projections__WEBPACK_IMPORTED_MODULE_8__["default"].setOpenCascade(openCascade);
+        _occt_solidOperations__WEBPACK_IMPORTED_MODULE_9__["default"].setOpenCascade(openCascade);
+        _occt_boundingBoxes__WEBPACK_IMPORTED_MODULE_10__["default"].setOpenCascade(openCascade);
+        _occt_occtio__WEBPACK_IMPORTED_MODULE_16__["default"].setOpenCascade(openCascade);
         this.utils = _utils_js__WEBPACK_IMPORTED_MODULE_1__["default"];
         this.vectors = _vectors_js__WEBPACK_IMPORTED_MODULE_2__["default"];
         this.booleans = _occt_booleans__WEBPACK_IMPORTED_MODULE_3__["default"];
         this.faces = _occt_faces__WEBPACK_IMPORTED_MODULE_4__["default"];
         this.shapes = _occt_shapes__WEBPACK_IMPORTED_MODULE_5__["default"];
         this.sweeps = _occt_sweeps__WEBPACK_IMPORTED_MODULE_6__["default"];
-        this.compounds = _compounds__WEBPACK_IMPORTED_MODULE_10__["default"];
-        this.wires = _wires_js__WEBPACK_IMPORTED_MODULE_11__["default"];
-        this.wireToSolid = _wireToSolid_js__WEBPACK_IMPORTED_MODULE_12__["default"];
-        this.visualize = _common_visualize__WEBPACK_IMPORTED_MODULE_14__["default"];
-        this.projections = _occt_projections__WEBPACK_IMPORTED_MODULE_7__["default"];
-        this.solidOperations = _occt_solidOperations__WEBPACK_IMPORTED_MODULE_8__["default"];
-        this.boundingBoxes = _occt_boundingBoxes__WEBPACK_IMPORTED_MODULE_9__["default"];
-        this.occtio = _occt_occtio__WEBPACK_IMPORTED_MODULE_15__["default"];
+        this.lofts = _occt_lofts__WEBPACK_IMPORTED_MODULE_7__["default"];
+        this.compounds = _compounds__WEBPACK_IMPORTED_MODULE_11__["default"];
+        this.wires = _wires_js__WEBPACK_IMPORTED_MODULE_12__["default"];
+        this.wireToSolid = _wireToSolid_js__WEBPACK_IMPORTED_MODULE_13__["default"];
+        this.visualize = _common_visualize__WEBPACK_IMPORTED_MODULE_15__["default"];
+        this.projections = _occt_projections__WEBPACK_IMPORTED_MODULE_8__["default"];
+        this.solidOperations = _occt_solidOperations__WEBPACK_IMPORTED_MODULE_9__["default"];
+        this.boundingBoxes = _occt_boundingBoxes__WEBPACK_IMPORTED_MODULE_10__["default"];
+        this.occtio = _occt_occtio__WEBPACK_IMPORTED_MODULE_16__["default"];
     },
     makeIntoSingleMesh_My: function (shape, addEdges, theLinDeflection, theAngDeflection) {
         var oc = this.openCascade;
@@ -390,7 +410,7 @@ var geometry = {
         }
         var facesEdgesAlreadyAdded = edges.length > 0;
         if (addEdges && !facesEdgesAlreadyAdded) {
-            var edgeList = _common_visualize__WEBPACK_IMPORTED_MODULE_14__["default"].ShapeToEdges(shape, theLinDeflection, theAngDeflection).edgeList;
+            var edgeList = _common_visualize__WEBPACK_IMPORTED_MODULE_15__["default"].ShapeToEdges(shape, theLinDeflection, theAngDeflection).edgeList;
             edges = edges.concat(edgeList);
         }
         return { faces: faces, edges: edges };
@@ -737,7 +757,7 @@ var geometry = {
         var face = faceProfile.Face();
         /// 2 - Position and orient face
         var zAxisVec = new oc.gp_Vec_4(0, 0, 1);
-        var zAngleRad = _math__WEBPACK_IMPORTED_MODULE_13__["default"].degToRad(planeRotationZ);
+        var zAngleRad = _math__WEBPACK_IMPORTED_MODULE_14__["default"].degToRad(planeRotationZ);
         var rotateZ = new oc.gp_Quaternion_5(zAxisVec, zAngleRad);
         this.shapes.rotate_gp_Quaternion(face, rotateZ);
         var from = new oc.gp_Vec_4(0, 0, 1);
@@ -754,7 +774,7 @@ var geometry = {
     makeFaceFromWires: function (wireShapes) {
         var oc = this.openCascade;
         // // console.log("makeFaceFromWires oc: ", oc);
-        wireShapes = wireShapes.map(function (wireShape) { return _compounds__WEBPACK_IMPORTED_MODULE_10__["default"].listWiresInsideCompound(wireShape); }).flat(1);
+        wireShapes = wireShapes.map(function (wireShape) { return _compounds__WEBPACK_IMPORTED_MODULE_11__["default"].listWiresInsideCompound(wireShape); }).flat(1);
         var mkWire = new oc.BRepBuilderAPI_MakeWire_1();
         var index = 0;
         wireShapes.forEach(function (wireShape) {
@@ -2271,8 +2291,8 @@ var CSGNodeCalculator = /** @class */ (function () {
                 errorMessage = "Unkown error: " + e;
                 // console.log();
             }
-            console.error("".concat(this.constructor.name, ".calculateNodeResult(").concat(node.PartName, " error: ").concat(errorMessage));
-            console.log("".concat(this.constructor.name, ".calculateNodeResult(").concat(node.PartName, " error: ").concat(errorMessage));
+            console.error("".concat(this.constructor.name, ".calculateNodeResult(").concat(node.PartName, ") error: ").concat(errorMessage));
+            console.log("".concat(this.constructor.name, ".calculateNodeResult(").concat(node.PartName, ") error: ").concat(errorMessage));
             return JSON.stringify({
                 error: "".concat(errorMessage)
             });
@@ -2667,7 +2687,7 @@ var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || 
     if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
-var _CSGSolidFactory_instances, _CSGSolidFactory_geometry, _CSGSolidFactory_nodeCalculator, _CSGSolidFactory_createBox, _CSGSolidFactory_createSphere, _CSGSolidFactory_createCylinder, _CSGSolidFactory_createExtrude, _CSGSolidFactory_createExtrudeWire, _CSGSolidFactory_createRevolveWire, _CSGSolidFactory_createSweepWire;
+var _CSGSolidFactory_instances, _CSGSolidFactory_geometry, _CSGSolidFactory_nodeCalculator, _CSGSolidFactory_createBox, _CSGSolidFactory_createSphere, _CSGSolidFactory_createCylinder, _CSGSolidFactory_createExtrude, _CSGSolidFactory_createExtrudeWire, _CSGSolidFactory_createRevolveWire, _CSGSolidFactory_createSweepWire, _CSGSolidFactory_createLoftThroughWires;
 
 
 var CSGSolidFactory = /** @class */ (function () {
@@ -2706,6 +2726,9 @@ var CSGSolidFactory = /** @class */ (function () {
                 break;
             case _csgTypes__WEBPACK_IMPORTED_MODULE_0__.CSGSolidType.SweepWire:
                 shape = __classPrivateFieldGet(this, _CSGSolidFactory_instances, "m", _CSGSolidFactory_createSweepWire).call(this, node.Solid);
+                break;
+            case _csgTypes__WEBPACK_IMPORTED_MODULE_0__.CSGSolidType.LoftWires:
+                shape = __classPrivateFieldGet(this, _CSGSolidFactory_instances, "m", _CSGSolidFactory_createLoftThroughWires).call(this, node.Solid);
                 break;
             default:
                 throw new Error("Solid type ".concat(node.Solid.Type, " is not supported."));
@@ -2758,6 +2781,20 @@ _CSGSolidFactory_geometry = new WeakMap(), _CSGSolidFactory_nodeCalculator = new
     var pathShape = __classPrivateFieldGet(this, _CSGSolidFactory_nodeCalculator, "f").calculateNodeShapesWithCache(pathNode)[0];
     var sweep = __classPrivateFieldGet(this, _CSGSolidFactory_geometry, "f").sweeps.pipeSolidFromWire(profileShape, pathShape);
     return sweep;
+}, _CSGSolidFactory_createLoftThroughWires = function _CSGSolidFactory_createLoftThroughWires(solid) {
+    var _this = this;
+    var wireShapes0 = solid.Profiles
+        .map(function (node) { return __classPrivateFieldGet(_this, _CSGSolidFactory_nodeCalculator, "f").calculateNodeShapesWithCache(node); })
+        .flat();
+    var wireShapes1 = wireShapes0
+        .map(function (shape) { return __classPrivateFieldGet(_this, _CSGSolidFactory_geometry, "f").compounds.listWiresInsideCompound(shape); })
+        .flat();
+    var wireShapes = wireShapes1
+        .map(function (shape) { return __classPrivateFieldGet(_this, _CSGSolidFactory_geometry, "f").shapes.getActualTypeOfShape(shape); });
+    // let wires = this.#geometry.compounds.filterOutWires(wireShapes);
+    var wires = wireShapes;
+    var loft = __classPrivateFieldGet(this, _CSGSolidFactory_geometry, "f").lofts.loftThroughWires(wires, solid.MakeSolid, solid.CheckCompatibility, solid.Ruled);
+    return loft;
 };
 
 
@@ -2944,6 +2981,7 @@ var CSGSolidType;
     CSGSolidType["ExtrudeWire"] = "ExtrudeWire";
     CSGSolidType["RevolveWire"] = "RevolveWire";
     CSGSolidType["SweepWire"] = "SweepWire";
+    CSGSolidType["LoftWires"] = "LoftWires";
 })(CSGSolidType || (CSGSolidType = {}));
 var CSGWireType;
 (function (CSGWireType) {
@@ -3480,6 +3518,48 @@ var faces = {
 
 /***/ }),
 
+/***/ "./src/occt/lofts.ts":
+/*!***************************!*\
+  !*** ./src/occt/lofts.ts ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _shapes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./shapes */ "./src/occt/shapes.js");
+
+var lofts = {
+    oc: null,
+    setOpenCascade: function (openCascade) {
+        this.oc = openCascade;
+    },
+    /**
+     *
+     */
+    loftThroughWires: function (wires, makeSolid, checkCompatibility, ruled) {
+        if (makeSolid === void 0) { makeSolid = true; }
+        if (checkCompatibility === void 0) { checkCompatibility = false; }
+        if (ruled === void 0) { ruled = false; }
+        var oc = this.oc;
+        var loft = new oc.BRepOffsetAPI_ThruSections(makeSolid, ruled, 1.0e-06);
+        wires.forEach(function (wire) {
+            loft.AddWire(wire);
+        });
+        loft.CheckCompatibility(checkCompatibility);
+        var pipeShape = loft.Shape();
+        var loftedShape = _shapes__WEBPACK_IMPORTED_MODULE_0__["default"].getActualTypeOfShape(pipeShape);
+        pipeShape.delete();
+        loft.delete();
+        return loftedShape;
+    },
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (lofts);
+
+
+/***/ }),
+
 /***/ "./src/occt/occtio.ts":
 /*!****************************!*\
   !*** ./src/occt/occtio.ts ***!
@@ -3529,7 +3609,7 @@ var occtio = {
         // const fileName = "ubinputs.filename";
         // const stepText = stepText;
         // const fileType = "step";
-        console.log(" ### stepText length: ", stepText.length);
+        // console.log(" ### stepText: ", stepText);
         // console.log(" ### stepType: ", fileType);
         // return undefined;
         if (fileType === "brep") {
