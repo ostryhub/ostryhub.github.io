@@ -1,10 +1,16 @@
-let prepareArgs = function(args)
+let prepareArgs = function(args, ommitN)
 {
+    ommitN = ommitN || 0;
     var text = "";
     // Logger.Log("logger arguments are: "+JSON.stringify(arguments, censor(arguments), 2))
 
+    let index = -1;
     for (const property in args)
     {
+        index++;
+        
+        if (index < ommitN) continue;
+        
         let arg = args[property]
 
         let json = "";
@@ -13,6 +19,10 @@ let prepareArgs = function(args)
             if (arg === window)
             {
                 json = "[window]"
+            }
+            else if (typeof arg === "string")
+            {
+                json = arg;
             }
             else
             {
