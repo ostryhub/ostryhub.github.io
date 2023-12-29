@@ -3,8 +3,8 @@ console.log("src/inject.js: Injecting deps into embedded frame window frames[0] 
 // (() => {
     console.log("just injected webpackNumbers into iframe, frames[0].window", frames[0].window)
     
-    frames[0].window.webpackNumbers = window.webpackNumbers;
-    frames[0].window.webpackNumbers.init(frames[0].window);
+    frames[0].window.geometry = window.geometry;
+    frames[0].window.geometry.init(frames[0].window);
 // })();
 
 // (() => {
