@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "857156159893",
+    "firebase_url": "https://justskidding-f2d3f.firebaseio.com",
+    "project_id": "justskidding-f2d3f",
+    "storage_bucket": "justskidding-f2d3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:857156159893:android:dda39f5b5e578a3c",
+        "android_client_info": {
+          "package_name": "com.igrek.racer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "857156159893-te7f0l3a5rt9sbe3tto9popipamr6u5e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLmYn-bBd4Tolgf8RbQz0taGHiOm4K1Z8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
